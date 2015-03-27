@@ -17,8 +17,8 @@ namespace DigitalWatch.Time
 
 		public static object NotifyOnce(TimeReached listener, DateTime time)
 		{
-			TimeSpan diff = new TimeSpan (DateTime.Now, time);
-			Timer timer = new Time (diff.Milliseconds);
+			TimeSpan diff = GetCurrentTime ().Subtract (time);
+			Timer timer = new Timer (diff.Milliseconds);
 			timer.Elapsed += new ElapsedEventHandler ((object sender, ElapsedEventArgs e) =>
 			{
 				CancelTimer(sender);
@@ -47,6 +47,18 @@ namespace DigitalWatch.Time
 			Timer timer = token as Timer;
 			timer.Dispose ();
 			RemoveTimer(timer);
+		}
+
+		public static void PauzeTimer(object token)
+		{
+			Timer timer = token as Timer;
+			timer.Enabled = false;
+		}
+
+		public static void ResumeTimer(object token)
+		{
+			Timer timer = token as Timer;
+			timer.Enabled = true;
 		}
 
 		private static void AddTimer(Timer timer)

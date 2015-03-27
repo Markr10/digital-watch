@@ -26,6 +26,11 @@ namespace DigitalWatch.Components
 
 		}
 
+		public void ForceScreenUpdate ()
+		{
+
+		}
+
 	}
 }
 

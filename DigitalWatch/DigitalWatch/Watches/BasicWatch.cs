@@ -41,16 +41,6 @@ namespace DigitalWatch.Watches
 			display.OnSecondaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().SecondaryButtonPress ());
 		}
 
-		public void ShowWatch ()
-		{
-			display.Show ();
-		}
-
-		public void HideWatch ()
-		{
-			display.Hide ();
-		}
-
 		public void SwitchMode ()
 		{
 			modeSwitcher.NextMode ();

@@ -73,7 +73,10 @@
     <Compile Include="Components\Time.cs" />
     <Compile Include="Displays\Display.cs" />
     <Compile Include="TimeManager.cs" />
-    <Compile Include="ModeSwitcher.cs" />
+    <Compile Include="Displays\LCDDisplayWidget.cs" />
+    <Compile Include="gtk-gui\DigitalWatch.Displays.LCDDisplayWidget.cs" />
+    <Compile Include="ModeSwitchers\ModeSwitcher.cs" />
+    <Compile Include="ModeSwitchers\SmartModeSwitcher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -81,5 +84,6 @@
     <Folder Include="Watches\" />
     <Folder Include="Components\" />
     <Folder Include="Watches\Builders\" />
+    <Folder Include="ModeSwitchers\" />
   </ItemGroup>
 </Project>

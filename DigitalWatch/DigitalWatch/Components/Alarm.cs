@@ -5,13 +5,13 @@ namespace DigitalWatch.Components
 {
 	public class Alarm : WatchComponent
 	{
-		event UpdateScreen OnScreenUpdate;
-		bool editorMode;
-		bool hoursSelected;
-		bool alarmEnabled;
-		int hours;
-		int minutes;
-		object timerToken;
+		public event UpdateScreen OnScreenUpdate;
+		private bool editorMode;
+		private bool hoursSelected;
+		private bool alarmEnabled;
+		private int hours;
+		private int minutes;
+		private object timerToken;
 
 		public Alarm ()
 		{
@@ -68,6 +68,11 @@ namespace DigitalWatch.Components
 				SetAlarm ();
 			}
 			UpdateScreen ();
+		}
+
+		public void ForceScreenUpdate ()
+		{
+
 		}
 
 		private void SetAlarm()

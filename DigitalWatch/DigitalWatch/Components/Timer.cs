@@ -4,11 +4,11 @@ namespace DigitalWatch.Components
 {
 	public class Timer : WatchComponent
 	{
-		event UpdateScreen OnScreenUpdate;
-		bool editorMode;
-		bool hoursSelected;
-		int hours;
-		int minutes;
+		public event UpdateScreen OnScreenUpdate;
+		private bool editorMode;
+		private bool hoursSelected;
+		private int hours;
+		private int minutes;
 
 		public Timer ()
 		{
@@ -48,6 +48,11 @@ namespace DigitalWatch.Components
 		public void PrimaryButtonLongPress()
 		{
 			editorMode = true;
+		}
+
+		public void ForceScreenUpdate ()
+		{
+
 		}
 
 		private void IncrementHours()

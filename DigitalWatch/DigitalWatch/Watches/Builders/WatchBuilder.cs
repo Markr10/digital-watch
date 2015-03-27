@@ -1,11 +1,13 @@
 ﻿using System;
+using DigitalWatch.Components;
+using DigitalWatch.Displays;
 
 namespace DigitalWatch.Watches.Builders
 {
 	public interface WatchBuilder
 	{
-		void SetDisplay(string displayType);
-		void AddComponent(string component);
+		void SetDisplay(Display display);
+		void AddComponent(WatchComponent component);
 		Watch CreateWatch();
 	}
 }

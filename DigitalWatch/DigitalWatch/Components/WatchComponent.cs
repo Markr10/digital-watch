@@ -10,6 +10,13 @@ namespace DigitalWatch.Components
 		void PrimaryButtonPress();
 		void SecondaryButtonPress();
 		void PrimaryButtonLongPress();
+		void ForceScreenUpdate ();
+	}
+
+	public interface PauzableWatchComponent: WatchComponent
+	{
+		void Pauze();
+		void Start();
 	}
 }
 

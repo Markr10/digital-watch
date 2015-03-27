@@ -5,8 +5,8 @@ namespace DigitalWatch.Mode
 {
 	public class ModeSwitcher<M>
 	{
-		private ArrayList innerList;
-		private int currentMode;
+		protected ArrayList innerList;
+		protected int currentMode;
 
 
 		public ModeSwitcher ()
@@ -15,12 +15,12 @@ namespace DigitalWatch.Mode
 			currentMode = 0;
 		}
 
-		public void AddMode(M mode)
+		public virtual void AddMode(M mode)
 		{
 			innerList.Add (mode);
 		}
 
-		public void AddModes(M[] modes)
+		public virtual void AddModes(M[] modes)
 		{
 			foreach (M mode in modes) 
 			{
@@ -28,7 +28,7 @@ namespace DigitalWatch.Mode
 			}
 		}
 
-		public void NextMode()
+		public virtual void NextMode()
 		{
 			if (currentMode > innerList.Count) 
 			{
@@ -44,7 +44,7 @@ namespace DigitalWatch.Mode
 		{
 			if (innerList.Count > 0) 
 			{
-				return innerList [currentMode];
+				return (M)innerList [currentMode];
 			} 
 			else 
 			{

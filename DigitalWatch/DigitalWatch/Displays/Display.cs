@@ -11,9 +11,7 @@ namespace DigitalWatch.Displays
 		event OnButtonPress OnSecondaryButtonPress;
 		event OnButtonPress OnPrimaryLongButtonPress;
 		void Write(string text, bool blink);
-		void Crear();
-		void Show();
-		void Hide();
+		void Clear();
 	}
 }
 
