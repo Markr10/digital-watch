@@ -10,14 +10,14 @@ public partial class MainWindow: Gtk.Window
 	public MainWindow () : base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
-		//BasicWatchBuilder builder = new BasicWatchBuilder ();
-		//Time timeComp = new Time ();
-		//timeComp.Start ();
-		//builder.AddComponent (timeComp);
+		BasicWatchBuilder builder = new BasicWatchBuilder ();
+		Time timeComp = new Time ();
+		timeComp.Start ();
+		builder.AddComponent (timeComp);
 
-		//builder.SetDisplay (lcddisplaywidget1);
+		builder.SetDisplay (lcddisplaywidget1);
 
-		//Watch myWatch = builder.CreateWatch ();
+		Watch myWatch = builder.CreateWatch ();
 
 	}
 
