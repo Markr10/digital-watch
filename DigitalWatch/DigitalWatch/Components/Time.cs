@@ -74,7 +74,7 @@ namespace DigitalWatch.Components
 			if (inEditorMode)
 			{
 				Timemanagement.Time currentTime = GetCurrentTime ();
-				currentTime.Increase ();
+				currentTime.IncreaseMinutes ();
 				timeManager.ChangeTime (timeToken, currentTime);
 				ForceScreenUpdate ();
 			}
@@ -85,7 +85,7 @@ namespace DigitalWatch.Components
 			if (inEditorMode)
 			{
 				Timemanagement.Time currentTime = GetCurrentTime ();
-				currentTime.Decrease ();
+				currentTime.DecreaseMinutes ();
 				timeManager.ChangeTime (timeToken, currentTime);
 				ForceScreenUpdate ();
 			}

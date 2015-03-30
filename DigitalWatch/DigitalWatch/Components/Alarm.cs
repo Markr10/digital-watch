@@ -27,7 +27,7 @@ namespace DigitalWatch.Components
 		{
 			if (editorMode)
 			{
-				currentTime.Increase ();
+				currentTime.IncreaseMinutes ();
 			} 
 			else
 			{
@@ -52,7 +52,7 @@ namespace DigitalWatch.Components
 		{
 			if (editorMode)
 			{
-				currentTime.Decrease ();
+				currentTime.DecreaseMinutes ();
 			}
 		}
 

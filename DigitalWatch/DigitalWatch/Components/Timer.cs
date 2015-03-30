@@ -16,7 +16,7 @@ namespace DigitalWatch.Components
 		{
 			editorMode = false;
 			time = new Timemanagement.Time (){ Hours = 0, Minutes = 0 };
-			timer = new System.Timers.Timer (5 * 1000);
+			timer = new System.Timers.Timer (1000);
 			timer.Elapsed += new ElapsedEventHandler (OnTimerElapsed);
 		}
 
@@ -41,7 +41,7 @@ namespace DigitalWatch.Components
 			{
 				lock (time)
 				{
-					time.Increase ();
+					time.IncreaseMinutes ();
 				}
 
 			}
@@ -58,7 +58,7 @@ namespace DigitalWatch.Components
 			{
 				lock (time)
 				{
-					time.Decrease ();
+					time.DecreaseMinutes ();
 				}
 				ForceScreenUpdate ();
 			}

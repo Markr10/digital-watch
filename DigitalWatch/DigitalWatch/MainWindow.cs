@@ -27,6 +27,17 @@ public partial class MainWindow: Gtk.Window
 
 		Watch myWatch = builder.CreateWatch ();
 
+		BasicWatchBuilder builder2 = new BasicWatchBuilder ();
+		Time timeComp2 = new Time ();
+		timeComp2.Start ();
+		Alarm alarmComp2 = new Alarm (timeComp2.GetTimeToken());
+		builder2.AddComponent (timeComp2);
+		builder2.AddComponent (alarmComp2);
+
+		builder2.SetDisplay (segmentdisplaywidget2);
+
+		Watch myWatch2 = builder2.CreateWatch ();
+
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)

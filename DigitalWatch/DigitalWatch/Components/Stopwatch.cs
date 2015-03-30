@@ -12,7 +12,7 @@ namespace DigitalWatch.Components
 		public Stopwatch ()
 		{
 			stopwatchTime= new Timemanagement.Time (){ Hours = 0, Minutes = 0 };
-			timer = new System.Timers.Timer (5 * 1000);
+			timer = new System.Timers.Timer (1000);
 			timer.Elapsed += new ElapsedEventHandler (OnTimerElapsed);
 		}
 
@@ -29,6 +29,7 @@ namespace DigitalWatch.Components
 		public void PrimaryButtonPress()
 		{
 			timer.Enabled = !timer.Enabled;
+			ForceScreenUpdate ();
 		}
 
 		public void SecondaryButtonPress()
@@ -37,12 +38,14 @@ namespace DigitalWatch.Components
 			{
 				stopwatchTime.Hours = 0;
 				stopwatchTime.Minutes = 0;
+				stopwatchTime.Seconds = 0;
 			}
+			ForceScreenUpdate();
 		}
 
 		public void PrimaryButtonLongPress()
 		{
-
+			//No implementation for PrimaryLongButtonPress
 		}
 
 		public void ForceScreenUpdate ()

@@ -16,7 +16,7 @@ namespace DigitalWatch.Displays
 		public LCDDisplayWidget ()
 		{
 			this.Build ();
-			DisplayLabel.ModifyFont(Pango.FontDescription.FromString("Ahafoni CLM Bold 50"));
+			DisplayLabel.ModifyFont(Pango.FontDescription.FromString("Ahafoni CLM Bold 40"));
 			Clear ();
 
 		}
