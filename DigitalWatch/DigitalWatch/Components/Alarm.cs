@@ -1,5 +1,6 @@
 ﻿using System;
-using DigitalWatch.Time;
+using System.Media;
+using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
@@ -7,40 +8,34 @@ namespace DigitalWatch.Components
 	{
 		public event UpdateScreen OnScreenUpdate;
 		private bool editorMode;
-		private bool hoursSelected;
 		private bool alarmEnabled;
-		private int hours;
-		private int minutes;
-		private object timerToken;
+		private Timemanagement.Time currentTime;
+		private object timeToken;
+		private object alarmToken;
+		private TimeManager timeManager;
 
-		public Alarm ()
+		public Alarm (object timeToken)
 		{
 			editorMode = false;
-			hoursSelected = false;
-			hours = minutes = 0;
-			timerToken = null;
+			alarmEnabled = false;
+			this.timeToken = timeToken;
+			timeManager = TimeManager.GetInstance ();
+			currentTime = timeManager.GetCurrentTime (timeToken).MakeCopy();
 		}
 
 		public void PrimaryButtonPress()
 		{
 			if (editorMode)
 			{
-				if (hoursSelected)
-				{
-					IncrementHours ();
-				} 
-				else
-				{
-					IncrementMinutes ();
-				}
+				currentTime.Increase ();
 			} 
 			else
 			{
-				if (timerToken != null)
+				if (alarmEnabled == true)
 				{
 					DisableAlarm ();
 				}
-				else
+				else if(HasValitAlarmTime())
 				{
 					SetAlarm ();
 				}
@@ -48,11 +43,16 @@ namespace DigitalWatch.Components
 			UpdateScreen ();
 		}
 
+		private bool HasValitAlarmTime()
+		{
+			return currentTime.Minutes > 0 || currentTime.Hours > 0;
+		}
+
 		public void SecondaryButtonPress()
 		{
 			if (editorMode)
 			{
-				hoursSelected = !hoursSelected;
+				currentTime.Decrease ();
 			}
 		}
 
@@ -72,62 +72,44 @@ namespace DigitalWatch.Components
 
 		public void ForceScreenUpdate ()
 		{
-
+			UpdateScreen ();
 		}
 
 		private void SetAlarm()
 		{
 			DisableAlarm ();
-			DateTime time = TimeManager.GetCurrentTime ();
-			time.AddHours (hours - time.Hour);
-			time.AddMinutes (minutes - time.Minute);
-			timerToken = TimeManager.NotifyOnce (new TimeReached (OnTimeManagerNotify), time);
+			alarmToken = timeManager.AddAlarm (new TimeReached (OnTimeManagerNotify), currentTime, timeToken);
+			alarmEnabled = true;
 		}
 
 		private void DisableAlarm()
 		{
-			if (timerToken != null)
+			if (alarmEnabled)
 			{
-				TimeManager.CancelTimer (timerToken);
-				timerToken = null;
+				timeManager.RemoveAlarm (alarmToken);
+				alarmEnabled = false;
 			}
 		}
 
-		public void OnTimeManagerNotify(DateTime currentTime)
+		public void OnTimeManagerNotify(Timemanagement.Time currentTime)
 		{
-			//Beep Beep	
-		}
-
-		private void IncrementHours()
-		{
-			if (hours < 24)
-			{
-				hours++;
-			} 
-			else
-			{
-				hours = 0;
-			}
-		}
-
-		private void IncrementMinutes()
-		{
-			if (minutes < 60)
-			{
-				minutes++;
-			} 
-			else
-			{
-				minutes = 0;
-
-			}
+			SystemSounds.Beep.Play ();
 		}
 
 		private void UpdateScreen()
 		{
 			if (OnScreenUpdate != null)
 			{
-				string writeString = hours + ":" + minutes;
+				string writeString = currentTime.ToString ();
+				if (alarmEnabled)
+				{
+					writeString += " E";
+				}
+				else
+				{
+					writeString += " D";
+				}
+
 				OnScreenUpdate (writeString, editorMode, this);
 			}
 		}

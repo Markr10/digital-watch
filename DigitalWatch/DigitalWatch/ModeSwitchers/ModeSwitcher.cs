@@ -30,7 +30,7 @@ namespace DigitalWatch.Mode
 
 		public virtual void NextMode()
 		{
-			if (currentMode > innerList.Count) 
+			if (currentMode >= (innerList.Count -1)) 
 			{
 				currentMode = 0;
 			} 

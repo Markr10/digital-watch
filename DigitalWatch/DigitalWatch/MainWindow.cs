@@ -13,7 +13,15 @@ public partial class MainWindow: Gtk.Window
 		BasicWatchBuilder builder = new BasicWatchBuilder ();
 		Time timeComp = new Time ();
 		timeComp.Start ();
+		Alarm alarmComp = new Alarm (timeComp.GetTimeToken());
 		builder.AddComponent (timeComp);
+		builder.AddComponent (alarmComp);
+
+		Timer timerComp = new Timer ();
+		builder.AddComponent (timerComp);
+
+		Stopwatch stopWatchComp = new Stopwatch ();
+		builder.AddComponent (stopWatchComp);
 
 		builder.SetDisplay (lcddisplaywidget1);
 

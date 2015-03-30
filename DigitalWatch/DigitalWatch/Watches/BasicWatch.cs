@@ -17,7 +17,7 @@ namespace DigitalWatch.Watches
 			display = watchDisplay;
 			InitDisplayListeners ();
 			InitComponetListeners (watchComponents);
-
+			modeSwitcher.GetCurrentMode ().ForceScreenUpdate ();
 		}
 
 		private void InitComponetListeners(WatchComponent[] components)
@@ -35,7 +35,10 @@ namespace DigitalWatch.Watches
 
 		private void InitDisplayListeners()
 		{
-			display.OnModeButtonPress += new OnButtonPress (() => modeSwitcher.NextMode ());
+			display.OnModeButtonPress += new OnButtonPress (() => {
+				modeSwitcher.NextMode ();
+				modeSwitcher.GetCurrentMode().ForceScreenUpdate();
+			});
 			display.OnPrimaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().PrimaryButtonPress ());
 			display.OnPrimaryLongButtonPress += new OnButtonPress(() => modeSwitcher.GetCurrentMode().PrimaryButtonLongPress());
 			display.OnSecondaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().SecondaryButtonPress ());

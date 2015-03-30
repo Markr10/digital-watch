@@ -1,66 +1,100 @@
 ﻿using System;
-using DigitalWatch.Time;
+using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
 	public class Time : PauzableWatchComponent
 	{
 		public event UpdateScreen OnScreenUpdate;
-		private object token;
+		private object timeToken;
+		private TimeManager timeManager;
+		private bool inEditorMode;
 
 		public Time ()
 		{
-
+			timeManager = TimeManager.GetInstance ();
+			inEditorMode = false;
 		}
 
 		public void Start()
 		{
-			if (token == null)
+			if (timeToken == null)
 			{
-				token = TimeManager.NotifyOnInterval (new TimeReached (OnTimeUpdate), 1000);
+				timeToken = timeManager.GetTimeToken ();
+				timeManager.AddInterval (new TimeReached (OnTimeUpdate), timeToken);
+
 			}
 			else
 			{
-				TimeManager.ResumeTimer (token);
+				timeManager.ResumeInterval (timeToken);
 			}
+			ForceScreenUpdate ();
+		}
 
+		public object GetTimeToken()
+		{
+			return timeToken;
 		}
 
 		public void Pauze()
 		{
-			if (token != null)
+			if (timeToken != null)
 			{
-				TimeManager.PauzeTimer (token);
+				timeManager.PauzeInterval (timeToken);
 			}
 		}
 
 		public void ForceScreenUpdate ()
 		{
-			OnTimeUpdate (TimeManager.GetCurrentTime ());
+			OnTimeUpdate (GetCurrentTime());
 		}
 
-		private void OnTimeUpdate(DateTime currentTime)
+		private void OnTimeUpdate(Timemanagement.Time currentTime)
 		{
 			if (OnScreenUpdate != null)
 			{
-				string text = currentTime.Hour + ":" + currentTime.Minute;
-				OnScreenUpdate (text, false, this);
+				OnScreenUpdate (currentTime.ToString(), inEditorMode, this);
+			}
+		}
+
+		private Timemanagement.Time GetCurrentTime()
+		{
+			if (timeToken != null)
+			{
+				return timeManager.GetCurrentTime (timeToken);
+			}
+			else
+			{
+				throw new Exception ("No timeToken. Get one by calling the start function");
 			}
 		}
 
 		public void PrimaryButtonPress()
 		{
-
+			if (inEditorMode)
+			{
+				Timemanagement.Time currentTime = GetCurrentTime ();
+				currentTime.Increase ();
+				timeManager.ChangeTime (timeToken, currentTime);
+				ForceScreenUpdate ();
+			}
 		}
 
 		public void SecondaryButtonPress()
 		{
-
+			if (inEditorMode)
+			{
+				Timemanagement.Time currentTime = GetCurrentTime ();
+				currentTime.Decrease ();
+				timeManager.ChangeTime (timeToken, currentTime);
+				ForceScreenUpdate ();
+			}
 		}
 
 		public void PrimaryButtonLongPress()
 		{
-
+			inEditorMode = !inEditorMode;
+			ForceScreenUpdate ();
 		}
 	}
 }

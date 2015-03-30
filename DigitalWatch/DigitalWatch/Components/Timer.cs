@@ -1,4 +1,7 @@
 ﻿using System;
+using DigitalWatch.Timemanagement;
+using System.Timers;
+using System.Media;
 
 namespace DigitalWatch.Components
 {
@@ -6,79 +9,97 @@ namespace DigitalWatch.Components
 	{
 		public event UpdateScreen OnScreenUpdate;
 		private bool editorMode;
-		private bool hoursSelected;
-		private int hours;
-		private int minutes;
+		protected Timemanagement.Time time;
+		private System.Timers.Timer timer;
 
 		public Timer ()
 		{
 			editorMode = false;
-			hoursSelected = false;
-			hours = minutes = 0;
+			time = new Timemanagement.Time (){ Hours = 0, Minutes = 0 };
+			timer = new System.Timers.Timer (5 * 1000);
+			timer.Elapsed += new ElapsedEventHandler (OnTimerElapsed);
 		}
 
-		public void Start()
+		protected virtual void OnTimerElapsed(object sender, ElapsedEventArgs e)
 		{
+			lock (time)
+			{
+				time.Decrease ();
+				if (time.Hours == 0 && time.Minutes == 0)
+				{
+					timer.Enabled = false;
+					SystemSounds.Beep.Play ();
+				}
+			}
 
-		}
-
-		public void Stop()
-		{
-
-
+			ForceScreenUpdate ();
 		}
 
 		public void PrimaryButtonPress()
 		{
-			if (hoursSelected)
+			if (editorMode)
 			{
-				IncrementHours ();
-			} 
+				lock (time)
+				{
+					time.Increase ();
+				}
+
+			}
 			else
 			{
-				IncrementMinutes ();
+				timer.Enabled = !timer.Enabled;
 			}
+			ForceScreenUpdate ();
 		}
 
 		public void SecondaryButtonPress()
 		{
-			hoursSelected = !hoursSelected;
+			if (editorMode)
+			{
+				lock (time)
+				{
+					time.Decrease ();
+				}
+				ForceScreenUpdate ();
+			}
 		}
 
 		public void PrimaryButtonLongPress()
 		{
-			editorMode = true;
+			bool valitTime;
+			lock (time)
+			{
+				valitTime = time.Hours > 0 || time.Minutes > 0;
+			}
+
+
+			if (editorMode && valitTime)
+			{
+				timer.Enabled = true;
+			}
+			else if (!editorMode)
+			{
+				timer.Enabled = false;
+			}
+			editorMode = !editorMode;
+			ForceScreenUpdate ();
 		}
 
 		public void ForceScreenUpdate ()
 		{
-
-		}
-
-		private void IncrementHours()
-		{
-			if (hours < 24)
+			if (OnScreenUpdate != null)
 			{
-				hours++;
-			} 
-			else
-			{
-				hours = 0;
+				string text;
+				lock (time)
+				{
+					text = time.ToString ();
+				}
+
+				OnScreenUpdate (text, editorMode, this);
 			}
 		}
 
-		private void IncrementMinutes()
-		{
-			if (minutes < 60)
-			{
-				minutes++;
-			} 
-			else
-			{
-				minutes = 0;
 
-			}
-		}
 	}
 }
 
