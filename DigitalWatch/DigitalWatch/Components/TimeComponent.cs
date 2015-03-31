@@ -6,7 +6,7 @@ namespace DigitalWatch.Components
 	/// <summary>
 	/// 	TimeCompontent witch displays the time (not to confuse with the Time class in the TimeManagement namespace).
 	/// </summary>
-	public class Time : PauzableWatchComponent
+	public class TimeComponent : PauzableWatchComponent
 	{
 		public event UpdateScreen OnScreenUpdate;
 		/// <summary>
@@ -19,13 +19,13 @@ namespace DigitalWatch.Components
 		/// </summary>
 		private bool inEditorMode;
 
-		public Time ()
+		public TimeComponent ()
 		{
 			timeManager = TimeManager.GetInstance ();
 			inEditorMode = false;
 		}
 
-		public Time(object timeToken)
+		public TimeComponent(object timeToken)
 		{
 			timeManager = TimeManager.GetInstance ();
 			inEditorMode = false;

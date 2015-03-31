@@ -70,7 +70,6 @@
     <Compile Include="Components\Stopwatch.cs" />
     <Compile Include="Components\Timer.cs" />
     <Compile Include="Components\Alarm.cs" />
-    <Compile Include="Components\Time.cs" />
     <Compile Include="Displays\Display.cs" />
     <Compile Include="Displays\LCDDisplayWidget.cs" />
     <Compile Include="gtk-gui\DigitalWatch.Displays.LCDDisplayWidget.cs" />
@@ -80,6 +79,7 @@
     <Compile Include="TimeManagement\TimeManager.cs" />
     <Compile Include="Displays\SegmentDisplayWidget.cs" />
     <Compile Include="gtk-gui\DigitalWatch.Displays.SegmentDisplayWidget.cs" />
+    <Compile Include="Components\TimeComponent.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

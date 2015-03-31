@@ -2,7 +2,6 @@
 using Gtk;
 using DigitalWatch.Watches;
 using DigitalWatch.Watches.Builders;
-using DigitalWatch.Displays;
 using DigitalWatch.Components;
 using DigitalWatch.Timemanagement;
 
@@ -13,7 +12,7 @@ public partial class MainWindow: Gtk.Window
 		Build ();
 		BasicWatchBuilder builder = new BasicWatchBuilder ();
 		object timeToken = TimeManager.GetInstance ().GetTimeToken ();
-		DigitalWatch.Components.Time timeComp = new  DigitalWatch.Components.Time(timeToken);
+		TimeComponent timeComp = new  TimeComponent(timeToken);
 
 		Alarm alarmComp = new Alarm (timeToken);
 		builder.AddComponent (timeComp);
@@ -31,17 +30,17 @@ public partial class MainWindow: Gtk.Window
 
 
 
-		BasicWatchBuilder builder2 = new BasicWatchBuilder ();
-		object timeToken2 = TimeManager.GetInstance ().GetTimeToken ();
-		DigitalWatch.Components.Time timeComp2 = new DigitalWatch.Components.Time (timeToken2);
+		BasicWatchBuilder segBuilder = new BasicWatchBuilder ();
+		object segTimeToken = TimeManager.GetInstance ().GetTimeToken ();
+		TimeComponent segTimeComp = new TimeComponent (segTimeToken);
 
-		Alarm alarmComp2 = new Alarm (timeToken2);
-		builder2.AddComponent (timeComp2);
-		builder2.AddComponent (alarmComp2);
+		Alarm segAlarmComp = new Alarm (segTimeToken);
+		segBuilder.AddComponent (segTimeComp);
+		segBuilder.AddComponent (segAlarmComp);
 
-		builder2.SetDisplay (segmentdisplaywidget2);
+		segBuilder.SetDisplay (segmentdisplaywidget2);
 
-		Watch myWatch2 = builder2.CreateWatch ();
+		Watch segWatch = segBuilder.CreateWatch ();
 
 	}
 
