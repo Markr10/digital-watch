@@ -12,7 +12,7 @@ namespace DigitalWatch.Watches
 
 		public BasicWatch (Display watchDisplay, WatchComponent[] watchComponents)
 		{
-			modeSwitcher = new ModeSwitcher<WatchComponent> ();
+			modeSwitcher = new SmartModeSwitcher<WatchComponent> ();
 			modeSwitcher.AddModes (watchComponents);
 			display = watchDisplay;
 			InitDisplayListeners ();
