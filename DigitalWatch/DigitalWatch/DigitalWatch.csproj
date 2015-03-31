@@ -72,11 +72,14 @@
     <Compile Include="Components\Alarm.cs" />
     <Compile Include="Components\Time.cs" />
     <Compile Include="Displays\Display.cs" />
-    <Compile Include="TimeManager.cs" />
     <Compile Include="Displays\LCDDisplayWidget.cs" />
     <Compile Include="gtk-gui\DigitalWatch.Displays.LCDDisplayWidget.cs" />
     <Compile Include="ModeSwitchers\ModeSwitcher.cs" />
     <Compile Include="ModeSwitchers\SmartModeSwitcher.cs" />
+    <Compile Include="TimeManagement\Time.cs" />
+    <Compile Include="TimeManagement\TimeManager.cs" />
+    <Compile Include="Displays\SegmentDisplayWidget.cs" />
+    <Compile Include="gtk-gui\DigitalWatch.Displays.SegmentDisplayWidget.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -85,5 +88,6 @@
     <Folder Include="Components\" />
     <Folder Include="Watches\Builders\" />
     <Folder Include="ModeSwitchers\" />
+    <Folder Include="TimeManagement\" />
   </ItemGroup>
 </Project>

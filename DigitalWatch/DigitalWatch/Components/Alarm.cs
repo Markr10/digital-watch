@@ -1,61 +1,98 @@
 ﻿using System;
-using DigitalWatch.Time;
+using System.Media;
+using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
+	/// <summary>
+	/// Alarm component for the watch
+	/// </summary>
 	public class Alarm : WatchComponent
 	{
 		public event UpdateScreen OnScreenUpdate;
+		/// <summary>
+		/// 	Indicates if the alarm is in editorMode
+		/// </summary>
 		private bool editorMode;
-		private bool hoursSelected;
+		/// <summary>
+		/// 	Indicats if the alarm is enabled or not
+		/// </summary>
 		private bool alarmEnabled;
-		private int hours;
-		private int minutes;
-		private object timerToken;
+		/// <summary>
+		/// 	Time object witch stores the alarm time
+		/// </summary>
+		private Timemanagement.Time currentTime;
+		/// <summary>
+		/// 	The timetoken used for scheduling alarms
+		/// </summary>
+		private object timeToken;
+		/// <summary>
+		/// 	The alarmToken used to cancel a running alarm
+		/// </summary>
+		private object alarmToken;
+		/// <summary>
+		/// The time manager used by this component
+		/// </summary>
+		private TimeManager timeManager;
 
-		public Alarm ()
+		public Alarm (object timeToken)
 		{
 			editorMode = false;
-			hoursSelected = false;
-			hours = minutes = 0;
-			timerToken = null;
+			alarmEnabled = false;
+			this.timeToken = timeToken;
+			timeManager = TimeManager.GetInstance ();
+			currentTime = timeManager.GetCurrentTime (timeToken).MakeCopy();
 		}
 
+		/// <summary>
+		/// 	Called when the user pressed the primary button.
+		/// 	Increases the minutes when the component is in editorMode
+		/// 	and enables or disables the alarm if the watch is not in editorMode
+		/// </summary>
 		public void PrimaryButtonPress()
 		{
 			if (editorMode)
 			{
-				if (hoursSelected)
-				{
-					IncrementHours ();
-				} 
-				else
-				{
-					IncrementMinutes ();
-				}
+				currentTime.IncreaseMinutes ();
 			} 
 			else
 			{
-				if (timerToken != null)
+				if (alarmEnabled == true)
 				{
 					DisableAlarm ();
 				}
-				else
+				else if(HasValitAlarmTime())
 				{
 					SetAlarm ();
 				}
 			}
-			UpdateScreen ();
+			ForceScreenUpdate ();
 		}
 
+		/// <summary>
+		/// Determines whether this instance has valit alarm time.
+		/// </summary>
+		/// <returns><c>true</c> if this instance has valit alarm time; otherwise, <c>false</c>.</returns>
+		private bool HasValitAlarmTime()
+		{
+			return currentTime.Minutes > 0 || currentTime.Hours > 0;
+		}
+
+		/// <summary>
+		/// 	Decreases the minutes when the component is in editor mode
+		/// </summary>
 		public void SecondaryButtonPress()
 		{
 			if (editorMode)
 			{
-				hoursSelected = !hoursSelected;
+				currentTime.DecreaseMinutes ();
+				ForceScreenUpdate ();
 			}
 		}
 
+		/// <summary>
+		/// 	Toggles the editorMode
+		/// </summary>
 		public void PrimaryButtonLongPress()
 		{
 			if (editorMode == false)
@@ -67,70 +104,55 @@ namespace DigitalWatch.Components
 				editorMode = false;
 				SetAlarm ();
 			}
-			UpdateScreen ();
+			ForceScreenUpdate ();
 		}
 
+		/// <summary>
+		/// Forces the compontent to write something the screen
+		/// </summary>
 		public void ForceScreenUpdate ()
-		{
-
-		}
-
-		private void SetAlarm()
-		{
-			DisableAlarm ();
-			DateTime time = TimeManager.GetCurrentTime ();
-			time.AddHours (hours - time.Hour);
-			time.AddMinutes (minutes - time.Minute);
-			timerToken = TimeManager.NotifyOnce (new TimeReached (OnTimeManagerNotify), time);
-		}
-
-		private void DisableAlarm()
-		{
-			if (timerToken != null)
-			{
-				TimeManager.CancelTimer (timerToken);
-				timerToken = null;
-			}
-		}
-
-		public void OnTimeManagerNotify(DateTime currentTime)
-		{
-			//Beep Beep	
-		}
-
-		private void IncrementHours()
-		{
-			if (hours < 24)
-			{
-				hours++;
-			} 
-			else
-			{
-				hours = 0;
-			}
-		}
-
-		private void IncrementMinutes()
-		{
-			if (minutes < 60)
-			{
-				minutes++;
-			} 
-			else
-			{
-				minutes = 0;
-
-			}
-		}
-
-		private void UpdateScreen()
 		{
 			if (OnScreenUpdate != null)
 			{
-				string writeString = hours + ":" + minutes;
+				string writeString = currentTime.ToString ();
+				writeString += alarmEnabled ? " E" : " D";
 				OnScreenUpdate (writeString, editorMode, this);
 			}
 		}
+
+		/// <summary>
+		/// Sets the alarm. Disables the current alarm if ti has been set
+		/// </summary>
+		private void SetAlarm()
+		{
+			DisableAlarm ();
+			alarmToken = timeManager.AddAlarm (new TimeReached (OnTimeManagerNotify), currentTime, timeToken);
+			alarmEnabled = true;
+		}
+
+		/// <summary>
+		/// Disables the alarm.
+		/// </summary>
+		private void DisableAlarm()
+		{
+			if (alarmEnabled)
+			{
+				timeManager.RemoveAlarm (alarmToken);
+				alarmEnabled = false;
+			}
+		}
+
+		/// <summary>
+		/// Raises the time manager notify event.
+		/// Sound the alarm
+		/// </summary>
+		/// <param name="currentTime">Current time.</param>
+		public void OnTimeManagerNotify(Timemanagement.Time currentTime)
+		{
+			SystemSounds.Beep.Play ();
+		}
+
+
 	}
 }
 

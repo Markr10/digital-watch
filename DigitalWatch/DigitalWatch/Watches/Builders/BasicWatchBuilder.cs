@@ -6,11 +6,17 @@ using DigitalWatch.Components;
 
 namespace DigitalWatch.Watches.Builders
 {
+	/// <summary>
+	/// 	The BasicWatchBuilder is a WatchBuilder witch can build BasicWatches
+	/// </summary>
 	public class BasicWatchBuilder : WatchBuilder
 	{
-		private List<WatchComponent> componentList;
+		private readonly List<WatchComponent> componentList;
 		private Display watchDisplay;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DigitalWatch.Watches.Builders.BasicWatchBuilder"/> class.
+		/// </summary>
 		public BasicWatchBuilder ()
 		{
 			componentList = new List<WatchComponent> ();
