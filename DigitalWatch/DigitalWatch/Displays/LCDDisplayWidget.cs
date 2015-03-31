@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Timers;
-using Gtk;
-using Gdk;
 
 namespace DigitalWatch.Displays
 {
+	/// <summary>
+	/// 	The LCDDisplayWidget is a simple Display for the watch
+	/// </summary>
+
 	[System.ComponentModel.ToolboxItem (true)]
 	public partial class LCDDisplayWidget : Gtk.Bin, Display
 	{

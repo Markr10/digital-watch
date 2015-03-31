@@ -223,8 +223,11 @@ namespace DigitalWatch.Timemanagement
 		/// <param name="timeToken">Time token.</param>
 		public object AddAlarm(TimeReached listener, Time time, object timeToken)
 		{
+			//Create a copy of the time object so it can not be changed externaly
+			Time timeCopy = time.MakeCopy ();
+
 			var reservation = new AlarmReservation () {
-				AlarmTime = time,
+				AlarmTime = timeCopy,
 				Enabled = true,
 				Listener = listener,
 				TimeToken = timeToken

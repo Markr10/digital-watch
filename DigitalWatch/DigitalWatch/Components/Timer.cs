@@ -1,17 +1,30 @@
-﻿using System;
-using DigitalWatch.Timemanagement;
-using System.Timers;
+﻿using System.Timers;
 using System.Media;
 
 namespace DigitalWatch.Components
 {
+	/// <summary>
+	/// Timer WatchComponent. Implements timer functionality.
+	/// </summary>
 	public class Timer : WatchComponent
 	{
 		public event UpdateScreen OnScreenUpdate;
+		/// <summary>
+		/// Indicates if the Timer is in editor mode or not
+		/// </summary>
 		private bool editorMode;
-		protected Timemanagement.Time time;
+		/// <summary>
+		/// The time of this timer
+		/// </summary>
+		private Timemanagement.Time time;
+		/// <summary>
+		/// 	The timer used for this timer instance 
+		/// </summary>
 		private System.Timers.Timer timer;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DigitalWatch.Components.Timer"/> class.
+		/// </summary>
 		public Timer ()
 		{
 			editorMode = false;
@@ -20,7 +33,12 @@ namespace DigitalWatch.Components
 			timer.Elapsed += new ElapsedEventHandler (OnTimerElapsed);
 		}
 
-		protected virtual void OnTimerElapsed(object sender, ElapsedEventArgs e)
+		/// <summary>
+		/// Raises the timer elapsed event.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="e">E.</param>
+		private void OnTimerElapsed(object sender, ElapsedEventArgs e)
 		{
 			lock (time)
 			{
@@ -35,6 +53,9 @@ namespace DigitalWatch.Components
 			ForceScreenUpdate ();
 		}
 
+		/// <summary>
+		/// Called when the user pressed the primary button
+		/// </summary>
 		public void PrimaryButtonPress()
 		{
 			if (editorMode)
@@ -52,6 +73,9 @@ namespace DigitalWatch.Components
 			ForceScreenUpdate ();
 		}
 
+		/// <summary>
+		/// Called when the user pressed the secondary button
+		/// </summary>
 		public void SecondaryButtonPress()
 		{
 			if (editorMode)
@@ -64,6 +88,9 @@ namespace DigitalWatch.Components
 			}
 		}
 
+		/// <summary>
+		/// Called when the user long presses the primary button
+		/// </summary>
 		public void PrimaryButtonLongPress()
 		{
 			bool valitTime;
@@ -85,6 +112,9 @@ namespace DigitalWatch.Components
 			ForceScreenUpdate ();
 		}
 
+		/// <summary>
+		/// Forces the compontent to write something the screen
+		/// </summary>
 		public void ForceScreenUpdate ()
 		{
 			if (OnScreenUpdate != null)

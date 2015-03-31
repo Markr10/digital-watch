@@ -4,6 +4,11 @@ using Gdk;
 
 namespace DigitalWatch.Displays
 {
+	/// <summary>
+	/// 	The segemnt display is a Display witch is very similiar to the 
+	/// 	LCDDisplayWidget. It uses the DS-Digital font to create the segments look
+	/// </summary>
+
 	[System.ComponentModel.ToolboxItem (true)]
 	public partial class SegmentDisplayWidget : Gtk.Bin, Display
 	{
@@ -12,21 +17,47 @@ namespace DigitalWatch.Displays
 		public event OnButtonPress OnSecondaryButtonPress;
 		public event OnButtonPress OnPrimaryLongButtonPress;
 
+		/// <summary>
+		/// The blink color of the segments. Change this constant if you want another
+		/// blink color (red, gray, green)
+		/// </summary>
+		private const string BLINK_COLOR = "gray";
+		/// <summary>
+		/// Font of the segment display. Change this if you want to change the font and size
+		/// of the display.
+		/// </summary>
+		private const string FONT_DESCRIPTION = "DS-Digital Bold 50";
+		/// <summary>
+		/// 	Indicates when ever the display needs to blink
+		/// </summary>
 		private bool isBlinking;
+		/// <summary>
+		/// 	Indicates when ever the segmends have the blink color
+		/// </summary>
 		private bool displayLabelHasBlinkColor;
+		/// <summary>
+		/// The color of the blink.
+		/// </summary>
 		private Color blinkColor;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DigitalWatch.Displays.SegmentDisplayWidget"/> class.
+		/// </summary>
 		public SegmentDisplayWidget ()
 		{
 			this.Build ();
-			DisplayLabel.ModifyFont(Pango.FontDescription.FromString("DS-Digital Bold 50"));
+			DisplayLabel.ModifyFont(Pango.FontDescription.FromString(FONT_DESCRIPTION));
 			Clear ();
 			isBlinking = false;
 			displayLabelHasBlinkColor = false;
 			blinkColor = new Color ();
-			Color.Parse("gray",ref blinkColor);
+			Color.Parse(BLINK_COLOR,ref blinkColor);
 		}
 
+		/// <summary>
+		/// 	Triggered by GLib.Timout
+		/// </summary>
+		/// <returns><c>true</c> when the timer has to make another cycle or false when the timer can stop</returns>
 		private bool OnBlink()
 		{
 			if (displayLabelHasBlinkColor)
@@ -40,6 +71,8 @@ namespace DigitalWatch.Displays
 				displayLabelHasBlinkColor = true;
 			}
 
+			//The timer can be stoped if the blink function has been disabled and
+			//the display has the normal color.
 			return isBlinking || displayLabelHasBlinkColor;
 		}
 
@@ -74,7 +107,11 @@ namespace DigitalWatch.Displays
 				OnPrimaryLongButtonPress ();
 			}
 		}
-
+		/// <summary>
+		/// Prints the text on the screen.
+		/// </summary>
+		/// <param name="text">The text to display</param>
+		/// <param name="blink">If set to <c>true</c> blink.</param>
 		public void Write(string text, bool blink)
 		{
 			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});

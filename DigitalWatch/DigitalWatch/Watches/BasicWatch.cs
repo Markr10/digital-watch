@@ -5,11 +5,27 @@ using DigitalWatch.Mode;
 
 namespace DigitalWatch.Watches
 {
+	/// <summary>
+	/// The BasicWatch is a basic implementation of the Watch interface.
+	/// It holds the reference to the display and used a SmartModeSwitcher to cycle between
+	/// components.
+	/// </summary>
 	public class BasicWatch : Watch
 	{
+		/// <summary>
+		/// The mode switcher. This will hold all the components
+		/// </summary>
 		private readonly ModeSwitcher<WatchComponent> modeSwitcher;
+		/// <summary>
+		/// The display.
+		/// </summary>
 		private readonly Display display;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DigitalWatch.Watches.BasicWatch"/> class.
+		/// </summary>
+		/// <param name="watchDisplay">Watch display.</param>
+		/// <param name="watchComponents">Watch components.</param>
 		public BasicWatch (Display watchDisplay, WatchComponent[] watchComponents)
 		{
 			modeSwitcher = new SmartModeSwitcher<WatchComponent> ();
@@ -20,6 +36,10 @@ namespace DigitalWatch.Watches
 			modeSwitcher.GetCurrentMode ().ForceScreenUpdate ();
 		}
 
+		/// <summary>
+		/// Inits the componet listeners.
+		/// </summary>
+		/// <param name="components">Components.</param>
 		private void InitComponetListeners(WatchComponent[] components)
 		{
 			foreach (WatchComponent comp in components)
@@ -33,6 +53,9 @@ namespace DigitalWatch.Watches
 			}
 		}
 
+		/// <summary>
+		/// Inits the display listeners.
+		/// </summary>
 		private void InitDisplayListeners()
 		{
 			display.OnModeButtonPress += new OnButtonPress (() => {
