@@ -32,7 +32,7 @@ namespace DigitalWatch.Watches
 			modeSwitcher.AddModes (watchComponents);
 			display = watchDisplay;
 			InitDisplayListeners ();
-			InitComponetListeners (watchComponents);
+			InitComponentListeners (watchComponents);
 			modeSwitcher.GetCurrentMode ().ForceScreenUpdate ();
 		}
 
@@ -40,7 +40,7 @@ namespace DigitalWatch.Watches
 		/// Inits the componet listeners.
 		/// </summary>
 		/// <param name="components">Components.</param>
-		private void InitComponetListeners(WatchComponent[] components)
+		private void InitComponentListeners(WatchComponent[] components)
 		{
 			foreach (WatchComponent comp in components)
 			{
