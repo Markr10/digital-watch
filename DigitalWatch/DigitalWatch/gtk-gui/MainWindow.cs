@@ -3,11 +3,11 @@
 
 public partial class MainWindow
 {
-	private global::Gtk.HBox hbox2;
+	private global::Gtk.Table table;
 	
-	private global::DigitalWatch.Displays.LCDDisplayWidget lcddisplaywidget1;
+	private global::DigitalWatch.Displays.LCDDisplayWidget lcddisplaywidget;
 	
-	private global::DigitalWatch.Displays.SegmentDisplayWidget segmentdisplaywidget2;
+	private global::DigitalWatch.Displays.SegmentDisplayWidget segmentdisplaywidget;
 
 	protected virtual void Build ()
 	{
@@ -17,32 +17,32 @@ public partial class MainWindow
 		this.Title = global::Mono.Unix.Catalog.GetString ("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
-		this.hbox2 = new global::Gtk.HBox ();
-		this.hbox2.Name = "hbox2";
-		this.hbox2.Spacing = 6;
-		// Container child hbox2.Gtk.Box+BoxChild
-		this.lcddisplaywidget1 = new global::DigitalWatch.Displays.LCDDisplayWidget ();
-		this.lcddisplaywidget1.Events = ((global::Gdk.EventMask)(256));
-		this.lcddisplaywidget1.Name = "lcddisplaywidget1";
-		this.hbox2.Add (this.lcddisplaywidget1);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.lcddisplaywidget1]));
-		w1.Position = 0;
-		w1.Expand = false;
-		w1.Fill = false;
-		// Container child hbox2.Gtk.Box+BoxChild
-		this.segmentdisplaywidget2 = new global::DigitalWatch.Displays.SegmentDisplayWidget ();
-		this.segmentdisplaywidget2.Events = ((global::Gdk.EventMask)(256));
-		this.segmentdisplaywidget2.Name = "segmentdisplaywidget2";
-		this.hbox2.Add (this.segmentdisplaywidget2);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.segmentdisplaywidget2]));
-		w2.Position = 1;
-		w2.Expand = false;
-		w2.Fill = false;
-		this.Add (this.hbox2);
+		this.table = new global::Gtk.Table (((uint)(2)), ((uint)(2)), false);
+		this.table.Name = "table";
+		this.table.RowSpacing = ((uint)(6));
+		this.table.ColumnSpacing = ((uint)(6));
+		// Container child table.Gtk.Table+TableChild
+		this.lcddisplaywidget = new global::DigitalWatch.Displays.LCDDisplayWidget ();
+		this.lcddisplaywidget.Events = ((global::Gdk.EventMask)(256));
+		this.lcddisplaywidget.Name = "lcddisplaywidget";
+		this.table.Add (this.lcddisplaywidget);
+		global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table [this.lcddisplaywidget]));
+		w1.XOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table.Gtk.Table+TableChild
+		this.segmentdisplaywidget = new global::DigitalWatch.Displays.SegmentDisplayWidget ();
+		this.segmentdisplaywidget.Events = ((global::Gdk.EventMask)(256));
+		this.segmentdisplaywidget.Name = "segmentdisplaywidget";
+		this.table.Add (this.segmentdisplaywidget);
+		global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table [this.segmentdisplaywidget]));
+		w2.LeftAttach = ((uint)(1));
+		w2.RightAttach = ((uint)(2));
+		w2.XOptions = ((global::Gtk.AttachOptions)(4));
+		w2.YOptions = ((global::Gtk.AttachOptions)(4));
+		this.Add (this.table);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 624;
+		this.DefaultWidth = 653;
 		this.DefaultHeight = 300;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
