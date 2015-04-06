@@ -24,7 +24,7 @@ public partial class MainWindow: Gtk.Window
 		Stopwatch stopWatchComp = new Stopwatch ();
 		builder.AddComponent (stopWatchComp);
 
-		builder.SetDisplay (lcddisplaywidget1);
+		builder.SetDisplay (lcddisplaywidget);
 
 		Watch myWatch = builder.CreateWatch ();
 
@@ -38,7 +38,7 @@ public partial class MainWindow: Gtk.Window
 		segBuilder.AddComponent (segTimeComp);
 		segBuilder.AddComponent (segAlarmComp);
 
-		segBuilder.SetDisplay (segmentdisplaywidget2);
+		segBuilder.SetDisplay (segmentdisplaywidget);
 
 		Watch segWatch = segBuilder.CreateWatch ();
 

@@ -13,7 +13,7 @@
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
-      <widget class="Gtk.Table" id="table1">
+      <widget class="Gtk.Table" id="table">
         <property name="MemberName" />
         <property name="NRows">2</property>
         <property name="NColumns">2</property>
@@ -26,7 +26,7 @@
           <placeholder />
         </child>
         <child>
-          <widget class="DigitalWatch.Displays.LCDDisplayWidget" id="lcddisplaywidget1">
+          <widget class="DigitalWatch.Displays.LCDDisplayWidget" id="lcddisplaywidget">
             <property name="MemberName" />
             <property name="Events">ButtonPressMask</property>
           </widget>
@@ -42,7 +42,7 @@
           </packing>
         </child>
         <child>
-          <widget class="DigitalWatch.Displays.SegmentDisplayWidget" id="segmentdisplaywidget2">
+          <widget class="DigitalWatch.Displays.SegmentDisplayWidget" id="segmentdisplaywidget">
             <property name="MemberName" />
             <property name="Events">ButtonPressMask</property>
           </widget>
