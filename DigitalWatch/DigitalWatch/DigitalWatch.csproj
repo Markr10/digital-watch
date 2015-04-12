@@ -80,6 +80,8 @@
     <Compile Include="Displays\SegmentDisplayWidget.cs" />
     <Compile Include="gtk-gui\DigitalWatch.Displays.SegmentDisplayWidget.cs" />
     <Compile Include="Components\TimeComponent.cs" />
+    <Compile Include="Displays\BinaryDisplayWidget.cs" />
+    <Compile Include="gtk-gui\DigitalWatch.Displays.BinaryDisplayWidget.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

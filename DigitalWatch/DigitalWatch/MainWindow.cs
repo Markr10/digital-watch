@@ -42,6 +42,17 @@ public partial class MainWindow: Gtk.Window
 
 		Watch segWatch = segBuilder.CreateWatch ();
 
+		BasicWatchBuilder binBuilder = new BasicWatchBuilder ();
+
+		TimeComponent binTimeComp = new TimeComponent ();
+		binTimeComp.Start ();
+		binTimeComp.PrimaryButtonLongPress ();
+		binBuilder.AddComponent (binTimeComp);
+
+		binBuilder.SetDisplay (Binarydisplaywidget);
+
+		Watch binWatch = binBuilder.CreateWatch ();
+
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
