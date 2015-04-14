@@ -107,6 +107,7 @@ namespace DigitalWatch.Displays
 				OnPrimaryLongButtonPress ();
 			}
 		}
+
 		/// <summary>
 		/// Prints the text on the screen.
 		/// </summary>
