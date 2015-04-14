@@ -5,7 +5,7 @@ using Gdk;
 namespace DigitalWatch.Displays
 {
 	/// <summary>
-	/// 	The segemnt display is a Display witch is very similiar to the 
+	/// 	The segemnt display is a Display which is very similiar to the 
 	/// 	LCDDisplayWidget. It uses the DS-Digital font to create the segments look
 	/// </summary>
 
