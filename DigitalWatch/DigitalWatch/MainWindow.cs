@@ -5,11 +5,19 @@ using DigitalWatch.Watches.Builders;
 using DigitalWatch.Components;
 using DigitalWatch.Timemanagement;
 
+/// <summary>
+/// Main window.
+/// </summary>
 public partial class MainWindow: Gtk.Window
 {
+	/// <summary>
+	/// Initializes a new instance of the <see cref="MainWindow"/> class.
+	/// Builds the watches.
+	/// </summary>
 	public MainWindow () : base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
+		// Build a watch with a LCD display
 		BasicWatchBuilder builder = new BasicWatchBuilder ();
 		object timeToken = TimeManager.GetInstance ().GetTimeToken ();
 		TimeComponent timeComp = new  TimeComponent(timeToken);
@@ -29,7 +37,7 @@ public partial class MainWindow: Gtk.Window
 		Watch myWatch = builder.CreateWatch ();
 
 
-
+		// Build a watch with a segment display
 		BasicWatchBuilder segBuilder = new BasicWatchBuilder ();
 		object segTimeToken = TimeManager.GetInstance ().GetTimeToken ();
 		TimeComponent segTimeComp = new TimeComponent (segTimeToken);
