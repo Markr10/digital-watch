@@ -22,9 +22,14 @@ namespace DigitalWatch.Displays
 
 		}
 
-		public void Write(string text, bool blink)
+		/// <summary>
+		/// Prints the text on the screen.
+		/// </summary>
+		/// <param name="text">The text to display</param>
+		/// <param name="blinkState">Depending on the value, a part of the display will possible blink.</param>
+		public void Write(string text, BlinkState blinkState)
 		{
-			if (blink)
+			if (blinkState != 0)
 			{
 				text += " +";
 			}

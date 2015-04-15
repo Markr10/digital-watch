@@ -111,16 +111,16 @@ namespace DigitalWatch.Displays
 		/// Prints the text on the screen.
 		/// </summary>
 		/// <param name="text">The text to display</param>
-		/// <param name="blink">If set to <c>true</c> blink.</param>
-		public void Write(string text, bool blink)
+		/// <param name="blinkState">Depending on the value, a part of the display will possible blink.</param>
+		public void Write(string text, BlinkState blinkState)
 		{
 			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
-			if (blink == true && isBlinking == false)
+			if (blinkState == BlinkState.All && isBlinking == false)
 			{
 				isBlinking = true;
 				GLib.Timeout.Add (1000, new GLib.TimeoutHandler (OnBlink));
 			}
-			else if(blink == false)
+			else if(blinkState == BlinkState.None)
 			{
 				isBlinking = false;
 			}

@@ -32,8 +32,8 @@ namespace DigitalWatch.Displays
 		/// 	Print text on the screen. 
 		/// </summary>
 		/// <param name="text">The text to display</param>
-		/// <param name="blink">The display will blink wel this is <c>true</c></param>
-		void Write(string text, bool blink);
+		/// <param name="blinkState">Depending on the value, a part of the display will possible blink.</param>
+		void Write(string text, BlinkState blinkState);
 		/// <summary>
 		/// Clear the display
 		/// </summary>
