@@ -22,22 +22,6 @@ namespace DigitalWatch.Displays
 
 		}
 
-		public void Write(string text, bool blink)
-		{
-			if (blink)
-			{
-				text += " +";
-			}
-
-			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
-		}
-
-
-		public void Clear()
-		{
-			Gtk.Application.Invoke (delegate {DisplayLabel.Text = "00:00";});
-		}
-
 		protected void OnPrimaryButtonClicked (object sender, EventArgs e)
 		{
 			if (OnPrimaryButtonPress != null)
@@ -68,6 +52,21 @@ namespace DigitalWatch.Displays
 			{
 				OnPrimaryLongButtonPress ();
 			}
+		}
+
+		public void Write(string text, bool blink)
+		{
+			if (blink)
+			{
+				text += " +";
+			}
+
+			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
+		}
+
+		public void Clear()
+		{
+			Gtk.Application.Invoke (delegate {DisplayLabel.Text = "00:00";});
 		}
 	}
 }
