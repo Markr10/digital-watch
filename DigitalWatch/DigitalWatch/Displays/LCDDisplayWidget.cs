@@ -22,27 +22,6 @@ namespace DigitalWatch.Displays
 
 		}
 
-		/// <summary>
-		/// Prints the text on the screen.
-		/// </summary>
-		/// <param name="text">The text to display</param>
-		/// <param name="blinkState">Depending on the value, a part of the display will possible blink.</param>
-		public void Write(string text, BlinkState blinkState)
-		{
-			if (blinkState != 0)
-			{
-				text += " +";
-			}
-
-			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
-		}
-
-
-		public void Clear()
-		{
-			Gtk.Application.Invoke (delegate {DisplayLabel.Text = "00:00";});
-		}
-
 		protected void OnPrimaryButtonClicked (object sender, EventArgs e)
 		{
 			if (OnPrimaryButtonPress != null)
@@ -73,6 +52,26 @@ namespace DigitalWatch.Displays
 			{
 				OnPrimaryLongButtonPress ();
 			}
+		}
+
+		/// <summary>
+		/// Prints the text on the screen.
+		/// </summary>
+		/// <param name="text">The text to display</param>
+		/// <param name="blinkState">Depending on the value, a part of the display will possible blink.</param>
+		public void Write(string text, BlinkState blinkState)
+		{
+			if (blinkState != 0)
+			{
+				text += " +";
+			}
+
+			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
+		}
+
+		public void Clear()
+		{
+			Gtk.Application.Invoke (delegate {DisplayLabel.Text = "00:00";});
 		}
 	}
 }

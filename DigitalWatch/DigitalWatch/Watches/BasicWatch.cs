@@ -37,7 +37,7 @@ namespace DigitalWatch.Watches
 		}
 
 		/// <summary>
-		/// Inits the componet listeners.
+		/// Inits the component listeners.
 		/// </summary>
 		/// <param name="components">Components.</param>
 		private void InitComponentListeners(WatchComponent[] components)
