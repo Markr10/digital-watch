@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DigitalWatch
+namespace DigitalWatch.Displays
 {
     /// <summary>
     /// A char of a display.
