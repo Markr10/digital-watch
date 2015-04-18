@@ -44,6 +44,7 @@ namespace DigitalWatch.Watches
 		{
 			foreach (WatchComponent comp in components)
 			{
+                // Ensures that the text is sent from the component to the display
 				comp.OnScreenUpdate += new UpdateScreen((string text, bool blink, WatchComponent sender) => {
 					if(modeSwitcher.IsCurrentMode(sender))
 					{
