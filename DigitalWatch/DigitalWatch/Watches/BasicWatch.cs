@@ -63,7 +63,7 @@ namespace DigitalWatch.Watches
 				modeSwitcher.NextMode ();
 				modeSwitcher.GetCurrentMode().ForceScreenUpdate();
 			});
-            // Call always the button code that belongs to the current component.
+            // Calls always the button code that belongs to the current component.
             display.OnPrimaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().PrimaryButtonPress ());
 			display.OnPrimaryLongButtonPress += new OnButtonPress(() => modeSwitcher.GetCurrentMode().PrimaryButtonLongPress());
 			display.OnSecondaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().SecondaryButtonPress ());
