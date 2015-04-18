@@ -8,16 +8,16 @@ namespace DigitalWatch.Displays
     public struct DisplayChar
     {
         /// <summary>
-        /// Gets or sets the character that the display should show.
+        /// The character that the display should show.
         /// </summary>
         /// <value>The character that the display should show.</value>
-        public char Value { get; private set; }
+        public readonly char Value;
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="DigitalWatch.Displays.DisplayChar"/> should blink.
+        /// A value indicating whether this <see cref="DigitalWatch.Displays.DisplayChar"/> should blink.
         /// </summary>
         /// <value><c>true</c> if it should blink; otherwise, <c>false</c>.</value>
         /// <remarks>Not all displays have support for blinking.</remarks>
-        public bool Blink { get; private set; }
+        public readonly bool Blink;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitalWatch.Displays.DisplayChar"/> struct with
