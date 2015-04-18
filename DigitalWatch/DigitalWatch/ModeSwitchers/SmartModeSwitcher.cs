@@ -6,7 +6,7 @@ namespace DigitalWatch.Mode
 	/// 	This is a modified version of the normal ModeSwitcher. The SmartModeSwitcher 
 	/// 	adds support for PauzebleWatchComponents
 	/// </summary>
-	public class SmartModeSwitcher<M> : ModeSwitcher<M>
+	public class SmartModeSwitcher<Mode> : ModeSwitcher<Mode>
 	{
 		/// <summary>
 		/// Adds a Mode the the list. Call the Start methods of the componten if
@@ -14,13 +14,22 @@ namespace DigitalWatch.Mode
 		/// a pauzeblecomponent.
 		/// </summary>
 		/// <param name="mode">Mode.</param>
-		public override void AddMode (M mode)
+		public override void AddMode (Mode mode)
 		{
-			base.AddMode (mode);
 			if (innerList.Count == 0 && mode is PauzableWatchComponent)
 			{
 				((PauzableWatchComponent)mode).Start ();
 			}
+			base.AddMode (mode);
+		}
+
+		public override void AddModes(Mode[] modes)
+		{
+			if (innerList.Count == 0 && modes[0] is PauzableWatchComponent)
+			{
+				((PauzableWatchComponent)modes[0]).Start ();
+			}
+			base.AddModes (modes);
 		}
 
 		/// <summary>
@@ -29,7 +38,7 @@ namespace DigitalWatch.Mode
 		/// </summary>
 		public override void NextMode ()
 		{
-			M curMode = GetCurrentMode ();
+			Mode curMode = GetCurrentMode ();
 			if(curMode is PauzableWatchComponent)
 			{
 				((PauzableWatchComponent)curMode).Pauze ();
