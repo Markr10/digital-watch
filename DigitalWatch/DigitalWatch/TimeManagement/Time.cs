@@ -27,7 +27,7 @@ namespace DigitalWatch.Timemanagement
 			}
 			else
 			{
-				Seconds += 1;
+				Seconds++;
 			}
 		}
 
@@ -44,9 +44,43 @@ namespace DigitalWatch.Timemanagement
 			}
 			else
 			{
-				Seconds-= 1;
+				Seconds--;
 			}
 		}
+
+        /// <summary>
+        /// Increases the minutes.
+        /// Incresaes the hours when Minutes &gt; 59
+        /// </summary>
+        public void IncreaseMinutes()
+        {
+            if (Minutes > 58)
+            {
+                Minutes = 0;
+                IncreaseHours ();
+            }
+            else
+            {
+                Minutes++;
+            }
+        }
+
+        /// <summary>
+        /// Decreases the minutes.
+        /// Decreases the hours when Minutes &lt; 1
+        /// </summary>
+        public void DecreaseMinutes()
+        {
+            if (Minutes < 1)
+            {
+                Minutes = 59;
+                DecreaseHours ();
+            }
+            else
+            {
+                Minutes--;
+            }
+        }
 
 		/// <summary>
 		/// Increases the hours.
@@ -59,7 +93,7 @@ namespace DigitalWatch.Timemanagement
 			}
 			else
 			{
-				Hours ++;
+				Hours++;
 			}
 		}
 
@@ -75,40 +109,6 @@ namespace DigitalWatch.Timemanagement
 			else
 			{
 				Hours--;
-			}
-		}
-
-		/// <summary>
-		/// Increases the minutes.
-		/// Incresaes the hours when Minutes &gt; 59
-		/// </summary>
-		public void IncreaseMinutes()
-		{
-			if (Minutes > 58)
-			{
-				Minutes = 0;
-				IncreaseHours ();
-			}
-			else
-			{
-				Minutes ++;
-			}
-		}
-
-		/// <summary>
-		/// Decreases the minutes.
-		/// Decreases the hours when Minutes &lt; 1
-		/// </summary>
-		public void DecreaseMinutes()
-		{
-			if (Minutes < 1)
-			{
-				Minutes = 59;
-				DecreaseHours ();
-			}
-			else
-			{
-				Minutes--;
 			}
 		}
 
