@@ -109,23 +109,23 @@ namespace DigitalWatch.Displays
 		}
 
         /// <summary>
-        /// Send the specified chars to a display to show them on the display.
+        /// Shows the specified text parts on the display.
         /// </summary>
-        /// <param name="chars">Chars to display.</param>
-        public void Write(DisplayChar[] chars)
+        /// <param name="textParts">Text parts to show.</param>
+        public void Write(DisplayTextPart[] textParts)
 		{
             // Text to display
             string text = string.Empty;
-            foreach (DisplayChar displayChar in chars)
+            foreach (DisplayTextPart textPart in textParts)
             {
-                text += displayChar.Value;
+                text += textPart.Value;
             }
             Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
 
             // TODO Fix blinking bug. It blinks now two seconds.
-            foreach (DisplayChar displayChar in chars)
+            foreach (DisplayTextPart textPart in textParts)
             {
-                if (displayChar.Blink && isBlinking == false)
+                if (textPart.Blink && isBlinking == false)
                 {
                     isBlinking = true;
                     GLib.Timeout.Add (1000, new GLib.TimeoutHandler (OnBlink));

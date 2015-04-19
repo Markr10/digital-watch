@@ -55,19 +55,19 @@ namespace DigitalWatch.Displays
 		}
 
         /// <summary>
-        /// Send the specified chars to a display to show them on the display.
+        /// Shows the specified text parts on the display.
         /// </summary>
-        /// <param name="chars">Chars to display.</param>
+        /// <param name="textParts">Text parts to show.</param>
         /// <remarks>This display type only shows that there is something blinking</remarks>
-        public void Write(DisplayChar[] chars)
+        public void Write(DisplayTextPart[] textParts)
 		{
             // Text to display
             string text = string.Empty;
             bool blinkState = false;
-            foreach (DisplayChar displayChar in chars)
+            foreach (DisplayTextPart textPart in textParts)
             {
-                text += displayChar.Value;
-                if (!blinkState && displayChar.Blink)
+                text += textPart.Value;
+                if (!blinkState && textPart.Blink)
                 {
                     blinkState = true;
                 }

@@ -29,11 +29,11 @@ namespace DigitalWatch.Displays
 		/// </summary>
 		event OnButtonPress OnPrimaryLongButtonPress;
         /// <summary>
-        /// Send the specified chars to a display to show them on the display.
+        /// Send the specified text parts to a display to show them on the display.
         /// </summary>
-        /// <param name="chars">Chars to display.</param>
-        /// <remarks>Some displays are designed to show certain characters.</remarks>
-        void Write(DisplayChar[] chars);
+        /// <param name="textParts">Text parts to show.</param>
+        /// <remarks>Some displays are designed to show certain text.</remarks>
+        void Write(DisplayTextPart[] textParts);
 		/// <summary>
 		/// Clear the display
 		/// </summary>
