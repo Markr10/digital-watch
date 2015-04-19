@@ -108,23 +108,32 @@ namespace DigitalWatch.Displays
 			}
 		}
 
-		/// <summary>
-		/// Prints the text on the screen.
-		/// </summary>
-		/// <param name="text">The text to display</param>
-		/// <param name="blinkState">Depending on the value, a part of the display will possible blink.</param>
-		public void Write(string text, BlinkState blinkState)
+        /// <summary>
+        /// Send the specified chars to a display to show them on the display.
+        /// </summary>
+        /// <param name="chars">Chars to display.</param>
+        public void Write(DisplayChar[] chars)
 		{
-			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
-			if (blinkState == BlinkState.All && isBlinking == false)
-			{
-				isBlinking = true;
-				GLib.Timeout.Add (1000, new GLib.TimeoutHandler (OnBlink));
-			}
-			else if(blinkState == BlinkState.None)
-			{
-				isBlinking = false;
-			}
+            // Text to display
+            string text = string.Empty;
+            foreach (DisplayChar displayChar in chars)
+            {
+                text += displayChar.Value;
+            }
+            Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
+
+            // TODO Fix blinking bug. It blinks now two seconds.
+            foreach (DisplayChar displayChar in chars)
+            {
+                if (displayChar.Blink && isBlinking == false)
+                {
+                    isBlinking = true;
+                    GLib.Timeout.Add (1000, new GLib.TimeoutHandler (OnBlink));
+                    return;
+                }
+            }
+            // When here no character of the display blink. 
+            isBlinking = false;
 		}
 
 		public void Clear()

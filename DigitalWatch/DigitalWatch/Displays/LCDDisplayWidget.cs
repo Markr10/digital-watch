@@ -54,14 +54,26 @@ namespace DigitalWatch.Displays
 			}
 		}
 
-		/// <summary>
-		/// Prints the text on the screen.
-		/// </summary>
-		/// <param name="text">The text to display</param>
-		/// <param name="blinkState">Depending on the value, a part of the display will possible blink.</param>
-		public void Write(string text, BlinkState blinkState)
+        /// <summary>
+        /// Send the specified chars to a display to show them on the display.
+        /// </summary>
+        /// <param name="chars">Chars to display.</param>
+        /// <remarks>This display type only shows that there is something blinking</remarks>
+        public void Write(DisplayChar[] chars)
 		{
-			if (blinkState != 0)
+            // Text to display
+            string text = string.Empty;
+            bool blinkState = false;
+            foreach (DisplayChar displayChar in chars)
+            {
+                text += displayChar.Value;
+                if (!blinkState && displayChar.Blink)
+                {
+                    blinkState = true;
+                }
+            }
+
+			if (blinkState)
 			{
 				text += " +";
 			}
