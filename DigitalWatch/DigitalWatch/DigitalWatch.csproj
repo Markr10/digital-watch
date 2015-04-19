@@ -87,7 +87,7 @@
     <Compile Include="gtk-gui\DigitalWatch.Displays.SegmentDisplayWidget.cs" />
     <Compile Include="Components\TimeComponent.cs" />
     <Compile Include="Components\EditorMode.cs" />
-    <Compile Include="Displays\DisplayChar.cs" />
+    <Compile Include="Displays\DisplayTextPart.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
