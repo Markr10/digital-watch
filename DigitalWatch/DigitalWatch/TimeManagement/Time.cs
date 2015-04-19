@@ -20,7 +20,7 @@ namespace DigitalWatch.Timemanagement
 		/// </summary>
 		public void Increase()
 		{
-			if (Seconds > 59)
+			if (Seconds > 58)
 			{
 				Seconds = 0;
 				IncreaseMinutes ();
@@ -53,7 +53,7 @@ namespace DigitalWatch.Timemanagement
 		/// </summary>
 		public void IncreaseHours()
 		{
-			if (Hours > 23)
+			if (Hours > 22)
 			{
 				Hours = 0;
 			}
@@ -84,7 +84,7 @@ namespace DigitalWatch.Timemanagement
 		/// </summary>
 		public void IncreaseMinutes()
 		{
-			if (Minutes > 59)
+			if (Minutes > 58)
 			{
 				Minutes = 0;
 				IncreaseHours ();
