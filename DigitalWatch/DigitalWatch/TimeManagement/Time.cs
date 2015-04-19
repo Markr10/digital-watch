@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DigitalWatch.Timemanagement
 {
@@ -187,6 +188,79 @@ namespace DigitalWatch.Timemanagement
 			return timeString;
 		}
 
+        /// <summary>
+        /// Returns an list with <see cref="Displays.DisplayTextPart"/> that represents the text parts of the current <see cref="DigitalWatch.Timemanagement.Time"/>.
+        /// </summary>
+        /// <returns>An list with <see cref="Displays.DisplayTextPart"/> that represents the text parts of the current <see cref="DigitalWatch.Timemanagement.Time"/>.</returns>
+        /// <param name="blinkingPart">The <see cref="Components.BlinkingPart"/> of the time string.</param>
+        public List<Displays.DisplayTextPart> ToListWithDisplayTextParts(Components.BlinkingPart blinkingPart)
+        {
+            List<Displays.DisplayTextPart> textParts = new List<Displays.DisplayTextPart>();
+
+            // Add hours
+            if (blinkingPart == Components.BlinkingPart.Hours)
+            {
+                textParts.Add(CreateTimeDisplayTextPart(Hours, true));
+            }
+            else
+            {
+                textParts.Add(CreateTimeDisplayTextPart(Hours, false));
+            }
+
+            textParts.Add(new Displays.DisplayTextPart(":", false));
+
+            // Add minutes
+            if (blinkingPart == Components.BlinkingPart.Minutes)
+            {
+                textParts.Add(CreateTimeDisplayTextPart(Minutes, true));
+            }
+            else
+            {
+                textParts.Add(CreateTimeDisplayTextPart(Minutes, false));
+            }
+
+            textParts.Add(new Displays.DisplayTextPart(":", false));
+
+            // Add seconds
+            if (blinkingPart == Components.BlinkingPart.Seconds)
+            {
+                textParts.Add(CreateTimeDisplayTextPart(Seconds, true));
+            }
+            else
+            {
+                textParts.Add(CreateTimeDisplayTextPart(Seconds, false));
+            }
+
+            return textParts;
+        }
+
+        /// <summary>
+        /// Returns an list with <see cref="Displays.DisplayTextPart"/> that represents the text parts of the current <see cref="DigitalWatch.Timemanagement.Time"/>.
+        /// </summary>
+        /// <returns>An list with <see cref="Displays.DisplayTextPart"/> that represents the text parts of the current <see cref="DigitalWatch.Timemanagement.Time"/>.</returns>
+        /// <param name="blinkingPart">The <see cref="Components.BlinkingPart"/> of the time string.</param>
+        public Displays.DisplayTextPart[] ToDisplayTextParts(Components.BlinkingPart blinkingPart)
+        {
+            return ToListWithDisplayTextParts(blinkingPart).ToArray();
+        }
+
+        /// <summary>
+        /// Creates the <see cref="Displays.DisplayTextPart"/> of a time element.
+        /// </summary>
+        /// <returns>The <see cref="Displays.DisplayTextPart"/> of a time element.</returns>
+        /// <param name="timeElement">The time element that should converted.</param>
+        /// <param name="blink">If set to <c>true</c> the <see cref="Displays.DisplayTextPart"/> should blink.</param>
+        private static Displays.DisplayTextPart CreateTimeDisplayTextPart(int timeElement, bool blink)
+        {
+            string text = string.Empty;
+            if (timeElement < 10)
+            {
+                text += "0";
+            }
+            text += timeElement.ToString();
+
+            return new Displays.DisplayTextPart(text, blink);
+        }
 	}
 }
 

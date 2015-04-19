@@ -74,12 +74,12 @@ namespace DigitalWatch.Components
 		{
 			if (OnScreenUpdate != null)
 			{
-				string text;
+                Displays.DisplayTextPart[] textParts;
 				lock (stopwatchTime)
 				{
-					text = stopwatchTime.ToString ();
-				}
-				OnScreenUpdate (text, false, this);
+                    textParts = stopwatchTime.ToDisplayTextParts(BlinkingPart.None);
+                }
+                OnScreenUpdate (textParts, this);
 			}
 		}
 

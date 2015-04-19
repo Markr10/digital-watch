@@ -119,13 +119,22 @@ namespace DigitalWatch.Components
 		{
 			if (OnScreenUpdate != null)
 			{
-				string text;
+                Displays.DisplayTextPart[] textParts;
 				lock (time)
 				{
-					text = time.ToString ();
+                    if (editorMode)
+                    {
+                        textParts = time.ToDisplayTextParts(BlinkingPart.Seconds);
+                    }
+                    else
+                    {
+                        textParts = time.ToDisplayTextParts(BlinkingPart.None);
+                    }
 				}
 
-				OnScreenUpdate (text, editorMode, this);
+
+
+                OnScreenUpdate(textParts, this);
 			}
 		}
 
