@@ -2,6 +2,7 @@
 using DigitalWatch.Displays;
 using DigitalWatch.Components;
 using DigitalWatch.Mode;
+using System.Collections.Generic;
 
 namespace DigitalWatch.Watches
 {
@@ -45,10 +46,10 @@ namespace DigitalWatch.Watches
 			foreach (WatchComponent comp in components)
 			{
                 // Ensures that the text is sent from the component to the display
-				comp.OnScreenUpdate += new UpdateScreen((string text, bool blink, WatchComponent sender) => {
-					if(modeSwitcher.IsCurrentMode(sender))
+                comp.OnScreenUpdate += new UpdateScreen((DisplayTextPart[] textParts, WatchComponent sender) => {
+                    if(modeSwitcher.IsCurrentMode(sender))
 					{
-						display.Write(text, blink);
+                        display.Write(textParts);
 					}
 				});
 			}

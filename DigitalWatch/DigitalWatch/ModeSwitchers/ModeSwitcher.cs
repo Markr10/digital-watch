@@ -52,14 +52,7 @@ namespace DigitalWatch.Mode
 		/// </summary>
 		public virtual void NextMode()
 		{
-			if (currentMode >= (innerList.Count -1)) 
-			{
-				currentMode = 0;
-			} 
-			else 
-			{
-				currentMode++;
-			}
+            currentMode = (currentMode + 1) % innerList.Count;
 		}
 
 		/// <summary>

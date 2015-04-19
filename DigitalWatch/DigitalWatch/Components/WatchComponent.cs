@@ -4,7 +4,7 @@ namespace DigitalWatch.Components
 	/// <summary>
 	/// 	Delegate used for updating the screen.
 	/// </summary>
-	public delegate void UpdateScreen(string text, bool blink, WatchComponent sender);
+    public delegate void UpdateScreen(Displays.DisplayTextPart[] textParts, WatchComponent sender);
 
 	/// <summary>
 	/// A WatchComponent implements some kind of watch functionality.

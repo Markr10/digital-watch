@@ -54,9 +54,26 @@ namespace DigitalWatch.Displays
 			}
 		}
 
-		public void Write(string text, bool blink)
+        /// <summary>
+        /// Shows the specified text parts on the display.
+        /// </summary>
+        /// <param name="textParts">Text parts to show.</param>
+        /// <remarks>This display type only shows that there is something blinking</remarks>
+        public void Write(DisplayTextPart[] textParts)
 		{
-			if (blink)
+            // Text to display
+            string text = string.Empty;
+            bool blinkState = false;
+            foreach (DisplayTextPart textPart in textParts)
+            {
+                text += textPart.Value;
+                if (!blinkState && textPart.Blink)
+                {
+                    blinkState = true;
+                }
+            }
+
+			if (blinkState)
 			{
 				text += " +";
 			}
