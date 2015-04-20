@@ -78,7 +78,7 @@ namespace DigitalWatch.Displays
 			cr.LineWidth = lineWidth;
 
 			//// Draw background
-			//cr.SetSourceRGBA (0.337, 0.612, 0.117, 0.9);    // green
+            //cr.SetSourceRGBA (0.729, 0.373, 0.22, 0.9); // orange
 			//cr.Paint ();
 
 			// Draw background clock
