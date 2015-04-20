@@ -89,10 +89,6 @@ namespace DigitalWatch.Displays
 			const int lineWidth = 6;
 			cr.LineWidth = lineWidth;
 
-			//// Draw background
-            //cr.SetSourceRGBA (0.729, 0.373, 0.22, 0.9); // orange
-			//cr.Paint ();
-
 			// Draw background clock
 			cr.Translate (width / 2, height / 2);
 			cr.Arc (0, 0, radius, 0, 2 * Math.PI);
@@ -108,7 +104,7 @@ namespace DigitalWatch.Displays
             {
                 cr.Save();
 
-                // Inset height for a tick // TODO Check comment
+                // Inset height for a tick
                 double inset = 5.5;
 
                 if(i % 3 != 0)
