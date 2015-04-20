@@ -50,7 +50,11 @@ namespace DigitalWatch.Displays
 			}
 		}
 
-		public void Write(string text, bool blink)
+        /// <summary>
+        /// Converts the specified text parts to a dial display.
+        /// </summary>
+        /// <param name="textParts">Text parts to show.</param>
+        public void Write(DisplayTextPart[] textParts)
 		{
 
 		}
