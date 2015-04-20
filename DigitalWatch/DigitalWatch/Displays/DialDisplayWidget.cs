@@ -84,6 +84,7 @@ namespace DigitalWatch.Displays
 			int height = area.Allocation.Height;
             int radius = (width < height ? width : height) / 2 - 10;
 			// Set the size of the line
+            // Basic size of a line
 			const int lineWidth = 6;
 			cr.LineWidth = lineWidth;
 
@@ -165,7 +166,7 @@ namespace DigitalWatch.Displays
             cr.Arc(0, 0, lineWidth / 3.0, 0, 2 * Math.PI);
             cr.Fill();
 
-			((IDisposable) cr.GetTarget()).Dispose();                                      
+			((IDisposable) cr.GetTarget()).Dispose();
 			((IDisposable) cr).Dispose();
 		}
 	}
