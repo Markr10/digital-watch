@@ -93,14 +93,14 @@ namespace DigitalWatch.Components
 		/// </summary>
 		public void PrimaryButtonLongPress()
 		{
-			bool valitTime;
+			bool validTime;
 			lock (time)
 			{
-				valitTime = time.Hours > 0 || time.Minutes > 0;
+				validTime = time.Hours > 0 || time.Minutes > 0;
 			}
 
 
-			if (editorMode && valitTime)
+			if (editorMode && validTime)
 			{
 				timer.Enabled = true;
 			}
@@ -137,8 +137,6 @@ namespace DigitalWatch.Components
                 OnScreenUpdate(textParts, this);
 			}
 		}
-
-
 	}
 }
 
