@@ -13,14 +13,14 @@ namespace DigitalWatch.Displays
 		public event OnButtonPress OnSecondaryButtonPress;
 		public event OnButtonPress OnPrimaryLongButtonPress;
 
-        private double minutesAngle;
         private double hoursAngle;
+        private double minutesAngle;
         private double secondsAngle;
 
 		public DialDisplayWidget ()
 		{
 			this.Build ();
-            minutesAngle = hoursAngle = secondsAngle = 0.0;
+            hoursAngle = minutesAngle = secondsAngle = 0.0;
 		}
 
 		protected void OnPrimaryButtonClicked (object sender, EventArgs e)
@@ -61,7 +61,11 @@ namespace DigitalWatch.Displays
         /// <param name="textParts">Text parts to show.</param>
         public void Write(DisplayTextPart[] textParts)
 		{
+            hoursAngle = Double.Parse(textParts[0].Value) * Math.PI / 6;
+            minutesAngle = Double.Parse(textParts[2].Value) * Math.PI / 30;
+            secondsAngle = Double.Parse(textParts[4].Value) * Math.PI / 30;
 
+            this.QueueDraw();
 		}
 
 		public void Clear()
@@ -138,6 +142,8 @@ namespace DigitalWatch.Displays
             cr.Restore();
 
             // Draw minutes hand
+            // Save source color 
+            cr.Save();
             cr.SetSourceRGBA(0.486, 0.149, 0.471, 0.9); // purple
             cr.MoveTo(0, 0);
             cr.LineTo(Math.Sin(
@@ -152,6 +158,8 @@ namespace DigitalWatch.Displays
                 Math.Sin(hoursAngle + minutesAngle / 12.0) * (radius * 0.5),
                 -Math.Cos(hoursAngle + minutesAngle / 12.0) * (radius * 0.5));
             cr.Stroke();
+            //Restore source color
+            cr.Restore();
 
             // Draw the middle dot
             cr.Arc(0, 0, lineWidth / 3.0, 0, 2 * Math.PI);
