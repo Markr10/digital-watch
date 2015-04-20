@@ -166,16 +166,16 @@ namespace DigitalWatch.Components
                     switch (editorMode)
                     {
                         case EditorMode.None:
-                            OnScreenUpdate(time.ToDisplayTextParts(BlinkingPart.None), this);
+                            textParts = time.ToDisplayTextParts(BlinkingPart.None);
                             break;
                         case EditorMode.Seconds:
-                            OnScreenUpdate(time.ToDisplayTextParts(BlinkingPart.Seconds), this);
+                            textParts = time.ToDisplayTextParts(BlinkingPart.Seconds);
                             break;
                         case EditorMode.Minutes:
-                            OnScreenUpdate(time.ToDisplayTextParts(BlinkingPart.Minutes), this);
+                            textParts = time.ToDisplayTextParts(BlinkingPart.Minutes);
                             break;
                         case EditorMode.Hours:
-                            OnScreenUpdate(time.ToDisplayTextParts(BlinkingPart.Hours), this);
+                            textParts = time.ToDisplayTextParts(BlinkingPart.Hours);
                             break;
                         default:
                             throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
