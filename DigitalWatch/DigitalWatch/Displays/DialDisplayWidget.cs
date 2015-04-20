@@ -20,7 +20,8 @@ namespace DigitalWatch.Displays
 		public DialDisplayWidget ()
 		{
 			this.Build ();
-            hoursAngle = minutesAngle = secondsAngle = 0.0;
+            hoursAngle = minutesAngle = secondsAngle = 0.0; // See also Clear method.
+                                                            // Not used because the clock is otherwise drawn twice.
 		}
 
 		protected void OnPrimaryButtonClicked (object sender, EventArgs e)
@@ -68,9 +69,13 @@ namespace DigitalWatch.Displays
             this.QueueDraw();
 		}
 
+        /// <summary>
+        /// Sets the display to the default values and redraws it.
+        /// </summary>
 		public void Clear()
 		{
-			//Gtk.Application.Invoke (delegate {DisplayLabel.Text = "00:00";});
+            hoursAngle = minutesAngle = secondsAngle = 0.0; // see also constructor
+            this.QueueDraw();
 		}
 
 		protected void OnExpose (object sender, Gtk.ExposeEventArgs args)
