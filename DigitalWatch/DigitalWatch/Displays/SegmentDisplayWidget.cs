@@ -35,6 +35,12 @@ namespace DigitalWatch.Displays
 		/// 	Indicates when ever the segmends have the blink color
 		/// </summary>
 		private bool displayLabelHasBlinkColor;
+
+        /// <summary>
+        ///     Indicates if the timer is running
+        /// </summary>
+        private bool timerIsRunning;
+
 		/// <summary>
 		/// The color of the blink.
 		/// </summary>
@@ -50,6 +56,7 @@ namespace DigitalWatch.Displays
 			Clear ();
 			isBlinking = false;
 			displayLabelHasBlinkColor = false;
+            timerIsRunning = false;
 			blinkColor = new Color ();
 			Color.Parse(BLINK_COLOR,ref blinkColor);
 		}
@@ -73,7 +80,8 @@ namespace DigitalWatch.Displays
 
 			//The timer can be stoped if the blink function has been disabled and
 			//the display has the normal color.
-			return isBlinking || displayLabelHasBlinkColor;
+            timerIsRunning = isBlinking || displayLabelHasBlinkColor;
+            return timerIsRunning;
 		}
 
 		protected void OnPrimaryButtonClicked (object sender, EventArgs e)
@@ -122,13 +130,16 @@ namespace DigitalWatch.Displays
             }
             Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
 
-            // TODO Fix blinking bug. It blinks now two seconds.
             foreach (DisplayTextPart textPart in textParts)
             {
                 if (textPart.Blink && isBlinking == false)
                 {
                     isBlinking = true;
-                    GLib.Timeout.Add (1000, new GLib.TimeoutHandler (OnBlink));
+                    if (!timerIsRunning)
+                    {
+                        GLib.Timeout.Add(1000, new GLib.TimeoutHandler(OnBlink));
+                        timerIsRunning = true;
+                    }
                     return;
                 }
             }
