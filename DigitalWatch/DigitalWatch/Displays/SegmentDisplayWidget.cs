@@ -36,6 +36,9 @@ namespace DigitalWatch.Displays
 		/// </summary>
 		private bool displayLabelHasBlinkColor;
 
+        /// <summary>
+        ///     Indicates if the timer is running
+        /// </summary>
         private bool timerIsRunning;
 
 		/// <summary>
