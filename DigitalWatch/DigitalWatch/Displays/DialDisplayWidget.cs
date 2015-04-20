@@ -83,6 +83,7 @@ namespace DigitalWatch.Displays
 			int width = area.Allocation.Width;
 			int height = area.Allocation.Height;
             int radius = (width < height ? width : height) / 2 - 10;
+            Color backgroundColorClock = new Color(1.0, 1.0, 1.0, 0.8); // almost white
 			// Set the size of the line
             // Basic size of a line
 			const int lineWidth = 6;
@@ -95,7 +96,7 @@ namespace DigitalWatch.Displays
 			// Draw background clock
 			cr.Translate (width / 2, height / 2);
 			cr.Arc (0, 0, radius, 0, 2 * Math.PI);
-			cr.SetSourceRGBA (1.0, 1.0, 1.0, 0.8); // almost white
+            cr.SetSourceColor(backgroundColorClock);
 			cr.FillPreserve ();
 
 			cr.SetSourceRGB (0, 0, 0); // black
@@ -143,8 +144,6 @@ namespace DigitalWatch.Displays
             cr.Restore();
 
             // Draw minutes hand
-            // Save source color 
-            cr.Save();
             cr.SetSourceRGBA(0.486, 0.149, 0.471, 0.9); // purple
             cr.MoveTo(0, 0);
             cr.LineTo(Math.Sin(
@@ -159,10 +158,9 @@ namespace DigitalWatch.Displays
                 Math.Sin(hoursAngle + minutesAngle / 12.0) * (radius * 0.5),
                 -Math.Cos(hoursAngle + minutesAngle / 12.0) * (radius * 0.5));
             cr.Stroke();
-            //Restore source color
-            cr.Restore();
 
             // Draw the middle dot
+            cr.SetSourceColor(backgroundColorClock);
             cr.Arc(0, 0, lineWidth / 3.0, 0, 2 * Math.PI);
             cr.Fill();
 
