@@ -15,20 +15,20 @@ namespace DigitalWatch.Components
 		private object timeToken;
 		private TimeManager timeManager;
 		/// <summary>
-		/// 	Indicates if the Time component is in an editor mode or not
+		/// 	Indicates if the Time componend is in editorMode or not
 		/// </summary>
-        private EditorMode editorMode;
+		private bool inEditorMode;
 
 		public TimeComponent ()
 		{
 			timeManager = TimeManager.GetInstance ();
-            editorMode = EditorMode.None;
+			inEditorMode = false;
 		}
 
 		public TimeComponent(object timeToken)
 		{
 			timeManager = TimeManager.GetInstance ();
-            editorMode = EditorMode.None;
+			inEditorMode = false;
 			this.timeToken = timeToken;
 			timeManager.AddInterval (new TimeReached (OnTimeUpdate), timeToken);
 		}
@@ -80,22 +80,13 @@ namespace DigitalWatch.Components
 		{
 			if (OnScreenUpdate != null)
 			{
-                switch (editorMode)
+                if (inEditorMode)
                 {
-                    case EditorMode.None:
-                        OnScreenUpdate(currentTime.ToDisplayTextParts(BlinkingPart.None), this);
-                        break;
-                    case EditorMode.Seconds:
-                        OnScreenUpdate(currentTime.ToDisplayTextParts(BlinkingPart.Seconds), this);
-                        break;
-                    case EditorMode.Minutes:
-                        OnScreenUpdate(currentTime.ToDisplayTextParts(BlinkingPart.Minutes), this);
-                        break;
-                    case EditorMode.Hours:
-                        OnScreenUpdate(currentTime.ToDisplayTextParts(BlinkingPart.Hours), this);
-                        break;
-                    default:
-                        throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
+                    OnScreenUpdate(currentTime.ToDisplayTextParts(BlinkingPart.Seconds), this);
+                }
+                else
+                {
+                    OnScreenUpdate (currentTime.ToDisplayTextParts(BlinkingPart.None), this);
                 }
 			}
 		}
@@ -121,28 +112,13 @@ namespace DigitalWatch.Components
 		/// </summary>
 		public void PrimaryButtonPress()
 		{
-            if(editorMode == EditorMode.None)
-            {
-                return;
-            }
-
-            Timemanagement.Time currentTime = GetCurrentTime();
-            switch (editorMode)
-            {
-                case EditorMode.Seconds:
-                    currentTime.Increase();
-                    break;
-                case EditorMode.Minutes:
-                    currentTime.IncreaseMinutes();
-                    break;
-                case EditorMode.Hours:
-                    currentTime.IncreaseHours();
-                    break;
-                default:
-                    throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
-            }
-            timeManager.ChangeTime (timeToken, currentTime);
-            ForceScreenUpdate ();
+			if (inEditorMode)
+			{
+				Timemanagement.Time currentTime = GetCurrentTime ();
+				currentTime.IncreaseMinutes ();
+				timeManager.ChangeTime (timeToken, currentTime);
+				ForceScreenUpdate ();
+			}
 		}
 
 		/// <summary>
@@ -150,52 +126,20 @@ namespace DigitalWatch.Components
 		/// </summary>
 		public void SecondaryButtonPress()
 		{
-            if(editorMode == EditorMode.None)
-            {
-                return;
-            }
-
-            Timemanagement.Time currentTime = GetCurrentTime();
-            switch (editorMode)
-            {
-                case EditorMode.Seconds:
-                    currentTime.Decrease();
-                    break;
-                case EditorMode.Minutes:
-                    currentTime.DecreaseMinutes();
-                    break;
-                case EditorMode.Hours:
-                    currentTime.DecreaseHours();
-                    break;
-                default:
-                    throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
-            }
-            timeManager.ChangeTime (timeToken, currentTime);
-            ForceScreenUpdate ();
+			if (inEditorMode)
+			{
+				Timemanagement.Time currentTime = GetCurrentTime ();
+				currentTime.DecreaseMinutes ();
+				timeManager.ChangeTime (timeToken, currentTime);
+				ForceScreenUpdate ();
+			}
 		}
 		/// <summary>
-		/// Switch between the editor modes 
+		/// 	Toggles the editor mode 
 		/// </summary>
-        /// <exception cref="T:System.ArgumentException"></exception>
 		public void PrimaryButtonLongPress()
 		{
-            switch (editorMode)
-            {
-                case EditorMode.None:
-                    editorMode = EditorMode.Seconds;
-                    break;
-                case EditorMode.Seconds:
-                    editorMode = EditorMode.Minutes;
-                    break;
-                case EditorMode.Minutes:
-                    editorMode = EditorMode.Hours;
-                    break;
-                case EditorMode.Hours:
-                    editorMode = EditorMode.None;
-                    break;
-                default:
-                    throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
-            }
+			inEditorMode = !inEditorMode;
 			ForceScreenUpdate ();
 		}
 	}
