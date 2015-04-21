@@ -10,9 +10,9 @@ namespace DigitalWatch.Timemanagement
 	/// </summary>
 	public class Time
 	{
-		public int Hours { get; set; }
+        public int Seconds { get; set; }
 		public int Minutes { get; set; }
-		public int Seconds { get; set; }
+        public int Hours   { get; set; }
 
 		/// <summary>
 		/// Basic increase function. Increases the Seconds.
