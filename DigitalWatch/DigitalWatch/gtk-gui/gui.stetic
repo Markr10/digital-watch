@@ -23,24 +23,7 @@
           <placeholder />
         </child>
         <child>
-          <widget class="DigitalWatch.Displays.BinaryDisplayWidget" id="binarydisplaywidget">
-            <property name="MemberName" />
-            <property name="Events">ButtonPressMask</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">1</property>
-            <property name="BottomAttach">2</property>
-            <property name="LeftAttach">1</property>
-            <property name="RightAttach">2</property>
-            <property name="AutoSize">False</property>
-            <property name="XOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">True</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
+          <placeholder />
         </child>
         <child>
           <widget class="DigitalWatch.Displays.LCDDisplayWidget" id="lcddisplaywidget">

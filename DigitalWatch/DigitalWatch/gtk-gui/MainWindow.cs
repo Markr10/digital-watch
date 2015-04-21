@@ -5,8 +5,6 @@ public partial class MainWindow
 {
 	private global::Gtk.Table table;
 	
-	private global::DigitalWatch.Displays.BinaryDisplayWidget binarydisplaywidget;
-	
 	private global::DigitalWatch.Displays.LCDDisplayWidget lcddisplaywidget;
 	
 	private global::DigitalWatch.Displays.SegmentDisplayWidget segmentdisplaywidget;
@@ -24,33 +22,22 @@ public partial class MainWindow
 		this.table.RowSpacing = ((uint)(6));
 		this.table.ColumnSpacing = ((uint)(6));
 		// Container child table.Gtk.Table+TableChild
-		this.binarydisplaywidget = new global::DigitalWatch.Displays.BinaryDisplayWidget ();
-		this.binarydisplaywidget.Events = ((global::Gdk.EventMask)(256));
-		this.binarydisplaywidget.Name = "binarydisplaywidget";
-		this.table.Add (this.binarydisplaywidget);
-		global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table [this.binarydisplaywidget]));
-		w1.TopAttach = ((uint)(1));
-		w1.BottomAttach = ((uint)(2));
-		w1.LeftAttach = ((uint)(1));
-		w1.RightAttach = ((uint)(2));
-		w1.XOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table.Gtk.Table+TableChild
 		this.lcddisplaywidget = new global::DigitalWatch.Displays.LCDDisplayWidget ();
 		this.lcddisplaywidget.Events = ((global::Gdk.EventMask)(256));
 		this.lcddisplaywidget.Name = "lcddisplaywidget";
 		this.table.Add (this.lcddisplaywidget);
-		global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table [this.lcddisplaywidget]));
-		w2.XOptions = ((global::Gtk.AttachOptions)(4));
+		global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table [this.lcddisplaywidget]));
+		w1.XOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table.Gtk.Table+TableChild
 		this.segmentdisplaywidget = new global::DigitalWatch.Displays.SegmentDisplayWidget ();
 		this.segmentdisplaywidget.Events = ((global::Gdk.EventMask)(256));
 		this.segmentdisplaywidget.Name = "segmentdisplaywidget";
 		this.table.Add (this.segmentdisplaywidget);
-		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table [this.segmentdisplaywidget]));
-		w3.LeftAttach = ((uint)(1));
-		w3.RightAttach = ((uint)(2));
-		w3.XOptions = ((global::Gtk.AttachOptions)(4));
-		w3.YOptions = ((global::Gtk.AttachOptions)(4));
+		global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table [this.segmentdisplaywidget]));
+		w2.LeftAttach = ((uint)(1));
+		w2.RightAttach = ((uint)(2));
+		w2.XOptions = ((global::Gtk.AttachOptions)(4));
+		w2.YOptions = ((global::Gtk.AttachOptions)(4));
 		this.Add (this.table);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
