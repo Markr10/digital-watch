@@ -12,15 +12,15 @@ namespace DigitalWatch.Components
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>
-        /// Indicates if the Timer is in an editor mode or not
+        /// Indicates if the Timer is in an editor mode or not.
         /// </summary>
         private EditorMode editorMode;
         /// <summary>
-        /// The time of this timer
+        /// The time of this timer.
         /// </summary>
-        private Timemanagement.Time time;
+        private readonly Timemanagement.Time time;
         /// <summary>
-        /// 	The timer used for this timer instance 
+        /// The timer used for this timer instance.
         /// </summary>
         private System.Timers.Timer timer;
 
@@ -39,7 +39,7 @@ namespace DigitalWatch.Components
         /// Raises the timer elapsed event.
         /// </summary>
         /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="e">Elapsed event arguments.</param>
         private void OnTimerElapsed(object sender, ElapsedEventArgs e)
         {
             lock (time)
@@ -56,7 +56,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Called when the user pressed the primary button
+        /// Called when the user pressed the primary button.
         /// </summary>
         public void PrimaryButtonPress()
         {
@@ -89,7 +89,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Called when the user pressed the secondary button
+        /// Called when the user pressed the secondary button.
         /// </summary>
         public void SecondaryButtonPress()
         {
@@ -119,7 +119,7 @@ namespace DigitalWatch.Components
         }
 
         // <summary>
-        // Called when the user long presses the primary button
+        // Called when the user long presses the primary button.
         // </summary>
         public void PrimaryButtonLongPress()
         {
@@ -155,7 +155,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Forces the compontent to write something the screen
+        /// Forces the compontent to write something the screen.
         /// </summary>
         public void ForceScreenUpdate()
         {

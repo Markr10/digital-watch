@@ -1,42 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Media;
 using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
     /// <summary>
-    /// Alarm component for the watch
+    /// Alarm component for the watch.
     /// </summary>
     public class Alarm : WatchComponent
     {
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>
-        /// 	Indicates if the alarm is in editorMode
+        /// Indicates if the alarm is in editorMode.
         /// </summary>
         private bool editorMode;
         /// <summary>
-        /// 	Indicats if the alarm is enabled or not
+        /// Indicats if the alarm is enabled or not.
         /// </summary>
         private bool alarmEnabled;
         /// <summary>
-        /// 	Time object witch stores the alarm time
+        /// Time object witch stores the alarm time.
         /// </summary>
         private Timemanagement.Time currentTime;
         /// <summary>
-        /// 	The timetoken used for scheduling alarms
+        /// The time token used for scheduling alarms.
         /// </summary>
         private object timeToken;
         /// <summary>
-        /// 	The alarmToken used to cancel a running alarm
+        /// The alarmToken used to cancel a running alarm.
         /// </summary>
         private object alarmToken;
         /// <summary>
-        /// The time manager used by this component
+        /// The time manager used by this component.
         /// </summary>
         private TimeManager timeManager;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Components.Alarm"/> class.
+        /// </summary>
+        /// <param name="timeToken">The time token used for scheduling alarms.</param>
         public Alarm(object timeToken)
         {
             editorMode = false;
@@ -47,9 +50,9 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Called when the user pressed the primary button.
-        /// 	Increases the minutes when the component is in editorMode
-        /// 	and enables or disables the alarm if the watch is not in editorMode
+        /// Called when the user pressed the primary button.
+        /// Increases the minutes when the component is in editorMode
+        /// and enables or disables the alarm if the watch is not in editorMode.
         /// </summary>
         public void PrimaryButtonPress()
         {
@@ -81,7 +84,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Decreases the minutes when the component is in editor mode
+        /// Decreases the minutes when the component is in editor mode.
         /// </summary>
         public void SecondaryButtonPress()
         {
@@ -93,7 +96,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Toggles the editorMode
+        /// Toggles the editorMode.
         /// </summary>
         public void PrimaryButtonLongPress()
         {
@@ -110,7 +113,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Forces the compontent to write something the screen
+        /// Forces the component to write something the screen.
         /// </summary>
         public void ForceScreenUpdate()
         {
@@ -134,7 +137,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Sets the alarm. Disables the current alarm if ti has been set
+        /// Sets the alarm. Disables the current alarm if it has been set.
         /// </summary>
         private void SetAlarm()
         {
@@ -164,8 +167,6 @@ namespace DigitalWatch.Components
         {
             SystemSounds.Beep.Play();
         }
-
-
     }
 }
 

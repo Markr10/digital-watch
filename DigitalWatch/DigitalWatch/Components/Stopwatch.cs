@@ -1,10 +1,9 @@
-﻿using System;
-using System.Timers;
+﻿using System.Timers;
 
 namespace DigitalWatch.Components
 {
     /// <summary>
-    /// Stopwatch component for the watch
+    /// Stopwatch component for the watch.
     /// </summary>
     public class Stopwatch : WatchComponent
     {
@@ -27,7 +26,7 @@ namespace DigitalWatch.Components
         /// Raises the timer elapsed event.
         /// </summary>
         /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="e">Elapsed event arguments.</param>
         private void OnTimerElapsed(object sender, ElapsedEventArgs e)
         {
             lock (stopwatchTime)
@@ -39,7 +38,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Enables or disables the timer (toggle)
+        /// Enables or disables the timer (toggle).
         /// </summary>
         public void PrimaryButtonPress()
         {
@@ -48,7 +47,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Resets the stopwatch to zero
+        /// Resets the stopwatch to zero.
         /// </summary>
         public void SecondaryButtonPress()
         {
@@ -62,15 +61,15 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Does nothing. There is no implementation for this method
+        /// Does nothing. There is no implementation for this method.
         /// </summary>
         public void PrimaryButtonLongPress()
         {
-            //No implementation for PrimaryLongButtonPress
+            // No implementation for PrimaryLongButtonPress
         }
 
         /// <summary>
-        /// 	Forces the compontent to write something the screen
+        /// Forces the compontent to write something the screen.
         /// </summary>
         public void ForceScreenUpdate()
         {
@@ -84,7 +83,6 @@ namespace DigitalWatch.Components
                 OnScreenUpdate(textParts, this);
             }
         }
-
     }
 }
 

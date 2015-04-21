@@ -6,7 +6,7 @@ using System.Timers;
 namespace DigitalWatch.Timemanagement
 {
     /// <summary>
-    /// Delegate used by the TimeManager to notify components when an interval or alarm is triggered
+    /// Delegate used by the TimeManager to notify components when an interval or alarm is triggered.
     /// </summary>
 	public delegate void TimeReached(Time currentTime);
 
@@ -22,16 +22,16 @@ namespace DigitalWatch.Timemanagement
     public sealed class TimeManager
     {
         /// <summary>
-        /// 	An instance of the TimeManager. The instance is ThreadSafe
+        /// An instance of the TimeManager. The instance is ThreadSafe.
         /// </summary>
         private readonly static Lazy<TimeManager> instance = new Lazy<TimeManager>(System.Threading.LazyThreadSafetyMode.ExecutionAndPublication);
         /// <summary>
-        /// 	The central timer
+        /// The central timer.
         /// </summary>
         private readonly Timer clockTimer;
         /// <summary>
         /// A dictionary which holds all the time object for the differant components.
-        /// Each time object is identied by a key. A component kan get his time by supplying his key (also called token)
+        /// Each time object is identied by a key. A component kan get his time by supplying his key (also called token).
         /// </summary>
         private readonly Dictionary<object, Time> timeDict;
         /// <summary>
@@ -45,7 +45,7 @@ namespace DigitalWatch.Timemanagement
 
         /// <summary>
         /// Repesesents an IntervalReservation. An IntervalReservation object
-        /// is a container which has components needed for the program
+        /// is a container which has components needed for the program.
         /// </summary>
         private class IntervalReservation
         {
@@ -57,7 +57,7 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// An AlarmReservation contains the alarm time for a component
+        /// An AlarmReservation contains the alarm time for a component.
         /// </summary>
         private class AlarmReservation : IntervalReservation
         {
@@ -77,7 +77,7 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// 	Starts the clockTimer of this TimeManager
+        /// Starts the clockTimer of this TimeManager
         /// </summary>
         private void Start()
         {
@@ -85,9 +85,9 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// 	Gets an instance of the TimeManager.
-        /// 	The TimeManager in Lazyevaluated an wil start automaticly
-        /// 	with ticking.
+        /// Gets an instance of the TimeManager.
+        /// The TimeManager in Lazyevaluated an wil start automaticly
+        /// with ticking.
         /// </summary>
         /// <returns>The instance.</returns>
         public static TimeManager GetInstance()
@@ -100,10 +100,10 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// 	Creates a new Time object an return a token to it.
-        /// 	You can use this token get the currentTime, change the time, set 
-        /// 	alarms for this time and subscribe for interval notifications.
-        /// 	This Method is threadsafe
+        /// Creates a new Time object an return a token to it.
+        /// You can use this token get the currentTime, change the time, set 
+        /// alarms for this time and subscribe for interval notifications.
+        /// This Method is threadsafe
         /// </summary>
         /// <returns>The time token.</returns>
         public object GetTimeToken()
@@ -127,7 +127,7 @@ namespace DigitalWatch.Timemanagement
         /// Raises the timer elapsed event.
         /// </summary>
         /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
+        /// <param name="e">Elapsed event arguments.</param>
         private void OnTimerElapsed(object sender, ElapsedEventArgs e)
         {
             IncreaseTime();
@@ -136,8 +136,8 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// 	Iterates over all the time object in the
-        /// 	timeDist and calls the Increase function on them
+        /// Iterates over all the time object in the
+        /// timeDist and calls the Increase function on them.
         /// </summary>
         private void IncreaseTime()
         {
@@ -170,8 +170,8 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// 	Trigger the interval subscribers which made a reservation in the intervalReservations list.
-        /// 	This method only triggers a reservation when it's enabled
+        /// Trigger the interval subscribers which made a reservation in the intervalReservations list.
+        /// This method only triggers a reservation when it is enabled.
         /// </summary>
         private void TriggerIntervals()
         {
@@ -193,7 +193,7 @@ namespace DigitalWatch.Timemanagement
         /// </summary>
         /// <returns>The current time.</returns>
         /// <param name="token">The timeToken which the program has recieved 
-        /// 	by calling the GetTimeToken method</param>
+        /// by calling the GetTimeToken method.</param>
         public Time GetCurrentTime(object token)
         {
             Time currentTime;
@@ -205,10 +205,10 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// Changes the time of a certen time object
+        /// Changes the time of a certen time object.
         /// </summary>
-        /// <param name="token">The timeToken retrieved by calling GetTimeToken</param>
-        /// <param name="newTime">The new time</param>
+        /// <param name="token">The timeToken retrieved by calling GetTimeToken.</param>
+        /// <param name="newTime">The new time.</param>
         public void ChangeTime(object token, Time newTime)
         {
             lock (timeDict)
@@ -218,15 +218,15 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// 	Adds an alarm reservation on a specific time object
+        /// Adds an alarm reservation on a specific time object.
         /// </summary>
-        /// <returns>An alarm token. Use this token to cancel the alarm at a later time</returns>
+        /// <returns>An alarm token. Use this token to cancel the alarm at a later time.</returns>
         /// <param name="listener">Listener.</param>
         /// <param name="time">Time.</param>
         /// <param name="timeToken">Time token.</param>
         public object AddAlarm(TimeReached listener, Time time, object timeToken)
         {
-            //Create a copy of the time object so it can not be changed externaly
+            // Create a copy of the time object so it can not be changed externaly.
             Time timeCopy = time.MakeCopy();
 
             var reservation = new AlarmReservation()
@@ -246,11 +246,11 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// 	Adds an interval reservation on a specific time object
+        /// Adds an interval reservation on a specific time object.
         /// </summary>
-        /// <returns>A token to enable, disable or remove the interval reservation at a later time</returns>
-        /// <param name="listener">A Listener which will be triggered on each iteration</param>
-        /// <param name="timeToken">The timeToken obtained from GetTimeToken</param>
+        /// <returns>A token to enable, disable or remove the interval reservation at a later time.</returns>
+        /// <param name="listener">A Listener which will be triggered on each iteration.</param>
+        /// <param name="timeToken">The timeToken obtained from GetTimeToken.</param>
         public object AddInterval(TimeReached listener, object timeToken)
         {
             var reservation = new IntervalReservation()
@@ -282,7 +282,7 @@ namespace DigitalWatch.Timemanagement
         /// <summary>
         /// Removes the an intervalReservation.
         /// </summary>
-        /// <param name="token">Intervaltoken obtained from AddInterval</param>
+        /// <param name="token">Intervaltoken obtained from AddInterval.</param>
         public void RemoveInterval(object token)
         {
             lock (intervalReservations)
@@ -294,7 +294,7 @@ namespace DigitalWatch.Timemanagement
         /// <summary>
         /// Pauzes an interval.
         /// </summary>
-        /// <param name="token">The intervalToken obtained from AddInterval</param>
+        /// <param name="token">The intervalToken obtained from AddInterval.</param>
         public void PauzeInterval(object token)
         {
             EnableInterval(token, false);
@@ -303,14 +303,14 @@ namespace DigitalWatch.Timemanagement
         /// <summary>
         /// Resumes an interval.
         /// </summary>
-        /// <param name="token">The intervalToken obtained from AddInterval</param>
+        /// <param name="token">The intervalToken obtained from AddInterval.</param>
         public void ResumeInterval(object token)
         {
             EnableInterval(token, true);
         }
 
         /// <summary>
-        /// Enables or disables an interval
+        /// Enables or disables an interval.
         /// </summary>
         /// <param name="token">Token.</param>
         /// <param name="enableInterval">If set to <c>true</c> enable interval.</param>
@@ -331,7 +331,7 @@ namespace DigitalWatch.Timemanagement
         /// <summary>
         /// Removes a Time object and al intervals and alarms connected to it.
         /// </summary>
-        /// <param name="timeToken">The timeToken obtained from GetTimeToken</param>
+        /// <param name="timeToken">The timeToken obtained from GetTimeToken.</param>
         public void RemoveTime(object timeToken)
         {
             RemoveAllAlarms(timeToken);
@@ -344,7 +344,7 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// Removes all alarms connected to a specific timeToken
+        /// Removes all alarms connected to a specific timeToken.
         /// </summary>
         /// <param name="timeToken">Time token.</param>
         private void RemoveAllAlarms(object timeToken)
@@ -362,7 +362,7 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// Removes all intervals connected to a specific timeToken
+        /// Removes all intervals connected to a specific timeToken.
         /// </summary>
         /// <param name="timeToken">Time token.</param>
         private void RemoveAllIntervals(object timeToken)
@@ -378,7 +378,6 @@ namespace DigitalWatch.Timemanagement
                 }
             }
         }
-
     }
 }
 

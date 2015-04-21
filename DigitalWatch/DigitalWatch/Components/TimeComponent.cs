@@ -11,12 +11,12 @@ namespace DigitalWatch.Components
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>
-        /// The time token used to get and change the time
+        /// The time token used to get and change the time.
         /// </summary>
         private object timeToken;
         private TimeManager timeManager;
         /// <summary>
-        /// Indicates if the Time componend is in editorMode or not
+        /// Indicates if the Time componend is in editorMode or not.
         /// </summary>
         private bool inEditorMode;
 
@@ -36,7 +36,7 @@ namespace DigitalWatch.Components
 
         /// <summary>
         /// Start/resume this instance. 
-        /// The Time component will automaticly acuire a timeToken if the token was not supplyed
+        /// The Time component will automaticly acquire a timeToken if the token was not supplied
         /// in the contructor.
         /// </summary>
         public void Start()
@@ -66,7 +66,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Forces the compontent to write something the screen
+        /// Forces the compontent to write something the screen.
         /// </summary>
         public void ForceScreenUpdate()
         {
@@ -104,12 +104,12 @@ namespace DigitalWatch.Components
             }
             else
             {
-                throw new Exception("No timeToken. Get one by calling the start function");
+                throw new Exception("No timeToken. Get one by calling the start function.");
             }
         }
 
         /// <summary>
-        /// 	Wil increase the minutes when the Time component is in editor mode
+        /// Increases the minutes when the Time component is in editor mode.
         /// </summary>
         public void PrimaryButtonPress()
         {
@@ -123,7 +123,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Decreases the time when the component is in editor mode.
+        /// Decreases the time when the component is in editor mode.
         /// </summary>
         public void SecondaryButtonPress()
         {
@@ -137,7 +137,7 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// 	Toggles the editor mode 
+        /// Toggles the editor mode.
         /// </summary>
         public void PrimaryButtonLongPress()
         {

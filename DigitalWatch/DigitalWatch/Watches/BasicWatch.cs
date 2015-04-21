@@ -1,8 +1,6 @@
-﻿using System;
+﻿using DigitalWatch.Components;
 using DigitalWatch.Displays;
-using DigitalWatch.Components;
 using DigitalWatch.Mode;
-using System.Collections.Generic;
 
 namespace DigitalWatch.Watches
 {
@@ -14,7 +12,7 @@ namespace DigitalWatch.Watches
     public class BasicWatch : Watch
     {
         /// <summary>
-        /// The mode switcher. This will hold all the components
+        /// The mode switcher. This will hold all the components.
         /// </summary>
         private readonly ModeSwitcher<WatchComponent> modeSwitcher;
         /// <summary>

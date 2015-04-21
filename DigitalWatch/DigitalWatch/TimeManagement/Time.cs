@@ -18,7 +18,7 @@ namespace DigitalWatch.Timemanagement
 
         /// <summary>
         /// Basic increase function. Increases the Seconds.
-        /// Increases Minutes when Seconds &gt; 59
+        /// Increases Minutes when Seconds &gt; 59.
         /// </summary>
         public void Increase()
         {
@@ -35,7 +35,7 @@ namespace DigitalWatch.Timemanagement
 
         /// <summary>
         /// Basic decrease function. Decreases the Seconds.
-        /// Decreases Minutes when Seconds &lt; 1
+        /// Decreases Minutes when Seconds &lt; 1.
         /// </summary>
         public void Decrease()
         {
@@ -52,7 +52,7 @@ namespace DigitalWatch.Timemanagement
 
         /// <summary>
         /// Increases the minutes.
-        /// Incresaes the hours when Minutes &gt; 59
+        /// Incresaes the hours when Minutes &gt; 59.
         /// </summary>
         public void IncreaseMinutes()
         {
@@ -69,7 +69,7 @@ namespace DigitalWatch.Timemanagement
 
         /// <summary>
         /// Decreases the minutes.
-        /// Decreases the hours when Minutes &lt; 1
+        /// Decreases the hours when Minutes &lt; 1.
         /// </summary>
         public void DecreaseMinutes()
         {
@@ -117,7 +117,7 @@ namespace DigitalWatch.Timemanagement
         /// <summary>
         /// Subtract this time from another time object
         /// </summary>
-        /// <param name="time">The subtracted time as TimeSpan</param>
+        /// <param name="time">The subtracted time as TimeSpan.</param>
         public TimeSpan Subtract(Time time)
         {
             int subHours = Hours - time.Hours;
@@ -146,9 +146,9 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// Makes a full copy of this object
+        /// Makes a full copy of this object.
         /// </summary>
-        /// <returns>An copy of this object</returns>
+        /// <returns>An copy of this object.</returns>
         public Time MakeCopy()
         {
             return new Time(){ Hours = this.Hours, Minutes = this.Minutes, Seconds = this.Seconds };
