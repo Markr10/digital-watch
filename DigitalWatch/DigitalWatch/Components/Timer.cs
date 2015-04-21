@@ -1,4 +1,5 @@
-﻿using System.Timers;
+﻿using System;
+using System.Timers;
 using System.Media;
 
 namespace DigitalWatch.Components
@@ -10,9 +11,9 @@ namespace DigitalWatch.Components
 	{
 		public event UpdateScreen OnScreenUpdate;
 		/// <summary>
-		/// Indicates if the Timer is in editor mode or not
+		/// Indicates if the Timer is in an editor mode or not
 		/// </summary>
-		private bool editorMode;
+        private EditorMode editorMode;
 		/// <summary>
 		/// The time of this timer
 		/// </summary>
@@ -27,7 +28,7 @@ namespace DigitalWatch.Components
 		/// </summary>
 		public Timer ()
 		{
-			editorMode = false;
+            editorMode = EditorMode.None;
 			time = new Timemanagement.Time (){ Hours = 0, Minutes = 0 };
 			timer = new System.Timers.Timer (1000);
 			timer.Elapsed += new ElapsedEventHandler (OnTimerElapsed);
@@ -58,11 +59,24 @@ namespace DigitalWatch.Components
 		/// </summary>
 		public void PrimaryButtonPress()
 		{
-			if (editorMode)
+            if (editorMode != EditorMode.None)
 			{
 				lock (time)
 				{
-					time.IncreaseMinutes ();
+                    switch (editorMode)
+                    {
+                        case EditorMode.Seconds:
+                            time.Increase();
+                            break;
+                        case EditorMode.Minutes:
+                            time.IncreaseMinutes();
+                            break;
+                        case EditorMode.Hours:
+                            time.IncreaseHours();
+                            break;
+                        default:
+                            throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
+                    }
 				}
 
 			}
@@ -78,19 +92,34 @@ namespace DigitalWatch.Components
 		/// </summary>
 		public void SecondaryButtonPress()
 		{
-			if (editorMode)
+            if(editorMode == EditorMode.None)
+            {
+                return;
+            }
+
+			lock (time)
 			{
-				lock (time)
-				{
-					time.DecreaseMinutes ();
-				}
-				ForceScreenUpdate ();
+                switch (editorMode)
+                {
+                    case EditorMode.Seconds:
+                        time.Decrease();
+                        break;
+                    case EditorMode.Minutes:
+                        time.DecreaseMinutes();
+                        break;
+                    case EditorMode.Hours:
+                        time.DecreaseHours();
+                        break;
+                    default:
+                        throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
+                }
 			}
+			ForceScreenUpdate ();
 		}
 
-		/// <summary>
-		/// Called when the user long presses the primary button
-		/// </summary>
+		// <summary>
+		// Called when the user long presses the primary button
+		// </summary>
 		public void PrimaryButtonLongPress()
 		{
 			bool validTime;
@@ -99,16 +128,28 @@ namespace DigitalWatch.Components
 				validTime = time.Hours > 0 || time.Minutes > 0;
 			}
 
-
-			if (editorMode && validTime)
-			{
-				timer.Enabled = true;
-			}
-			else if (!editorMode)
-			{
-				timer.Enabled = false;
-			}
-			editorMode = !editorMode;
+            switch (editorMode)
+            {
+                case EditorMode.None:
+                    timer.Enabled = false;
+                    editorMode = EditorMode.Seconds;
+                    break;
+                case EditorMode.Seconds:
+                    editorMode = EditorMode.Minutes;
+                    break;
+                case EditorMode.Minutes:
+                    editorMode = EditorMode.Hours;
+                    break;
+                case EditorMode.Hours:
+                    editorMode = EditorMode.None;
+                    if (validTime)
+                    {
+                        timer.Enabled = true;
+                    }
+                    break;
+                default:
+                    throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
+            }
 			ForceScreenUpdate ();
 		}
 
@@ -119,13 +160,29 @@ namespace DigitalWatch.Components
 		{
 			if (OnScreenUpdate != null)
 			{
-				string text;
+                Displays.DisplayTextPart[] textParts;
 				lock (time)
 				{
-					text = time.ToString ();
+                    switch (editorMode)
+                    {
+                        case EditorMode.None:
+                            textParts = time.ToDisplayTextParts(BlinkingPart.None);
+                            break;
+                        case EditorMode.Seconds:
+                            textParts = time.ToDisplayTextParts(BlinkingPart.Seconds);
+                            break;
+                        case EditorMode.Minutes:
+                            textParts = time.ToDisplayTextParts(BlinkingPart.Minutes);
+                            break;
+                        case EditorMode.Hours:
+                            textParts = time.ToDisplayTextParts(BlinkingPart.Hours);
+                            break;
+                        default:
+                            throw new ArgumentException("Editor mode " + editorMode + " not implemented.");
+                    }
 				}
 
-				OnScreenUpdate (text, editorMode, this);
+                OnScreenUpdate(textParts, this);
 			}
 		}
 	}

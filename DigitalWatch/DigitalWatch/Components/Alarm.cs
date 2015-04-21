@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Media;
 using DigitalWatch.Timemanagement;
 
@@ -114,9 +115,20 @@ namespace DigitalWatch.Components
 		{
 			if (OnScreenUpdate != null)
 			{
-				string writeString = currentTime.ToString ();
-				writeString += alarmEnabled ? " E" : " D";
-				OnScreenUpdate (writeString, editorMode, this);
+                List<Displays.DisplayTextPart> listWithTextParts;
+                if (editorMode)
+                {
+                    listWithTextParts = currentTime.ToListWithDisplayTextParts(BlinkingPart.Seconds);
+                }
+                else
+                {
+                    listWithTextParts = currentTime.ToListWithDisplayTextParts(BlinkingPart.None);
+                }
+
+                string alarmText = alarmEnabled ? " E" : " D";
+                listWithTextParts.Add(new Displays.DisplayTextPart(alarmText, false));
+
+                OnScreenUpdate (listWithTextParts.ToArray(), this);
 			}
 		}
 
