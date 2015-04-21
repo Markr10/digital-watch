@@ -20,10 +20,42 @@
         <property name="RowSpacing">6</property>
         <property name="ColumnSpacing">6</property>
         <child>
-          <placeholder />
+          <widget class="DigitalWatch.Displays.BinaryDisplayWidget" id="binarydisplaywidget">
+            <property name="MemberName" />
+            <property name="Events">ButtonPressMask</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">1</property>
+            <property name="BottomAttach">2</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">2</property>
+            <property name="AutoSize">False</property>
+            <property name="XOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">True</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
         </child>
         <child>
-          <placeholder />
+          <widget class="DigitalWatch.Displays.DialDisplayWidget" id="dialdisplaywidget">
+            <property name="MemberName" />
+            <property name="Events">ButtonPressMask</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">1</property>
+            <property name="BottomAttach">2</property>
+            <property name="AutoSize">False</property>
+            <property name="XOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">True</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
         </child>
         <child>
           <widget class="DigitalWatch.Displays.LCDDisplayWidget" id="lcddisplaywidget">
@@ -51,11 +83,10 @@
             <property name="RightAttach">2</property>
             <property name="AutoSize">False</property>
             <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
             <property name="XExpand">False</property>
             <property name="XFill">True</property>
             <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
+            <property name="YExpand">True</property>
             <property name="YFill">True</property>
             <property name="YShrink">False</property>
           </packing>
