@@ -5,19 +5,26 @@ namespace DigitalWatch.Displays
     [System.ComponentModel.ToolboxItem(true)]
     public partial class BinaryDisplayWidget : Gtk.Bin, Display
     {
+        #region Display implementation Variables
 
+        public event OnButtonPress OnModeButtonPress;
+        public event OnButtonPress OnPrimaryButtonPress;
+        public event OnButtonPress OnSecondaryButtonPress;
+        public event OnButtonPress OnPrimaryLongButtonPress;
+
+        #endregion
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Displays.BinaryDisplayWidget"/> class.
+        /// </summary>
         public BinaryDisplayWidget()
         {
             Build();
             Clear();
         }
 
-        #region Display implementation
 
-        public event OnButtonPress OnModeButtonPress;
-        public event OnButtonPress OnPrimaryButtonPress;
-        public event OnButtonPress OnSecondaryButtonPress;
-        public event OnButtonPress OnPrimaryLongButtonPress;
+        #region Display implementation Methods
 
         /// <summary>
         /// Shows specified text parts on the display as binary values.
@@ -33,6 +40,18 @@ namespace DigitalWatch.Displays
         }
 
         /// <summary>
+        /// Sets the display to the default value.
+        /// </summary>
+        public void Clear()
+        {
+            Gtk.Application.Invoke(delegate
+                {
+                    DisplayHoursLabel.Text = "00000";
+                    DisplayMinutesLabel.Text = "000000";
+                });
+        }
+
+        /// <summary>
         /// Converts the time element in (string format) to a binary value with leading zeros.
         /// </summary>
         /// <returns>The time element as a binary value with leading zeros.</returns>
@@ -40,9 +59,9 @@ namespace DigitalWatch.Displays
         /// <param name="maxLength">Max length of the text.</param>
         private static string ConvertTimeElementToBinValueWithLeadingZeros(string timeString, int maxLength)
         {
-            // convert string
+            // Convert string
             string returnString = ConvertTimeElementToBinValue(timeString);
-            // add leading zeros
+            // Add leading zeros
             returnString = AddLeadingZeros(returnString, maxLength);
 
             return returnString;
@@ -77,35 +96,35 @@ namespace DigitalWatch.Displays
             return returnString;
         }
 
-        public void Clear()
-        {
-            Gtk.Application.Invoke(delegate
-                {
-                    DisplayHoursLabel.Text = "00000";
-                    DisplayMinutesLabel.Text = "000000";
-                });
-        }
-
         #endregion
 
+        /// <summary>
+        /// Raises the primary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
         protected void OnPrimaryButtonClicked(object sender, EventArgs e)
         {
+            // Do something when there is an event.
             if (OnPrimaryButtonPress != null)
             {
                 OnPrimaryButtonPress();
             }
         }
 
+        /// <summary>
+        /// Raises the secondary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
         protected void OnSecondaryButtonClicked(object sender, EventArgs e)
         {
+            // Do something when there is an event.
             if (OnSecondaryButtonPress != null)
             {
                 OnSecondaryButtonPress();
             }
         }
-
-
-
     }
 }
 

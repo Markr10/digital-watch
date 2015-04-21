@@ -19,7 +19,7 @@ namespace DigitalWatch.Displays
 
 		public DialDisplayWidget ()
 		{
-			this.Build ();
+			Build ();
             hoursAngle = minutesAngle = secondsAngle = 0.0; // See also Clear method.
                                                             // Not used because the clock is otherwise drawn twice.
 		}
@@ -70,7 +70,7 @@ namespace DigitalWatch.Displays
 		}
 
         /// <summary>
-        /// Sets the display to the default values and redraws it.
+        /// Sets the display to the default value and redraws it.
         /// </summary>
 		public void Clear()
 		{
