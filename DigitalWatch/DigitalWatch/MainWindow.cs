@@ -1,81 +1,83 @@
-﻿using System;
-using Gtk;
+﻿using DigitalWatch.Components;
+using DigitalWatch.Timemanagement;
 using DigitalWatch.Watches;
 using DigitalWatch.Watches.Builders;
-using DigitalWatch.Components;
-using DigitalWatch.Timemanagement;
+using Gtk;
 
 /// <summary>
 /// Main window.
 /// </summary>
-public partial class MainWindow: Gtk.Window
+public partial class MainWindow: Window
 {
-	/// <summary>
-	/// Initializes a new instance of the <see cref="MainWindow"/> class.
-	/// Builds the watches.
-	/// </summary>
-	public MainWindow () : base (Gtk.WindowType.Toplevel)
-	{
-		Build ();
-		// Build a watch with a LCD display
-		BasicWatchBuilder builder = new BasicWatchBuilder ();
-		object timeToken = TimeManager.GetInstance ().GetTimeToken ();
-		TimeComponent timeComp = new  TimeComponent(timeToken);
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MainWindow"/> class.
+    /// Builds the watches.
+    /// </summary>
+    public MainWindow() : base(WindowType.Toplevel)
+    {
+        Build();
 
-		Alarm alarmComp = new Alarm (timeToken);
-		builder.AddComponent (timeComp);
-		builder.AddComponent (alarmComp);
+        // Build a watch with a LCD display
+        BasicWatchBuilder builder = new BasicWatchBuilder();
+        object timeToken = TimeManager.GetInstance().GetTimeToken();
+        TimeComponent timeComp = new  TimeComponent(timeToken);
 
-		Timer timerComp = new Timer ();
-		builder.AddComponent (timerComp);
+        Alarm alarmComp = new Alarm(timeToken);
+        builder.AddComponent(timeComp);
+        builder.AddComponent(alarmComp);
 
-		Stopwatch stopWatchComp = new Stopwatch ();
-		builder.AddComponent (stopWatchComp);
+        Timer timerComp = new Timer();
+        builder.AddComponent(timerComp);
 
-		builder.SetDisplay (lcddisplaywidget);
+        Stopwatch stopWatchComp = new Stopwatch();
+        builder.AddComponent(stopWatchComp);
 
-		Watch myWatch = builder.CreateWatch ();
+        builder.SetDisplay(lcddisplaywidget);
+
+        Watch myWatch = builder.CreateWatch();
 
 
-		// Build a watch with a segment display
-		BasicWatchBuilder segBuilder = new BasicWatchBuilder ();
-		object segTimeToken = TimeManager.GetInstance ().GetTimeToken ();
-		TimeComponent segTimeComp = new TimeComponent (segTimeToken);
+        // Build a watch with a segment display
+        BasicWatchBuilder segBuilder = new BasicWatchBuilder();
+        object segTimeToken = TimeManager.GetInstance().GetTimeToken();
+        TimeComponent segTimeComp = new TimeComponent(segTimeToken);
 
-		Alarm segAlarmComp = new Alarm (segTimeToken);
-		segBuilder.AddComponent (segTimeComp);
-		segBuilder.AddComponent (segAlarmComp);
+        Alarm segAlarmComp = new Alarm(segTimeToken);
+        segBuilder.AddComponent(segTimeComp);
+        segBuilder.AddComponent(segAlarmComp);
 
-		segBuilder.SetDisplay (segmentdisplaywidget);
+        segBuilder.SetDisplay(segmentdisplaywidget);
 
-		Watch segWatch = segBuilder.CreateWatch ();
+        Watch segWatch = segBuilder.CreateWatch();
+
 
         // Build a watch with a dial display
-        BasicWatchBuilder dialBuilder = new BasicWatchBuilder ();
-        TimeComponent dialTimeComp = new TimeComponent ();
+        BasicWatchBuilder dialBuilder = new BasicWatchBuilder();
+        TimeComponent dialTimeComp = new TimeComponent();
 
-        dialBuilder.AddComponent (dialTimeComp);
+        dialBuilder.AddComponent(dialTimeComp);
 
-        dialBuilder.SetDisplay (dialdisplaywidget);
+        dialBuilder.SetDisplay(dialdisplaywidget);
 
-        Watch dialWatch = dialBuilder.CreateWatch ();
+        Watch dialWatch = dialBuilder.CreateWatch();
+
 
         // Build a watch with a binary display
-		BasicWatchBuilder binBuilder = new BasicWatchBuilder ();
+        BasicWatchBuilder binBuilder = new BasicWatchBuilder();
 
-		TimeComponent binTimeComp = new TimeComponent ();
-		binTimeComp.Start ();
-		binTimeComp.PrimaryButtonLongPress ();
-		binBuilder.AddComponent (binTimeComp);
+        TimeComponent binTimeComp = new TimeComponent();
+        binTimeComp.Start();
+        binTimeComp.PrimaryButtonLongPress();
+        binBuilder.AddComponent(binTimeComp);
 
-		binBuilder.SetDisplay (binarydisplaywidget);
+        binBuilder.SetDisplay(binarydisplaywidget);
 
-		Watch binWatch = binBuilder.CreateWatch ();
-	}
+        Watch binWatch = binBuilder.CreateWatch();
+    }
 
-	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
-	{
-		Application.Quit ();
-		a.RetVal = true;
-	}
+    protected void OnDeleteEvent(object sender, DeleteEventArgs a)
+    {
+        Application.Quit();
+        a.RetVal = true;
+    }
 }

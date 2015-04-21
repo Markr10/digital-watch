@@ -171,7 +171,7 @@ Global
 		$27.BeforeMethodDeclarationParentheses = False
 		$27.BeforeMethodCallParentheses = False
 		$27.BeforeConstructorDeclarationParentheses = False
-		$27.NewLineBeforeConstructorInitializerColon = NewLine
+		$27.NewLineBeforeConstructorInitializerColon = SameLine
 		$27.NewLineAfterConstructorInitializerColon = SameLine
 		$27.BeforeDelegateDeclarationParentheses = False
 		$27.NewParentheses = False

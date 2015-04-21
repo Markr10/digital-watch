@@ -1,39 +1,58 @@
 ﻿using System;
+using Gtk;
 
 namespace DigitalWatch.Displays
 {
-	[System.ComponentModel.ToolboxItem (true)]
-	public partial class BinaryDisplayWidget : Gtk.Bin, Display
-	{
+    /// <summary>
+    /// The DialDisplayWidget is a binary Display for the watch.
+    /// </summary>
+    [System.ComponentModel.ToolboxItem(true)]
+    public partial class BinaryDisplayWidget : Bin, Display
+    {
+        #region Display implementation variables
 
-		public BinaryDisplayWidget ()
-		{
-			this.Build ();
-			Clear ();
-		}
+        public event OnButtonPress OnModeButtonPress;
+        public event OnButtonPress OnPrimaryButtonPress;
+        public event OnButtonPress OnSecondaryButtonPress;
+        public event OnButtonPress OnPrimaryLongButtonPress;
 
-		#region Display implementation
+        #endregion
 
-		public event OnButtonPress OnModeButtonPress;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Displays.BinaryDisplayWidget"/> class.
+        /// </summary>
+        public BinaryDisplayWidget()
+        {
+            Build();
+            Clear();
+        }
 
-		public event OnButtonPress OnPrimaryButtonPress;
-
-		public event OnButtonPress OnSecondaryButtonPress;
-
-		public event OnButtonPress OnPrimaryLongButtonPress;
+        #region Display implementation
 
         /// <summary>
         /// Shows specified text parts on the display as binary values.
         /// </summary>
         /// <param name="textParts">Text parts that can be displayed.</param>
         public void Write(DisplayTextPart[] textParts)
-		{
-			Gtk.Application.Invoke (delegate 
-			{
+        {
+            Gtk.Application.Invoke(delegate
+                {
                     DisplayHoursLabel.Text = ConvertTimeElementToBinValueWithLeadingZeros(textParts[0].Value, 5);
-                    DisplayMinutesLabel.Text= ConvertTimeElementToBinValueWithLeadingZeros(textParts[2].Value, 6);
-			});
-		}
+                    DisplayMinutesLabel.Text = ConvertTimeElementToBinValueWithLeadingZeros(textParts[2].Value, 6);
+                });
+        }
+
+        /// <summary>
+        /// Sets the display to the default value.
+        /// </summary>
+        public void Clear()
+        {
+            Application.Invoke(delegate
+                {
+                    DisplayHoursLabel.Text = "00000";
+                    DisplayMinutesLabel.Text = "000000";
+                });
+        }
 
         /// <summary>
         /// Converts the time element in (string format) to a binary value with leading zeros.
@@ -43,9 +62,9 @@ namespace DigitalWatch.Displays
         /// <param name="maxLength">Max length of the text.</param>
         private static string ConvertTimeElementToBinValueWithLeadingZeros(string timeString, int maxLength)
         {
-            // convert string
+            // Convert string
             string returnString = ConvertTimeElementToBinValue(timeString);
-            // add leading zeros
+            // Add leading zeros
             returnString = AddLeadingZeros(returnString, maxLength);
 
             return returnString;
@@ -57,10 +76,10 @@ namespace DigitalWatch.Displays
         /// <returns>The time element as a binary value.</returns>
         /// <param name="timeString">Time element as a string.</param>
         private static string ConvertTimeElementToBinValue(string timeString)
-		{
+        {
             int timeElement = Int32.Parse(timeString);
             return Convert.ToString(timeElement, 2);
-		}
+        }
 
         /// <summary>
         /// Adds leading zeros to a text.
@@ -80,35 +99,35 @@ namespace DigitalWatch.Displays
             return returnString;
         }
 
-		public void Clear ()
-		{
-			Gtk.Application.Invoke (delegate 
-			{
-				DisplayHoursLabel.Text = "00000";
-				DisplayMinutesLabel.Text= "000000";
-			});
-		}
+        #endregion
 
-		#endregion
+        /// <summary>
+        /// Raises the primary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnPrimaryButtonPress != null)
+            {
+                OnPrimaryButtonPress();
+            }
+        }
 
-		protected void OnPrimaryButtonClicked (object sender, EventArgs e)
-		{
-			if (OnPrimaryButtonPress != null)
-			{
-				OnPrimaryButtonPress ();
-			}
-		}
-
-		protected void OnSecondaryButtonClicked (object sender, EventArgs e)
-		{
-			if (OnSecondaryButtonPress != null)
-			{
-				OnSecondaryButtonPress ();
-			}
-		}
-
-
-
-	}
+        /// <summary>
+        /// Raises the secondary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnSecondaryButtonPress != null)
+            {
+                OnSecondaryButtonPress();
+            }
+        }
+    }
 }
 
