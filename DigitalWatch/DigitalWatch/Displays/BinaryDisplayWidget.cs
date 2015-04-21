@@ -2,38 +2,35 @@
 
 namespace DigitalWatch.Displays
 {
-	[System.ComponentModel.ToolboxItem (true)]
-	public partial class BinaryDisplayWidget : Gtk.Bin, Display
-	{
+    [System.ComponentModel.ToolboxItem(true)]
+    public partial class BinaryDisplayWidget : Gtk.Bin, Display
+    {
 
-		public BinaryDisplayWidget ()
-		{
-			this.Build ();
-			Clear ();
-		}
+        public BinaryDisplayWidget()
+        {
+            Build();
+            Clear();
+        }
 
-		#region Display implementation
+        #region Display implementation
 
-		public event OnButtonPress OnModeButtonPress;
-
-		public event OnButtonPress OnPrimaryButtonPress;
-
-		public event OnButtonPress OnSecondaryButtonPress;
-
-		public event OnButtonPress OnPrimaryLongButtonPress;
+        public event OnButtonPress OnModeButtonPress;
+        public event OnButtonPress OnPrimaryButtonPress;
+        public event OnButtonPress OnSecondaryButtonPress;
+        public event OnButtonPress OnPrimaryLongButtonPress;
 
         /// <summary>
         /// Shows specified text parts on the display as binary values.
         /// </summary>
         /// <param name="textParts">Text parts that can be displayed.</param>
         public void Write(DisplayTextPart[] textParts)
-		{
-			Gtk.Application.Invoke (delegate 
-			{
+        {
+            Gtk.Application.Invoke(delegate
+                {
                     DisplayHoursLabel.Text = ConvertTimeElementToBinValueWithLeadingZeros(textParts[0].Value, 5);
-                    DisplayMinutesLabel.Text= ConvertTimeElementToBinValueWithLeadingZeros(textParts[2].Value, 6);
-			});
-		}
+                    DisplayMinutesLabel.Text = ConvertTimeElementToBinValueWithLeadingZeros(textParts[2].Value, 6);
+                });
+        }
 
         /// <summary>
         /// Converts the time element in (string format) to a binary value with leading zeros.
@@ -57,10 +54,10 @@ namespace DigitalWatch.Displays
         /// <returns>The time element as a binary value.</returns>
         /// <param name="timeString">Time element as a string.</param>
         private static string ConvertTimeElementToBinValue(string timeString)
-		{
+        {
             int timeElement = Int32.Parse(timeString);
             return Convert.ToString(timeElement, 2);
-		}
+        }
 
         /// <summary>
         /// Adds leading zeros to a text.
@@ -80,35 +77,35 @@ namespace DigitalWatch.Displays
             return returnString;
         }
 
-		public void Clear ()
-		{
-			Gtk.Application.Invoke (delegate 
-			{
-				DisplayHoursLabel.Text = "00000";
-				DisplayMinutesLabel.Text= "000000";
-			});
-		}
+        public void Clear()
+        {
+            Gtk.Application.Invoke(delegate
+                {
+                    DisplayHoursLabel.Text = "00000";
+                    DisplayMinutesLabel.Text = "000000";
+                });
+        }
 
-		#endregion
+        #endregion
 
-		protected void OnPrimaryButtonClicked (object sender, EventArgs e)
-		{
-			if (OnPrimaryButtonPress != null)
-			{
-				OnPrimaryButtonPress ();
-			}
-		}
+        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
+        {
+            if (OnPrimaryButtonPress != null)
+            {
+                OnPrimaryButtonPress();
+            }
+        }
 
-		protected void OnSecondaryButtonClicked (object sender, EventArgs e)
-		{
-			if (OnSecondaryButtonPress != null)
-			{
-				OnSecondaryButtonPress ();
-			}
-		}
+        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
+        {
+            if (OnSecondaryButtonPress != null)
+            {
+                OnSecondaryButtonPress();
+            }
+        }
 
 
 
-	}
+    }
 }
 
