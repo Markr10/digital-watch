@@ -1,11 +1,15 @@
 ﻿using System;
+using Gtk;
 
 namespace DigitalWatch.Displays
 {
+    /// <summary>
+    /// The DialDisplayWidget is a binary Display for the watch.
+    /// </summary>
     [System.ComponentModel.ToolboxItem(true)]
-    public partial class BinaryDisplayWidget : Gtk.Bin, Display
+    public partial class BinaryDisplayWidget : Bin, Display
     {
-        #region Display implementation Variables
+        #region Display implementation variables
 
         public event OnButtonPress OnModeButtonPress;
         public event OnButtonPress OnPrimaryButtonPress;
@@ -23,8 +27,7 @@ namespace DigitalWatch.Displays
             Clear();
         }
 
-
-        #region Display implementation Methods
+        #region Display implementation
 
         /// <summary>
         /// Shows specified text parts on the display as binary values.
@@ -44,7 +47,7 @@ namespace DigitalWatch.Displays
         /// </summary>
         public void Clear()
         {
-            Gtk.Application.Invoke(delegate
+            Application.Invoke(delegate
                 {
                     DisplayHoursLabel.Text = "00000";
                     DisplayMinutesLabel.Text = "000000";
@@ -105,7 +108,7 @@ namespace DigitalWatch.Displays
         /// <param name="e">Event arguments.</param>
         protected void OnPrimaryButtonClicked(object sender, EventArgs e)
         {
-            // Do something when there is an event.
+            // Do something when there is an event handler.
             if (OnPrimaryButtonPress != null)
             {
                 OnPrimaryButtonPress();
@@ -119,7 +122,7 @@ namespace DigitalWatch.Displays
         /// <param name="e">Event arguments.</param>
         protected void OnSecondaryButtonClicked(object sender, EventArgs e)
         {
-            // Do something when there is an event.
+            // Do something when there is an event handler.
             if (OnSecondaryButtonPress != null)
             {
                 OnSecondaryButtonPress();

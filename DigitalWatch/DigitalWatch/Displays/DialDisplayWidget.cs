@@ -1,60 +1,48 @@
 ﻿using System;
-using Gtk;
 using Cairo;
+using Gtk;
 
 namespace DigitalWatch.Displays
 {
+    /// <summary>
+    /// The DialDisplayWidget is a dial Display for the watch.
+    /// </summary>
     [System.ComponentModel.ToolboxItem(true)]
-    public partial class DialDisplayWidget : Gtk.Bin, Display
+    public partial class DialDisplayWidget : Bin, Display
     {
+        #region Display implementation variables
 
         public event OnButtonPress OnModeButtonPress;
         public event OnButtonPress OnPrimaryButtonPress;
         public event OnButtonPress OnSecondaryButtonPress;
         public event OnButtonPress OnPrimaryLongButtonPress;
 
+        #endregion
+
+        /// <summary>
+        /// The angle of the hours hand.
+        /// </summary>
         private double hoursAngle;
+        /// <summary>
+        /// The angle of the minutes hand.
+        /// </summary>
         private double minutesAngle;
+        /// <summary>
+        /// The angle of the seconds hand.
+        /// </summary>
         private double secondsAngle;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Displays.DialDisplayWidget"/> class.
+        /// </summary>
         public DialDisplayWidget()
         {
             Build();
             hoursAngle = minutesAngle = secondsAngle = 0.0; // See also Clear method.
-            // Not used because the clock is otherwise drawn twice.
+                                                            // Not used because the clock is otherwise drawn twice.
         }
 
-        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
-        {
-            if (OnPrimaryButtonPress != null)
-            {
-                OnPrimaryButtonPress();
-            }
-        }
-
-        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
-        {
-            if (OnSecondaryButtonPress != null)
-            {
-                OnSecondaryButtonPress();
-            }
-        }
-
-        protected void OnModeButtonClicked(object sender, EventArgs e)
-        {
-            if (OnModeButtonPress != null)
-            {
-                OnModeButtonPress();
-            }
-        }
-
-        protected void OnPrimaryLongButtonClicked(object sender, EventArgs e)
-        {
-            if (OnPrimaryLongButtonPress != null)
-            {
-                OnPrimaryLongButtonPress();
-            }
-        }
+        #region Display implementation
 
         /// <summary>
         /// Converts the specified text parts to a dial display.
@@ -78,6 +66,69 @@ namespace DigitalWatch.Displays
             this.QueueDraw();
         }
 
+        #endregion
+
+        /// <summary>
+        /// Raises the primary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnPrimaryButtonPress != null)
+            {
+                OnPrimaryButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the secondary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnSecondaryButtonPress != null)
+            {
+                OnSecondaryButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the mode button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnModeButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnModeButtonPress != null)
+            {
+                OnModeButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the primary long button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnPrimaryLongButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnPrimaryLongButtonPress != null)
+            {
+                OnPrimaryLongButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the expose event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="args">Expose event arguments.</param>
         protected void OnExpose(object sender, Gtk.ExposeEventArgs args)
         {
             // Get de drawing context

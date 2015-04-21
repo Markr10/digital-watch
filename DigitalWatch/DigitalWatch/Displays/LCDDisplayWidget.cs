@@ -1,64 +1,41 @@
 ﻿using System;
+using Gtk;
 
 namespace DigitalWatch.Displays
 {
     /// <summary>
-    /// 	The LCDDisplayWidget is a simple Display for the watch
+    /// The LCDDisplayWidget is a simple Display for the watch.
     /// </summary>
-
     [System.ComponentModel.ToolboxItem(true)]
-    public partial class LCDDisplayWidget : Gtk.Bin, Display
+    public partial class LCDDisplayWidget : Bin, Display
     {
+        #region Display implementation variables
+
         public event OnButtonPress OnModeButtonPress;
         public event OnButtonPress OnPrimaryButtonPress;
         public event OnButtonPress OnSecondaryButtonPress;
         public event OnButtonPress OnPrimaryLongButtonPress;
 
+        #endregion
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Displays.LCDDisplayWidget"/> class.
+        /// </summary>
         public LCDDisplayWidget()
         {
-            this.Build();
+            Build();
             DisplayLabel.ModifyFont(Pango.FontDescription.FromString("Ahafoni CLM Bold 40"));
             Clear();
 
         }
 
-        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
-        {
-            if (OnPrimaryButtonPress != null)
-            {
-                OnPrimaryButtonPress();
-            }
-        }
-
-        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
-        {
-            if (OnSecondaryButtonPress != null)
-            {
-                OnSecondaryButtonPress();
-            }
-        }
-
-        protected void OnModeButtonClicked(object sender, EventArgs e)
-        {
-            if (OnModeButtonPress != null)
-            {
-                OnModeButtonPress();
-            }
-        }
-
-        protected void OnPrimaryLongButtonClicked(object sender, EventArgs e)
-        {
-            if (OnPrimaryLongButtonPress != null)
-            {
-                OnPrimaryLongButtonPress();
-            }
-        }
+        #region Display implementation
 
         /// <summary>
         /// Shows the specified text parts on the display.
         /// </summary>
         /// <param name="textParts">Text parts to show.</param>
-        /// <remarks>This display type only shows that there is something blinking</remarks>
+        /// <remarks>This display type only shows that there is something blinking.</remarks>
         public void Write(DisplayTextPart[] textParts)
         {
             // Text to display
@@ -84,12 +61,73 @@ namespace DigitalWatch.Displays
                 });
         }
 
+        /// <summary>
+        /// Sets the display to the default value.
+        /// </summary>
         public void Clear()
         {
-            Gtk.Application.Invoke(delegate
+            Application.Invoke(delegate
                 {
                     DisplayLabel.Text = "00:00";
                 });
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Raises the primary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnPrimaryButtonPress != null)
+            {
+                OnPrimaryButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the secondary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnSecondaryButtonPress != null)
+            {
+                OnSecondaryButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the mode button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnModeButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnModeButtonPress != null)
+            {
+                OnModeButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the primary long button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnPrimaryLongButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnPrimaryLongButtonPress != null)
+            {
+                OnPrimaryLongButtonPress();
+            }
         }
     }
 }

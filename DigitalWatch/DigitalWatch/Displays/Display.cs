@@ -4,28 +4,28 @@ namespace DigitalWatch.Displays
     public delegate void OnButtonPress();
 
     /// <summary>
-    /// 	Represents a watch display.
-    /// 	The display triggers events when the user interacts with it.
-    /// 	WatchComponens can write to the display. But never inderact directly with it.
-    /// 	<para>
-    /// 	The Write and Clear methods must be thread safe
+    /// Represents a watch display.
+    /// The display triggers events when the user interacts with it.
+    /// WatchComponens can write to the display. But never inderact directly with it.
+    /// 
+    /// <para>The Write and Clear methods must be thread safe.</para>
     /// </summary>
     public interface Display
     {
         /// <summary>
-        /// Occurs when on mode button press.
+        /// Occurs on a mode button press.
         /// </summary>
         event OnButtonPress OnModeButtonPress;
         /// <summary>
-        /// Occurs when on primary button press.
+        /// Occurs on a primary button press.
         /// </summary>
         event OnButtonPress OnPrimaryButtonPress;
         /// <summary>
-        /// Occurs when on secondary button press.
+        /// Occurs on a secondary button press.
         /// </summary>
         event OnButtonPress OnSecondaryButtonPress;
         /// <summary>
-        /// Occurs when on primary long button press.
+        /// Occurs on a primary long button press.
         /// </summary>
         event OnButtonPress OnPrimaryLongButtonPress;
 
@@ -37,7 +37,7 @@ namespace DigitalWatch.Displays
         void Write(DisplayTextPart[] textParts);
 
         /// <summary>
-        /// Clear the display
+        /// Clear the display.
         /// </summary>
         void Clear();
     }

@@ -1,25 +1,29 @@
 ﻿using System;
-using Gtk;
 using Gdk;
+using Gtk;
 
 namespace DigitalWatch.Displays
 {
     /// <summary>
-    /// 	The segment display is a Display which is very similiar to the 
-    /// 	LCDDisplayWidget. It uses the DS-Digital font to create the segments look
+    /// The segment display is a Display which is very similiar to the 
+    /// LCDDisplayWidget. It uses the DS-Digital font to create the segments look.
     /// </summary>
 
     [System.ComponentModel.ToolboxItem(true)]
-    public partial class SegmentDisplayWidget : Gtk.Bin, Display
+    public partial class SegmentDisplayWidget : Bin, Display
     {
+        #region Display implementation variables
+
         public event OnButtonPress OnModeButtonPress;
         public event OnButtonPress OnPrimaryButtonPress;
         public event OnButtonPress OnSecondaryButtonPress;
         public event OnButtonPress OnPrimaryLongButtonPress;
 
+        #endregion
+
         /// <summary>
         /// The blink color of the segments. Change this constant if you want another
-        /// blink color (red, gray, green)
+        /// blink color (red, gray, green).
         /// </summary>
         private const string BLINK_COLOR = "gray";
         /// <summary>
@@ -28,19 +32,17 @@ namespace DigitalWatch.Displays
         /// </summary>
         private const string FONT_DESCRIPTION = "DS-Digital Bold 50";
         /// <summary>
-        /// 	Indicates when ever the display needs to blink
+        /// Indicates when ever the display needs to blink.
         /// </summary>
         private bool isBlinking;
         /// <summary>
-        /// 	Indicates when ever the segmends have the blink color
+        /// Indicates when ever the segmends have the blink color.
         /// </summary>
         private bool displayLabelHasBlinkColor;
-
         /// <summary>
-        ///     Indicates if the timer is running
+        /// Indicates if the timer is running.
         /// </summary>
         private bool timerIsRunning;
-
         /// <summary>
         /// The color of the blink.
         /// </summary>
@@ -51,70 +53,17 @@ namespace DigitalWatch.Displays
         /// </summary>
         public SegmentDisplayWidget()
         {
-            this.Build();
+            Build();
             DisplayLabel.ModifyFont(Pango.FontDescription.FromString(FONT_DESCRIPTION));
-            Clear();
             isBlinking = false;
             displayLabelHasBlinkColor = false;
             timerIsRunning = false;
             blinkColor = new Color();
             Color.Parse(BLINK_COLOR, ref blinkColor);
+            Clear();
         }
 
-        /// <summary>
-        /// 	Triggered by GLib.Timout
-        /// </summary>
-        /// <returns><c>true</c> when the timer has to make another cycle or false when the timer can stop</returns>
-        private bool OnBlink()
-        {
-            if (displayLabelHasBlinkColor)
-            {
-                DisplayLabel.ModifyFg(StateType.Normal);
-                displayLabelHasBlinkColor = false;
-            }
-            else
-            {
-                DisplayLabel.ModifyFg(StateType.Normal, blinkColor);
-                displayLabelHasBlinkColor = true;
-            }
-
-            //The timer can be stoped if the blink function has been disabled and
-            //the display has the normal color.
-            timerIsRunning = isBlinking || displayLabelHasBlinkColor;
-            return timerIsRunning;
-        }
-
-        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
-        {
-            if (OnPrimaryButtonPress != null)
-            {
-                OnPrimaryButtonPress();
-            }
-        }
-
-        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
-        {
-            if (OnSecondaryButtonPress != null)
-            {
-                OnSecondaryButtonPress();
-            }
-        }
-
-        protected void OnModeButtonClicked(object sender, EventArgs e)
-        {
-            if (OnModeButtonPress != null)
-            {
-                OnModeButtonPress();
-            }
-        }
-
-        protected void OnPrimaryLongButtonClicked(object sender, EventArgs e)
-        {
-            if (OnPrimaryLongButtonPress != null)
-            {
-                OnPrimaryLongButtonPress();
-            }
-        }
+        #region Display implementation
 
         /// <summary>
         /// Shows the specified text parts on the display.
@@ -150,12 +99,96 @@ namespace DigitalWatch.Displays
             isBlinking = false;
         }
 
+        /// <summary>
+        /// Sets the display to the default value.
+        /// </summary>
         public void Clear()
         {
-            Gtk.Application.Invoke(delegate
+            Application.Invoke(delegate
                 {
                     DisplayLabel.Text = "00:00";
                 });
+        }
+
+        /// <summary>
+        /// Triggered by GLib.Timout.
+        /// </summary>
+        /// <returns><c>true</c> when the timer has to make another cycle or false when the timer can stop.</returns>
+        private bool OnBlink()
+        {
+            if (displayLabelHasBlinkColor)
+            {
+                DisplayLabel.ModifyFg(StateType.Normal);
+                displayLabelHasBlinkColor = false;
+            }
+            else
+            {
+                DisplayLabel.ModifyFg(StateType.Normal, blinkColor);
+                displayLabelHasBlinkColor = true;
+            }
+
+            //The timer can be stoped if the blink function has been disabled and
+            //the display has the normal color.
+            timerIsRunning = isBlinking || displayLabelHasBlinkColor;
+            return timerIsRunning;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Raises the primary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnPrimaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnPrimaryButtonPress != null)
+            {
+                OnPrimaryButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the secondary button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnSecondaryButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnSecondaryButtonPress != null)
+            {
+                OnSecondaryButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the mode button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnModeButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnModeButtonPress != null)
+            {
+                OnModeButtonPress();
+            }
+        }
+
+        /// <summary>
+        /// Raises the primary long button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void OnPrimaryLongButtonClicked(object sender, EventArgs e)
+        {
+            // Do something when there is an event handler.
+            if (OnPrimaryLongButtonPress != null)
+            {
+                OnPrimaryLongButtonPress();
+            }
         }
     }
 }
