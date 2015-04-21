@@ -143,7 +143,7 @@ namespace DigitalWatch.Displays
                     return;
                 }
             }
-            // When here no character of the display blink. 
+            // At this point no character of the display should blink.
             isBlinking = false;
 		}
 
