@@ -66,42 +66,42 @@
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="MainWindow.cs" />
-    <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="gtk-gui\DigitalWatch.MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Watches\Builders\WatchBuilder.cs" />
-    <Compile Include="Watches\Watch.cs" />
-    <Compile Include="Watches\Builders\BasicWatchBuilder.cs" />
-    <Compile Include="Watches\BasicWatch.cs" />
     <Compile Include="Components\WatchComponent.cs" />
+    <Compile Include="Components\BlinkingPart.cs" />
+    <Compile Include="Components\EditorMode.cs" />
+    <Compile Include="Components\TimeComponent.cs" />
+    <Compile Include="Components\Alarm.cs" />
     <Compile Include="Components\Stopwatch.cs" />
     <Compile Include="Components\Timer.cs" />
-    <Compile Include="Components\Alarm.cs" />
     <Compile Include="Displays\Display.cs" />
+    <Compile Include="Displays\DisplayTextPart.cs" />
+    <Compile Include="Displays\BinaryDisplayWidget.cs" />
+    <Compile Include="gtk-gui\DigitalWatch.Displays.BinaryDisplayWidget.cs" />
+    <Compile Include="Displays\DialDisplayWidget.cs" />
+    <Compile Include="gtk-gui\DigitalWatch.Displays.DialDisplayWidget.cs" />
     <Compile Include="Displays\LCDDisplayWidget.cs" />
     <Compile Include="gtk-gui\DigitalWatch.Displays.LCDDisplayWidget.cs" />
+    <Compile Include="Displays\SegmentDisplayWidget.cs" />
+    <Compile Include="gtk-gui\DigitalWatch.Displays.SegmentDisplayWidget.cs" />
     <Compile Include="ModeSwitchers\ModeSwitcher.cs" />
     <Compile Include="ModeSwitchers\SmartModeSwitcher.cs" />
     <Compile Include="TimeManagement\Time.cs" />
     <Compile Include="TimeManagement\TimeManager.cs" />
-    <Compile Include="Displays\SegmentDisplayWidget.cs" />
-    <Compile Include="gtk-gui\DigitalWatch.Displays.SegmentDisplayWidget.cs" />
-    <Compile Include="Displays\DialDisplayWidget.cs" />
-    <Compile Include="gtk-gui\DigitalWatch.Displays.DialDisplayWidget.cs" />
-    <Compile Include="Components\TimeComponent.cs" />
-    <Compile Include="Displays\BinaryDisplayWidget.cs" />
-    <Compile Include="gtk-gui\DigitalWatch.Displays.BinaryDisplayWidget.cs" />
-    <Compile Include="Components\EditorMode.cs" />
-    <Compile Include="Displays\DisplayTextPart.cs" />
-    <Compile Include="Components\BlinkingPart.cs" />
+    <Compile Include="Watches\Watch.cs" />
+    <Compile Include="Watches\BasicWatch.cs" />
+    <Compile Include="Watches\Builders\WatchBuilder.cs" />
+    <Compile Include="Watches\Builders\BasicWatchBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Displays\" />
-    <Folder Include="Watches\" />
     <Folder Include="Components\" />
-    <Folder Include="Watches\Builders\" />
+    <Folder Include="Displays\" />
     <Folder Include="ModeSwitchers\" />
     <Folder Include="TimeManagement\" />
+    <Folder Include="Watches\" />
+    <Folder Include="Watches\Builders\" />
   </ItemGroup>
 </Project>
