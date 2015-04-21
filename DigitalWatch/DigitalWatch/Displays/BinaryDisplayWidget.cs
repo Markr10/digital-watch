@@ -81,7 +81,7 @@ namespace DigitalWatch.Displays
 		{
 			Gtk.Application.Invoke (delegate 
 			{
-				DisplayHoursLabel.Text = "0000";
+				DisplayHoursLabel.Text = "00000";
 				DisplayMinutesLabel.Text= "000000";
 			});
 		}
