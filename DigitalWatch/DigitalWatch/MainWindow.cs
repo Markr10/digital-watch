@@ -50,6 +50,15 @@ public partial class MainWindow: Gtk.Window
 
 		Watch segWatch = segBuilder.CreateWatch ();
 
+        // Build a watch with a dial display
+        BasicWatchBuilder dialBuilder = new BasicWatchBuilder ();
+        TimeComponent dialTimeComp = new TimeComponent ();
+
+        dialBuilder.AddComponent (dialTimeComp);
+
+        dialBuilder.SetDisplay (dialdisplaywidget);
+
+        Watch dialWatch = dialBuilder.CreateWatch ();
 
         // Build a watch with a binary display
 		BasicWatchBuilder binBuilder = new BasicWatchBuilder ();
