@@ -36,6 +36,19 @@ namespace DigitalWatch.Displays
 		}
 
         /// <summary>
+        /// Converts the time element in (string format) to a binary value with leading zeros.
+        /// </summary>
+        /// <returns>The time element as a binary value with leading zeros.</returns>
+        /// <param name="timeString">Time element as a string.</param>
+        private static string ConvertTimeElementToBinValueWithLeadingZeros(string timeString)
+        {
+            string returnString = ConvertTimeElementToBinValue(timeString);
+            returnString = AddLeadingZeros(returnString, (Math.Ceiling(Math.Log(Double.Parse(timeString)) / Math.Log(2.0))));
+
+            return returnString;
+        }
+
+        /// <summary>
         /// Converts the time element in (string format) to a binary value.
         /// </summary>
         /// <returns>The time element as a binary value.</returns>
@@ -45,6 +58,24 @@ namespace DigitalWatch.Displays
             int timeElement = Int32.Parse(timeString);
             return Convert.ToString(timeElement, 2);
 		}
+
+        /// <summary>
+        /// Adds leading zeros to a text.
+        /// </summary>
+        /// <returns>The text with the leading zeros.</returns>
+        /// <param name="text">Text without leading zeros.</param>
+        /// <param name="maxLength">Max length of the text.</param>
+        private static string AddLeadingZeros(string text, int maxLength)
+        {
+            String returnString = String.Empty;
+            for (int i = text.Length; i < maxLength; i++)
+            {
+                returnString += "0";
+            }
+            returnString += text;
+
+            return returnString;
+        }
 
 		public void Clear ()
 		{
