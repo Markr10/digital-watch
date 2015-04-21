@@ -116,27 +116,35 @@ namespace DigitalWatch.Displays
 			}
 		}
 
-		/// <summary>
-		/// Prints the text on the screen.
-		/// </summary>
-		/// <param name="text">The text to display</param>
-		/// <param name="blink">If set to <c>true</c> blink.</param>
-		public void Write(string text, bool blink)
+        /// <summary>
+        /// Shows the specified text parts on the display.
+        /// </summary>
+        /// <param name="textParts">Text parts to show.</param>
+        public void Write(DisplayTextPart[] textParts)
 		{
-			Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
-			if (blink == true && isBlinking == false)
-			{
-				isBlinking = true;
-                if (!timerIsRunning)
+            // Text to display
+            string text = string.Empty;
+            foreach (DisplayTextPart textPart in textParts)
+            {
+                text += textPart.Value;
+            }
+            Gtk.Application.Invoke (delegate{DisplayLabel.Text = text;});
+
+            foreach (DisplayTextPart textPart in textParts)
+            {
+                if (textPart.Blink && isBlinking == false)
                 {
-                    GLib.Timeout.Add(1000, new GLib.TimeoutHandler(OnBlink));
-                    timerIsRunning = true;
+                    isBlinking = true;
+                    if (!timerIsRunning)
+                    {
+                        GLib.Timeout.Add(1000, new GLib.TimeoutHandler(OnBlink));
+                        timerIsRunning = true;
+                    }
+                    return;
                 }
-			}
-			else if(blink == false)
-			{
-				isBlinking = false;
-			}
+            }
+            // At this point no character of the display should blink.
+            isBlinking = false;
 		}
 
 		public void Clear()

@@ -28,12 +28,12 @@ namespace DigitalWatch.Displays
 		/// Occurs when on primary long button press.
 		/// </summary>
 		event OnButtonPress OnPrimaryLongButtonPress;
-		/// <summary>
-		/// 	Print text on the screen. 
-		/// </summary>
-		/// <param name="text">The text to display</param>
-		/// <param name="blink">The display will blink wel this is <c>true</c></param>
-		void Write(string text, bool blink);
+        /// <summary>
+        /// Send the specified text parts to a display to show them on the display.
+        /// </summary>
+        /// <param name="textParts">Text parts to show.</param>
+        /// <remarks>Some displays are designed to show certain text.</remarks>
+        void Write(DisplayTextPart[] textParts);
 		/// <summary>
 		/// Clear the display
 		/// </summary>

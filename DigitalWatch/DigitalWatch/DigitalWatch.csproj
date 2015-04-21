@@ -88,6 +88,9 @@
     <Compile Include="Components\TimeComponent.cs" />
     <Compile Include="Displays\BinaryDisplayWidget.cs" />
     <Compile Include="gtk-gui\DigitalWatch.Displays.BinaryDisplayWidget.cs" />
+    <Compile Include="Components\EditorMode.cs" />
+    <Compile Include="Displays\DisplayTextPart.cs" />
+    <Compile Include="Components\BlinkingPart.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

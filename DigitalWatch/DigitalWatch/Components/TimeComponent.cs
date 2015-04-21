@@ -80,7 +80,14 @@ namespace DigitalWatch.Components
 		{
 			if (OnScreenUpdate != null)
 			{
-				OnScreenUpdate (currentTime.ToString(), inEditorMode, this);
+                if (inEditorMode)
+                {
+                    OnScreenUpdate(currentTime.ToDisplayTextParts(BlinkingPart.Seconds), this);
+                }
+                else
+                {
+                    OnScreenUpdate (currentTime.ToDisplayTextParts(BlinkingPart.None), this);
+                }
 			}
 		}
 
