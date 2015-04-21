@@ -5,7 +5,7 @@ public partial class MainWindow
 {
 	private global::Gtk.Table table;
 	
-	private global::DigitalWatch.Displays.BinaryDisplayWidget Binarydisplaywidget;
+	private global::DigitalWatch.Displays.BinaryDisplayWidget binarydisplaywidget;
 	
 	private global::DigitalWatch.Displays.LCDDisplayWidget lcddisplaywidget;
 	
@@ -24,13 +24,15 @@ public partial class MainWindow
 		this.table.RowSpacing = ((uint)(6));
 		this.table.ColumnSpacing = ((uint)(6));
 		// Container child table.Gtk.Table+TableChild
-		this.Binarydisplaywidget = new global::DigitalWatch.Displays.BinaryDisplayWidget ();
-		this.Binarydisplaywidget.Events = ((global::Gdk.EventMask)(256));
-		this.Binarydisplaywidget.Name = "Binarydisplaywidget";
-		this.table.Add (this.Binarydisplaywidget);
-		global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table [this.Binarydisplaywidget]));
+		this.binarydisplaywidget = new global::DigitalWatch.Displays.BinaryDisplayWidget ();
+		this.binarydisplaywidget.Events = ((global::Gdk.EventMask)(256));
+		this.binarydisplaywidget.Name = "binarydisplaywidget";
+		this.table.Add (this.binarydisplaywidget);
+		global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table [this.binarydisplaywidget]));
 		w1.TopAttach = ((uint)(1));
 		w1.BottomAttach = ((uint)(2));
+		w1.LeftAttach = ((uint)(1));
+		w1.RightAttach = ((uint)(2));
 		w1.XOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table.Gtk.Table+TableChild
 		this.lcddisplaywidget = new global::DigitalWatch.Displays.LCDDisplayWidget ();
@@ -53,7 +55,7 @@ public partial class MainWindow
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 608;
+		this.DefaultWidth = 637;
 		this.DefaultHeight = 407;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
