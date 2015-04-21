@@ -49,23 +49,19 @@ namespace DigitalWatch.Displays
 			this.PrimaryButton.CanFocus = true;
 			this.PrimaryButton.Name = "PrimaryButton";
 			this.PrimaryButton.UseUnderline = true;
-			this.PrimaryButton.Label = global::Mono.Unix.Catalog.GetString ("PrimaryButton");
+			this.PrimaryButton.Label = global::Mono.Unix.Catalog.GetString ("Primary");
 			this.hbox1.Add (this.PrimaryButton);
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.PrimaryButton]));
 			w3.Position = 0;
-			w3.Expand = false;
-			w3.Fill = false;
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.SecondaryButton = new global::Gtk.Button ();
 			this.SecondaryButton.CanFocus = true;
 			this.SecondaryButton.Name = "SecondaryButton";
 			this.SecondaryButton.UseUnderline = true;
-			this.SecondaryButton.Label = global::Mono.Unix.Catalog.GetString ("SecondaryButton");
+			this.SecondaryButton.Label = global::Mono.Unix.Catalog.GetString ("Secondary");
 			this.hbox1.Add (this.SecondaryButton);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.SecondaryButton]));
 			w4.Position = 1;
-			w4.Expand = false;
-			w4.Fill = false;
 			this.vbox1.Add (this.hbox1);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
 			w5.Position = 2;
