@@ -43,7 +43,7 @@ namespace DigitalWatch.Displays
         private static string ConvertTimeElementToBinValueWithLeadingZeros(string timeString)
         {
             string returnString = ConvertTimeElementToBinValue(timeString);
-            returnString = AddLeadingZeros(returnString, (Math.Ceiling(Math.Log(Double.Parse(timeString)) / Math.Log(2.0))));
+            returnString = AddLeadingZeros(returnString, (int)(Math.Ceiling(Math.Log(Int32.Parse(timeString)) / Math.Log(2))));
 
             return returnString;
         }
