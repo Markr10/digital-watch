@@ -37,13 +37,14 @@ namespace DigitalWatch.Watches
 		}
 
 		/// <summary>
-		/// Inits the componet listeners.
+		/// Inits the component listeners.
 		/// </summary>
 		/// <param name="components">Components.</param>
 		private void InitComponentListeners(WatchComponent[] components)
 		{
 			foreach (WatchComponent comp in components)
 			{
+                // Ensures that the text is sent from the component to the display
 				comp.OnScreenUpdate += new UpdateScreen((string text, bool blink, WatchComponent sender) => {
 					if(modeSwitcher.IsCurrentMode(sender))
 					{
@@ -62,7 +63,8 @@ namespace DigitalWatch.Watches
 				modeSwitcher.NextMode ();
 				modeSwitcher.GetCurrentMode().ForceScreenUpdate();
 			});
-			display.OnPrimaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().PrimaryButtonPress ());
+            // Calls always the button code that belongs to the current component.
+            display.OnPrimaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().PrimaryButtonPress ());
 			display.OnPrimaryLongButtonPress += new OnButtonPress(() => modeSwitcher.GetCurrentMode().PrimaryButtonLongPress());
 			display.OnSecondaryButtonPress += new OnButtonPress (() => modeSwitcher.GetCurrentMode ().SecondaryButtonPress ());
 		}
