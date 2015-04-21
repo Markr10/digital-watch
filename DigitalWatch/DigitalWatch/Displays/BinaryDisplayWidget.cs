@@ -22,26 +22,28 @@ namespace DigitalWatch.Displays
 
 		public event OnButtonPress OnPrimaryLongButtonPress;
 
-
-		public void Write (string text, bool blink)
+        /// <summary>
+        /// Shows specified text parts on the display as binary values.
+        /// </summary>
+        /// <param name="textParts">Text parts that can be displayed.</param>
+        public void Write(DisplayTextPart[] textParts)
 		{
 			Gtk.Application.Invoke (delegate 
 			{
-				string[] binValues = ConvertTimeStringToBinValues (text);
-				DisplayHoursLabel.Text = binValues[0];
-				DisplayMinutesLabel.Text= binValues[1];
+                    DisplayHoursLabel.Text = ConvertTimeElementToBinValue(textParts[0].Value);
+                    DisplayMinutesLabel.Text= ConvertTimeElementToBinValue(textParts[2].Value);
 			});
 		}
 
-		private static string[] ConvertTimeStringToBinValues(string timeString)
+        /// <summary>
+        /// Converts the time element in (string format) to a binary value.
+        /// </summary>
+        /// <returns>The time element as a binary value.</returns>
+        /// <param name="timeString">Time element as a string.</param>
+        private static string ConvertTimeElementToBinValue(string timeString)
 		{
-			string[] splitResult = timeString.Split (':');
-			string[] binValues = new string[2];
-			int hours = Int32.Parse(splitResult [0]);
-			int minutes = Int32.Parse (splitResult [1]);
-			binValues [0] = Convert.ToString (hours, 2);
-			binValues [1] = Convert.ToString (minutes, 2);
-			return binValues;
+            int timeElement = Int32.Parse(timeString);
+            return Convert.ToString(timeElement, 2);
 		}
 
 		public void Clear ()
