@@ -10,9 +10,9 @@ namespace DigitalWatch.Displays
 		
 		private global::Gtk.HBox hbox1;
 		
-		private global::Gtk.Button PrimaryButton;
-		
 		private global::Gtk.Button PrimaryLongButton;
+		
+		private global::Gtk.Button PrimaryButton;
 		
 		private global::Gtk.Button SecondaryButton;
 		
@@ -39,24 +39,24 @@ namespace DigitalWatch.Displays
 			this.hbox1.Name = "hbox1";
 			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.PrimaryButton = new global::Gtk.Button ();
-			this.PrimaryButton.CanFocus = true;
-			this.PrimaryButton.Name = "PrimaryButton";
-			this.PrimaryButton.UseUnderline = true;
-			this.PrimaryButton.Label = global::Mono.Unix.Catalog.GetString ("Primary");
-			this.hbox1.Add (this.PrimaryButton);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.PrimaryButton]));
-			w2.Position = 0;
-			w2.Expand = false;
-			w2.Fill = false;
-			// Container child hbox1.Gtk.Box+BoxChild
 			this.PrimaryLongButton = new global::Gtk.Button ();
 			this.PrimaryLongButton.CanFocus = true;
 			this.PrimaryLongButton.Name = "PrimaryLongButton";
 			this.PrimaryLongButton.UseUnderline = true;
 			this.PrimaryLongButton.Label = global::Mono.Unix.Catalog.GetString ("Primary Long");
 			this.hbox1.Add (this.PrimaryLongButton);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.PrimaryLongButton]));
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.PrimaryLongButton]));
+			w2.Position = 0;
+			w2.Expand = false;
+			w2.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.PrimaryButton = new global::Gtk.Button ();
+			this.PrimaryButton.CanFocus = true;
+			this.PrimaryButton.Name = "PrimaryButton";
+			this.PrimaryButton.UseUnderline = true;
+			this.PrimaryButton.Label = global::Mono.Unix.Catalog.GetString ("Primary");
+			this.hbox1.Add (this.PrimaryButton);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.PrimaryButton]));
 			w3.Position = 1;
 			w3.Expand = false;
 			w3.Fill = false;
@@ -94,8 +94,8 @@ namespace DigitalWatch.Displays
 			}
 			this.Hide ();
 			this.drawingarea1.ExposeEvent += new global::Gtk.ExposeEventHandler (this.OnExpose);
-			this.PrimaryButton.Clicked += new global::System.EventHandler (this.OnPrimaryButtonClicked);
 			this.PrimaryLongButton.Clicked += new global::System.EventHandler (this.OnPrimaryLongButtonClicked);
+			this.PrimaryButton.Clicked += new global::System.EventHandler (this.OnPrimaryButtonClicked);
 			this.SecondaryButton.Clicked += new global::System.EventHandler (this.OnSecondaryButtonClicked);
 			this.ModeButton.Clicked += new global::System.EventHandler (this.OnModeButtonClicked);
 		}
