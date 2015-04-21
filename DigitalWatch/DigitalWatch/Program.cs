@@ -1,11 +1,10 @@
-﻿using System;
-using Gtk;
+﻿using Gtk;
 
 namespace DigitalWatch
 {
     class MainClass
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             Application.Init();
             MainWindow win = new MainWindow();
