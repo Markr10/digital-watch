@@ -30,8 +30,8 @@ namespace DigitalWatch.Displays
 		{
 			Gtk.Application.Invoke (delegate 
 			{
-                    DisplayHoursLabel.Text = ConvertTimeElementToBinValue(textParts[0].Value);
-                    DisplayMinutesLabel.Text= ConvertTimeElementToBinValue(textParts[2].Value);
+                    DisplayHoursLabel.Text = ConvertTimeElementToBinValueWithLeadingZeros(textParts[0].Value, 5);
+                    DisplayMinutesLabel.Text= ConvertTimeElementToBinValueWithLeadingZeros(textParts[2].Value, 6);
 			});
 		}
 
@@ -40,10 +40,13 @@ namespace DigitalWatch.Displays
         /// </summary>
         /// <returns>The time element as a binary value with leading zeros.</returns>
         /// <param name="timeString">Time element as a string.</param>
-        private static string ConvertTimeElementToBinValueWithLeadingZeros(string timeString)
+        /// <param name="maxLength">Max length of the text.</param>
+        private static string ConvertTimeElementToBinValueWithLeadingZeros(string timeString, int maxLength)
         {
+            // convert string
             string returnString = ConvertTimeElementToBinValue(timeString);
-            returnString = AddLeadingZeros(returnString, (int)(Math.Ceiling(Math.Log(Int32.Parse(timeString)) / Math.Log(2))));
+            // add leading zeros
+            returnString = AddLeadingZeros(returnString, maxLength);
 
             return returnString;
         }
