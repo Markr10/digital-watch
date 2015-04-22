@@ -35,7 +35,7 @@ namespace DigitalWatch.Displays
         /// <param name="textParts">Text parts that can be displayed.</param>
         public void Write(DisplayTextPart[] textParts)
         {
-            Gtk.Application.Invoke(delegate
+            Application.Invoke(delegate
                 {
                     DisplayHoursLabel.Text = ConvertTimeElementToBinValueWithLeadingZeros(textParts[0].Value, 5);
                     DisplayMinutesLabel.Text = ConvertTimeElementToBinValueWithLeadingZeros(textParts[2].Value, 6);

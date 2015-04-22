@@ -77,7 +77,7 @@ namespace DigitalWatch.Displays
             {
                 text += textPart.Value;
             }
-            Gtk.Application.Invoke(delegate
+            Application.Invoke(delegate
                 {
                     DisplayLabel.Text = text;
                 });

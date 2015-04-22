@@ -129,11 +129,11 @@ namespace DigitalWatch.Displays
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="args">Expose event arguments.</param>
-        protected void OnExpose(object sender, Gtk.ExposeEventArgs args)
+        protected void OnExpose(object sender, ExposeEventArgs args)
         {
             // Get de drawing context
             DrawingArea area = (DrawingArea)sender;
-            Cairo.Context cr = Gdk.CairoHelper.Create(area.GdkWindow);
+            Context cr = Gdk.CairoHelper.Create(area.GdkWindow);
 
             // Set the size of the context
             int width = area.Allocation.Width;
