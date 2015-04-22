@@ -17,6 +17,13 @@ namespace DigitalWatch.Timemanagement
         public int Hours   { get; set; }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Timemanagement.Time"/> class.
+        /// </summary>
+        public Time()
+        {
+        }
+
+        /// <summary>
         /// Basic increase function. Increases the Seconds.
         /// Increases Minutes when Seconds &gt; 59.
         /// </summary>
