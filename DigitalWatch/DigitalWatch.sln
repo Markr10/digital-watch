@@ -182,5 +182,6 @@ Global
 		$0.DotNetNamingPolicy = $28
 		$28.DirectoryNamespaceAssociation = None
 		$28.ResourceNamePolicy = FileFormatDefault
+		version = 2.0.0
 	EndGlobalSection
 EndGlobal
