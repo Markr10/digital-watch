@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="274cm" height="74cm" viewBox="-1258 -582 5475 1462" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #00ff00" x="-1247.8" y="-563.428" width="1436.52" height="1032.14"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #0000ff" x="497.696" y="46.0976" width="1194.3" height="559.321"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #ffff00" x="796.578" y="-521.71" width="344.584" height="399.283"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #ffff00" x="2043.12" y="-409.986" width="1695.61" height="1033.23"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #ff0000" x="3274.24" y="-317.418" width="609.792" height="540.661"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #1e90ff" x="609.418" y="103.1" width="599.666" height="203.92"/>
+  <g>
+    <rect style="fill: #ffffff" x="1147.01" y="835.298" width="53.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1147.01" y="835.298" width="53.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1173.81" y="854.298">Main</text>
+    <rect style="fill: #ffffff" x="1147.01" y="863.298" width="53.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1147.01" y="863.298" width="53.6" height="8"/>
+    <rect style="fill: #ffffff" x="1147.01" y="871.298" width="53.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1147.01" y="871.298" width="53.6" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-146.843" y="177.598" width="248.7" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-146.843" y="177.598" width="248.7" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-22.4928" y="193.598">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-22.4928" y="212.598">Display</text>
+    <rect style="fill: #ffffff" x="-146.843" y="221.598" width="248.7" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-146.843" y="221.598" width="248.7" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="235.598">+OnModeButtonPress: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="251.598">+OnPrimaryButtonPress: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="267.598">+OnSecondaryButtonPress: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="283.598">+OnPrimaryLongButtonPress: even</text>
+    <rect style="fill: #ffffff" x="-146.843" y="289.598" width="248.7" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-146.843" y="289.598" width="248.7" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="303.598">+Write()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="319.598">+Clear()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="335.598">+Show()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-143.843" y="351.598">+Hide()</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="829.524" y="465.292" width="164" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="829.524" y="465.292" width="164" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="911.524" y="481.292">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="911.524" y="500.292">Watch</text>
+    <rect style="fill: #ffffff" x="829.524" y="509.292" width="164" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="829.524" y="509.292" width="164" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="832.524" y="523.292">+OnModeSwitch: event</text>
+    <rect style="fill: #ffffff" x="829.524" y="529.292" width="164" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="829.524" y="529.292" width="164" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="832.524" y="543.292">+ShowWatch()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="832.524" y="559.292">+HideWatch()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="832.524" y="575.292">+SwitchMode()</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2131.5" y="232.242" width="279.5" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2131.5" y="232.242" width="279.5" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="2271.25" y="248.242">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2271.25" y="267.242">WatchComponent</text>
+    <rect style="fill: #ffffff" x="2131.5" y="276.242" width="279.5" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2131.5" y="276.242" width="279.5" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2134.5" y="290.242">+OnScreenUpdate: event UpdateScreen</text>
+    <rect style="fill: #ffffff" x="2131.5" y="296.242" width="279.5" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2131.5" y="296.242" width="279.5" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2134.5" y="310.242">+PrimaryButtonPress()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2134.5" y="326.242">+SecondaryButtonPress()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2134.5" y="342.242">+PrimaryButtonLongPress()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2134.5" y="358.242">+ForceScreenUpdate()</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2431.5" y="310.242" width="433.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2431.5" y="310.242" width="433.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2648.25" y="329.242">Stopwatch</text>
+    <rect style="fill: #ffffff" x="2431.5" y="338.242" width="433.5" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2431.5" y="338.242" width="433.5" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="352.242">+OnScreenUpdate: event UpdateScreen</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="368.242">-timer: System.TImers.Timer</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="384.242">-stopwatchTime: Time</text>
+    <rect style="fill: #ffffff" x="2431.5" y="390.242" width="433.5" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2431.5" y="390.242" width="433.5" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="404.242">-OnTimerElapsed(sender:object,e:ElapsedEventArgs): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="420.242">+PrimaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="436.242">+SecondaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="452.242">+PrimaryButtonLongPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2434.5" y="468.242">+ForceScreenUpdate(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2903.5" y="293.242" width="279.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2903.5" y="293.242" width="279.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="3043.25" y="312.242">Timer</text>
+    <rect style="fill: #ffffff" x="2903.5" y="321.242" width="279.5" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2903.5" y="321.242" width="279.5" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="335.242">+OnScreenUpdate: event UpdateScreen</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="351.242">-editorMode: bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="367.242">-time: Time</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="383.242">-timer: System.Timers.Timer.Timer</text>
+    <rect style="fill: #ffffff" x="2903.5" y="389.242" width="279.5" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2903.5" y="389.242" width="279.5" height="100"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="403.242">+Timer()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="419.242">-OnTimerElapsed(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="435.242">+PrimaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="451.242">+SecondaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="467.242">+PrimaryButtonLongPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2906.5" y="483.242">+ForceScreenUpdate(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="3318.5" y="297.242" width="348.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="3318.5" y="297.242" width="348.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="3492.9" y="316.242">Alarm</text>
+    <rect style="fill: #ffffff" x="3318.5" y="325.242" width="348.8" height="116"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="3318.5" y="325.242" width="348.8" height="116"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="339.242">+OnScreenUpdate: event UpdateScreen</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="355.242">-editorMode: bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="371.242">-alarmEnabled: bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="387.242">-currentTime: Time</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="403.242">-timeToken: object</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="419.242">-alarmToken: object</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="435.242">-timeManager: Timemanager</text>
+    <rect style="fill: #ffffff" x="3318.5" y="441.242" width="348.8" height="148"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="3318.5" y="441.242" width="348.8" height="148"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="455.242">+Alarm(timeToken:object)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="471.242">+PrimaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="487.242">-HasValitAlarmTime(): bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="503.242">+SecondaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="519.242">+PrimaryButtonLongPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="535.242">+ForceScreenUpdate(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="551.242">-SetAlarm(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="567.242">-DisableAlarm(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3321.5" y="583.242">+OnTimeManagerNotify(currentTime:Time): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-962.54" y="-299.732" width="379.6" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-962.54" y="-299.732" width="379.6" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-772.74" y="-283.732">&lt;&lt;Gtk.Bin&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-772.74" y="-264.732">SegmentDisplay</text>
+    <rect style="fill: #ffffff" x="-962.54" y="-255.732" width="379.6" height="148"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-962.54" y="-255.732" width="379.6" height="148"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-241.732">+OnModeButtonPress: event OnButtonPress</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-225.732">+OnPrimaryButtonPress: event OnButtonPress</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-209.732">+OnSecondaryButtonPress: event OnButtonPress</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-193.732">+OnPrimaryLongButtonPress: event OnButtonPress</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-177.732">-BLINK_COLOR: string = "gray"</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-161.732">-FONT_DESCRIPTION: string = "DS-Digital Bold 50"</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-145.732">-isBlinking: bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-129.732">-displayLabelHasBlinkColor: bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-113.732">-blinkColor: Color</text>
+    <rect style="fill: #ffffff" x="-962.54" y="-107.732" width="379.6" height="132"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-962.54" y="-107.732" width="379.6" height="132"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-93.732">+SegemntDisplay()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-77.732">-OnBlink(): bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-61.732">#OnPrimaryButtonClicked(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-45.732">#OnSecondaryButtonClicked(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-29.732">#OnModeButtonClicked(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="-13.732">#OnPrimaryLongButtonClicked()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="2.268">+Write(text:string,blink:bool): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-959.54" y="18.268">+Clear(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-543.822" y="-202.808" width="364.2" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-543.822" y="-202.808" width="364.2" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-361.722" y="-186.808">&lt;&lt;Gtk.Bin&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-361.722" y="-167.808">LCDDisplay</text>
+    <rect style="fill: #ffffff" x="-543.822" y="-158.808" width="364.2" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-543.822" y="-158.808" width="364.2" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-144.808">+OnModeButtonPress: event OnButtonPress</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-128.808">+OnPrimaryButtonPress: event OnButtonPress</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-112.808">+OnSecondaryButtonPress: event OnButtonPress</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-96.808">+OnPrimaryLongButtonPress: event OnButtonPress</text>
+    <rect style="fill: #ffffff" x="-543.822" y="-90.808" width="364.2" height="116"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-543.822" y="-90.808" width="364.2" height="116"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-76.808">+LCDDisplayWidget()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-60.808">+Write(text:string,blink:bool): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-44.808">+Clear(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-28.808">#OnPrimaryButtonClicked(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="-12.808">#OnSecondaryButtonClicked(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="3.192">#OnModeButtonClicked(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-540.822" y="19.192">#OnPrimaryLongButtonClicked(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-79.4528" y="-51.902" width="111.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-79.4528" y="-51.902" width="111.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-23.9028" y="-32.902">DailDisplay</text>
+    <rect style="fill: #ffffff" x="-79.4528" y="-23.902" width="111.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-79.4528" y="-23.902" width="111.1" height="8"/>
+    <rect style="fill: #ffffff" x="-79.4528" y="-15.902" width="111.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-79.4528" y="-15.902" width="111.1" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="-22.4928,159.362 -22.4928,96.7772 -361.722,96.7772 -361.722,25.1914 "/>
+    <polygon style="fill: #ffffff" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="-22.4928,159.362 -22.4928,96.5982 -772.74,96.5982 -772.74,24.2674 "/>
+    <polygon style="fill: #ffffff" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="-22.4928,159.362 -22.4928,97.5982 -23.9028,97.5982 -23.9028,-7.90202 "/>
+    <polygon style="fill: #ffffff" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="655.162" y="139.5" width="510.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="655.162" y="139.5" width="510.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="910.412" y="158.5">BasicWatch</text>
+    <rect style="fill: #ffffff" x="655.162" y="167.5" width="510.5" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="655.162" y="167.5" width="510.5" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="658.162" y="181.5">-modeSwitcher: ModeSwitcher&lt;WatchComponent&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="658.162" y="197.5">-display: Display</text>
+    <rect style="fill: #ffffff" x="655.162" y="203.5" width="510.5" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="655.162" y="203.5" width="510.5" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="658.162" y="217.5">+BasicWatch(watchDisplay:Display,watchComponets:WatchComponent[])</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="658.162" y="233.5">-InitComponentListeners(components:WatchComponent[]): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="658.162" y="249.5">-InitDisplayListeners(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="658.162" y="265.5">+SwitchMode(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1282" y="139.5" width="356.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282" y="139.5" width="356.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1460.25" y="158.5">BasicWatchBuilder</text>
+    <rect style="fill: #ffffff" x="1282" y="167.5" width="356.5" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282" y="167.5" width="356.5" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285" y="181.5">-componentList: List&lt;WatchComponent&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285" y="197.5">-watchDisplay: Display</text>
+    <rect style="fill: #ffffff" x="1282" y="203.5" width="356.5" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282" y="203.5" width="356.5" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285" y="217.5">+BasicWatchBuilder()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285" y="233.5">+SetDisplay(display:Display): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285" y="249.5">+AddComponent(component:WatchComponent): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285" y="265.5">+CreateWatch(): Watch</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1282.55" y="334.856" width="356.5" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282.55" y="334.856" width="356.5" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1460.8" y="350.856">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1460.8" y="369.856">WatchBuilder</text>
+    <rect style="fill: #ffffff" x="1282.55" y="378.856" width="356.5" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282.55" y="378.856" width="356.5" height="8"/>
+    <rect style="fill: #ffffff" x="1282.55" y="386.856" width="356.5" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282.55" y="386.856" width="356.5" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285.55" y="400.856">+SetDisplay(displayType:Display)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285.55" y="416.856">+AddComponent(component:WatchComponent): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1285.55" y="432.856">+CreateWatch(): Watch</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="911.524,447.056 911.524,360.396 910.412,360.396 910.412,271.5 "/>
+    <polygon style="fill: #ffffff" points="903.524,447.056 911.524,463.056 919.524,447.056 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="903.524,447.056 911.524,463.056 919.524,447.056 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1460.8,316.62 1460.8,295.178 1460.25,295.178 1460.25,271.5 "/>
+    <polygon style="fill: #ffffff" points="1452.8,316.62 1460.8,332.62 1468.8,316.62 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1452.8,316.62 1460.8,332.62 1468.8,316.62 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1282,153.5 1281,153.5 1174.66,153.5 1172.37,153.5 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1185.01,148.5 1169.01,153.5 1185.01,158.5 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="2429.24,254.242 2648.25,254.242 2648.25,310.242 "/>
+    <polygon style="fill: #ffffff" points="2429.24,246.242 2413.24,254.242 2429.24,262.242 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2429.24,246.242 2413.24,254.242 2429.24,262.242 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="2429.24,254.242 3043.25,254.242 3043.25,293.242 "/>
+    <polygon style="fill: #ffffff" points="2429.24,246.242 2413.24,254.242 2429.24,262.242 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2429.24,246.242 2413.24,254.242 2429.24,262.242 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="2429.24,254.242 3492.9,254.242 3492.9,297.242 "/>
+    <polygon style="fill: #ffffff" points="2429.24,246.242 2413.24,254.242 2429.24,262.242 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2429.24,246.242 2413.24,254.242 2429.24,262.242 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-1206.8" y="-68.544" width="134.25" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-1206.8" y="-68.544" width="134.25" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-1139.68" y="-49.544">BinaryDisplay</text>
+    <rect style="fill: #ffffff" x="-1206.8" y="-40.544" width="134.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-1206.8" y="-40.544" width="134.25" height="8"/>
+    <rect style="fill: #ffffff" x="-1206.8" y="-32.544" width="134.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-1206.8" y="-32.544" width="134.25" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="-22.4928,159.362 -22.4928,96.5982 -1139.68,96.5982 -1139.68,-24.544 "/>
+    <polygon style="fill: #ffffff" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-30.4928,159.362 -22.4928,175.362 -14.4928,159.362 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="910.412,138.525 910.412,73.6748 2131.5,73.6748 2131.5,247.537 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2126.5,234.889 2131.5,250.889 2136.5,234.889 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1147.01,849.298 911.524,849.298 911.524,587.997 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="916.524,600.645 911.524,584.645 906.524,600.645 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2381.78" y="-357.706" width="294.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2381.78" y="-357.706" width="294.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2529.23" y="-338.706">Time</text>
+    <rect style="fill: #ffffff" x="2381.78" y="-329.706" width="294.9" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2381.78" y="-329.706" width="294.9" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-315.706">+OnScreenUpdate: event UpdateScreen</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-299.706">-timeToken: object</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-283.706">-timeManager: TimerManager</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-267.706">-inEditorMode: bool</text>
+    <rect style="fill: #ffffff" x="2381.78" y="-261.706" width="294.9" height="164"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2381.78" y="-261.706" width="294.9" height="164"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-247.706">+Time()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-231.706">+Time(timeToken:object)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-215.706">+Start(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-199.706">+Pauze(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-183.706">+ForceScreenUpdate(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-167.706">-OnTimeUpdate(currentTime:TIme): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-151.706">-GetCurrentTime(): Time</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-135.706">+PrimaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-119.706">+SecondaryButtonPress(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2384.78" y="-103.706">+PrimaryButtonLongPress(): void</text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="2169.92,694.108 2884.32,694.108 2896.32,706.108 2896.32,760.108 2169.92,760.108 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2169.92,694.108 2884.32,694.108 2896.32,706.108 2896.32,760.108 2169.92,760.108 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="2884.32,694.108 2884.32,706.108 2896.32,706.108 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2176.92" y="719.008">
+      <tspan x="2176.92" y="719.008">Een WatchComponent voegt functionaliteit toe aan de watch.</tspan>
+      <tspan x="2176.92" y="735.008">Zo kan een watch een StopWatch en Timer bevaten. Niet alle display's</tspan>
+      <tspan x="2176.92" y="751.008">ondersteunen alle componenten. Zo ondersteunt een bijvoorbeeld WijzerDisplay geen Stopwatch.</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="2533.12" y1="694.108" x2="2271.26" y2="364.242"/>
+  <g>
+    <polygon style="fill: #ffffff" points="1233.75,648.826 1755.65,648.826 1767.65,660.826 1767.65,682.826 1233.75,682.826 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1233.75,648.826 1755.65,648.826 1767.65,660.826 1767.65,682.826 1233.75,682.826 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="1755.65,648.826 1755.65,660.826 1767.65,660.826 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1240.75" y="673.726">
+      <tspan x="1240.75" y="673.726">De WatchBuilder is verantwoordelijk voor het crëeren van een Watch </tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="1498.12" y1="647.828" x2="1468.38" y2="439.852"/>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2765.1" y="112.243">
+    <tspan x="2765.1" y="112.243"></tspan>
+  </text>
+  <g>
+    <polygon style="fill: #ffffff" points="-582.644,372.598 -76.144,372.598 -64.144,384.598 -64.144,438.598 -582.644,438.598 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-582.644,372.598 -76.144,372.598 -64.144,384.598 -64.144,438.598 -582.644,438.598 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="-76.144,372.598 -76.144,384.598 -64.144,384.598 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-575.644" y="397.498">
+      <tspan x="-575.644" y="397.498">De Display zorgt in de applicatie voor twee dingen:</tspan>
+      <tspan x="-575.644" y="413.498">- Het tonen van de inhoud die naar de Write functie geschreven is</tspan>
+      <tspan x="-575.644" y="429.498">- Het doorgeven van GUI events naar de Watch classe</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="-249.252" y1="371.595" x2="-147.838" y2="325.084"/>
+  <g>
+    <polygon style="fill: #ffffff" points="146.136,684.834 845.136,684.834 857.136,696.834 857.136,766.834 146.136,766.834 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="146.136,684.834 845.136,684.834 857.136,696.834 857.136,766.834 146.136,766.834 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="845.136,684.834 845.136,696.834 857.136,696.834 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="153.136" y="709.734">
+      <tspan x="153.136" y="709.734">De watch classe is de basis klasse van het watch programma.</tspan>
+      <tspan x="153.136" y="725.734">De watch is de "brug" tussen het Display en de WatchComponenten.</tspan>
+      <tspan x="153.136" y="741.734">Wanneer een actief WatchComponent een update heeft, moet de watch classe</tspan>
+      <tspan x="153.136" y="757.734">hier op reageren door bijvoorbeerd de Compontent informatie naar het scherm te schrijven. </tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="3371.2" y="-257.258" width="464.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="3371.2" y="-257.258" width="464.3" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="3603.35" y="-238.258">TimeManager</text>
+    <rect style="fill: #ffffff" x="3371.2" y="-229.258" width="464.3" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="3371.2" y="-229.258" width="464.3" height="100"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-215.258">-instance: Lazy&lt;TimeManager&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-199.258">-clockTimer: Timer</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-183.258">-timeDict: Dictionary&lt;object, Time&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-167.258">-alarmReservations: ArrayList</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-151.258">-intervalReservations: ArrayList</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-135.258">-alarmReservations: ArrayList</text>
+    <rect style="fill: #ffffff" x="3371.2" y="-129.258" width="464.3" height="324"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="3371.2" y="-129.258" width="464.3" height="324"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-115.258">+TimeManager()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-99.258">-Start(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-83.258">+GetInstance(): Timemanager</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-67.258">+GetTimeToken(): object</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-51.258">-OnTimerElapsed(sender:object,e:ElapsedEventArgs)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-35.258">-IncreaseTime(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-19.258">-CheckAlarms(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="-3.258">+TriggerIntervals(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="12.742">+GetCurrentTime(token:object): Time</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="28.742">+ChangeTIme(token:object,newTime:Time): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="44.742">+AddAlarm(listener:TimeReached,time:Time,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="60.742">          timeToken:object): object</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="76.742">+AddInterval(listener:TimeReached,timeToken:object): object</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="92.742">+RemoveInterval(token:object): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="108.742">+PauzeInterval(token:object): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="124.742">+ResumeInterval(token:object): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="140.742">-EnableInterval(token:object,enableInterval:bool): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="156.742">+RemoveTime(timeToken:object): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="172.742">-RemoveAllAlarms(timeToken:object): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3374.2" y="188.742">+RemoveAllIntervals(timeToken:object): void</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="3667.3,311.242 3688.3,311.242 3688.3,257.492 3603.36,257.492 3603.36,201.448 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="3608.36,214.095 3603.36,198.095 3598.36,214.095 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="2676.68,-343.706 3019.94,-343.706 3019.94,-243.258 3364.49,-243.258 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="3351.85,-238.258 3367.85,-243.258 3351.85,-248.258 "/>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="3362.86,-519.91 3792.36,-519.91 3804.36,-507.91 3804.36,-485.91 3362.86,-485.91 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="3362.86,-519.91 3792.36,-519.91 3804.36,-507.91 3804.36,-485.91 3362.86,-485.91 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="3792.36,-519.91 3792.36,-507.91 3804.36,-507.91 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3369.86" y="-495.01">
+      <tspan x="3369.86" y="-495.01">De TimeManager is een singletron welke de tijd verzorgt</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="3583.62" y1="-485.91" x2="3603.36" y2="-257.258"/>
+  <g>
+    <polygon style="fill: #ffffff" points="2312.08,-495.916 2872.48,-495.916 2884.48,-483.916 2884.48,-461.916 2312.08,-461.916 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2312.08,-495.916 2872.48,-495.916 2884.48,-483.916 2884.48,-461.916 2312.08,-461.916 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="2872.48,-495.916 2872.48,-483.916 2884.48,-483.916 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2319.08" y="-471.016">
+      <tspan x="2319.08" y="-471.016">Het Time component zorgt voor het schrijven van de tijd naar het display</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="2588.03" y1="-460.916" x2="2529.24" y2="-357.706"/>
+  <g>
+    <polygon style="fill: #ffffff" points="3409.7,718.098 4008.6,718.098 4020.6,730.098 4020.6,768.098 3409.7,768.098 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="3409.7,718.098 4008.6,718.098 4020.6,730.098 4020.6,768.098 3409.7,768.098 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="4008.6,718.098 4008.6,730.098 4020.6,730.098 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3416.7" y="742.998">
+      <tspan x="3416.7" y="742.998">Het Alarm component zorgt er voor dat er een alarm afgaat op de bepaalde tijd</tspan>
+      <tspan x="3416.7" y="758.998">Het Alarm maakt gebruik van de TimeManager voor het verkrijgen van de tijd</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="3715.14" y1="718.098" x2="3667.3" y2="589.242"/>
+  <g>
+    <polygon style="fill: #ffffff" points="-92.8208,-117.348 13.2792,-117.348 25.2792,-105.348 25.2792,-83.3482 -92.8208,-83.3482 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-92.8208,-117.348 13.2792,-117.348 25.2792,-105.348 25.2792,-83.3482 -92.8208,-83.3482 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="13.2792,-117.348 13.2792,-105.348 25.2792,-105.348 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-85.8208" y="-92.4482">
+      <tspan x="-85.8208" y="-92.4482">WijzerDisplay</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="-30.1064" y1="-82.3583" x2="-23.9028" y2="-51.902"/>
+  <g>
+    <rect style="fill: #ffffff" x="819.548" y="-258.478" width="181" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="819.548" y="-258.478" width="181" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="910.048" y="-239.478">ModeSwitcher&lt;M&gt;</text>
+    <rect style="fill: #ffffff" x="819.548" y="-230.478" width="181" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="819.548" y="-230.478" width="181" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="822.548" y="-216.478">-modeList: List&lt;M&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="822.548" y="-200.478">+CurrentMode: M</text>
+    <rect style="fill: #ffffff" x="819.548" y="-194.478" width="181" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="819.548" y="-194.478" width="181" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="822.548" y="-180.478">+AddMode(mode:M)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="822.548" y="-164.478">+NextMode()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="822.548" y="-148.478">+PreviousMode()</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="910.412,138.492 910.412,2.51051 910.048,2.51051 910.048,-134.766 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="915.048,-122.118 910.048,-138.118 905.048,-122.118 "/>
+  </g>
+  <text font-size="31.2025" style="fill: #ff0000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="3311.74" y="-351.478">
+    <tspan x="3311.74" y="-351.478">Singleton</tspan>
+  </text>
+  <text font-size="31.2025" style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="573.032" y="-11.5922">
+    <tspan x="573.032" y="-11.5922">Builder</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffff00" x="814.862" y="-581.53" width="82.6" height="36.4"/>
+    <text font-size="31.2025" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="814.862" y="-552.53">
+      <tspan x="814.862" y="-552.53">State</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffff00" x="2079.54" y="-489.606" width="82.6" height="36.4"/>
+    <text font-size="31.2025" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2079.54" y="-460.606">
+      <tspan x="2079.54" y="-460.606">State</tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-209.37" y="-181.822">
+    <tspan x="-209.37" y="-181.822"></tspan>
+  </text>
+  <text font-size="31.2025" style="fill: #00ff00;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-258.516" y="-379.996">
+    <tspan x="-258.516" y="-379.996">Bridge</tspan>
+  </text>
+  <text font-size="31.2025" style="fill: #1e90ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="620.066" y="382.266">
+    <tspan x="620.066" y="382.266">Facade</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="4026.74" y="-298.258" width="188.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4026.74" y="-298.258" width="188.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="4121.09" y="-279.258">IntervalReservation</text>
+    <rect style="fill: #ffffff" x="4026.74" y="-270.258" width="188.7" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4026.74" y="-270.258" width="188.7" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="4029.74" y="-256.258">+TimeToken: object</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="4029.74" y="-240.258">+Listener: TimeReached</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="4029.74" y="-224.258">+Enabled: bool</text>
+    <rect style="fill: #ffffff" x="4026.74" y="-218.258" width="188.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4026.74" y="-218.258" width="188.7" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="4026.74" y="-93.2574" width="187.1" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4026.74" y="-93.2574" width="187.1" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="4120.29" y="-77.2574">&lt;&lt;IntervalReservation&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="4120.29" y="-58.2574">AlarmReservation</text>
+    <rect style="fill: #ffffff" x="4026.74" y="-49.2574" width="187.1" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4026.74" y="-49.2574" width="187.1" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="4029.74" y="-35.2574">+AlarmTime: Time</text>
+    <rect style="fill: #ffffff" x="4026.74" y="-29.2574" width="187.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4026.74" y="-29.2574" width="187.1" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="4121.09,-191.016 4121.09,-143.759 4120.29,-143.759 4120.29,-94.2664 "/>
+    <polygon style="fill: #ffffff" points="4129.09,-191.016 4121.09,-207.016 4113.09,-191.016 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="4129.09,-191.016 4121.09,-207.016 4113.09,-191.016 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="4000.56,-254.258 3923.62,-254.258 3923.62,-171.258 3835.5,-171.258 "/>
+    <polygon style="fill: #ffffff" points="4025.73,-254.258 4011.73,-249.458 3997.73,-254.258 4011.73,-259.058 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="4025.73,-254.258 4011.73,-249.458 3997.73,-254.258 4011.73,-259.058 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3925.62" y="-216.758"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="3993.73" y="-258.258"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3839.5" y="-175.258"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="4000.56,-57.2574 3923.62,-57.2574 3923.62,-71.258 3835.5,-71.258 "/>
+    <polygon style="fill: #ffffff" points="4025.73,-57.2574 4011.73,-52.4574 3997.73,-57.2574 4011.73,-62.0574 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="4025.73,-57.2574 4011.73,-52.4574 3997.73,-57.2574 4011.73,-62.0574 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3925.62" y="-68.2577"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="3993.73" y="-61.2574"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3839.5" y="-75.258"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2922.74" y="-98.7574" width="241" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2922.74" y="-98.7574" width="241" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="3043.24" y="-79.7574">Time</text>
+    <rect style="fill: #ffffff" x="2922.74" y="-70.7574" width="241" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2922.74" y="-70.7574" width="241" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="-56.7574">+Hours: int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="-40.7574">+Minutes: int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="-24.7574">+Seconds: int</text>
+    <rect style="fill: #ffffff" x="2922.74" y="-18.7574" width="241" height="180"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2922.74" y="-18.7574" width="241" height="180"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="-4.7574">+Increase(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="11.2426">+Decrease(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="27.2426">+IncreaseHours(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="43.2426">+DecreaseHours(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="59.2426">+IncreaseMinutes(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="75.2426">+DecreaseMinutes(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="91.2426">+Subtract(time:Time): TimeSpan</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="107.243">+Equals(obj:object): bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="123.243">+MakeCopy(): Time</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="139.243">+GetHashCode(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2925.74" y="155.243">+ToString(): string</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="3370.19,-31.258 3270.97,-31.258 3270.97,39.2426 3170.45,39.2426 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="3183.09,34.2426 3167.09,39.2426 3183.09,44.2426 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="3043.25,292.236 3043.25,231.243 3043.24,231.243 3043.24,168.956 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="3048.24,181.603 3043.24,165.603 3038.24,181.603 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="2648.25,309.249 2648.25,23.2426 2916.03,23.2426 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2903.39,28.2426 2919.39,23.2426 2903.39,18.2426 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="3492.9,296.245 3492.9,211.242 3043.24,211.242 3043.24,168.926 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="3048.24,181.574 3043.24,165.574 3038.24,181.574 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2145.26" y="-23.906" width="251.05" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2145.26" y="-23.906" width="251.05" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="2270.79" y="-7.906">&lt;&lt;WatchComponent&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2270.79" y="11.094">PauzebleWatchComponent</text>
+    <rect style="fill: #ffffff" x="2145.26" y="20.094" width="251.05" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2145.26" y="20.094" width="251.05" height="8"/>
+    <rect style="fill: #ffffff" x="2145.26" y="28.094" width="251.05" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2145.26" y="28.094" width="251.05" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2148.26" y="42.094">+Start(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2148.26" y="58.094">+Pauze(): void</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="2270.79,-43.1476 2270.79,-68.8047 2529.23,-68.8047 2529.23,-96.698 "/>
+    <polygon style="fill: #ffffff" points="2262.78,-43.1476 2270.79,-27.1476 2278.79,-43.1476 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2262.78,-43.1476 2270.79,-27.1476 2278.79,-43.1476 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="839.934" y="-486.354" width="235.5" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="839.934" y="-486.354" width="235.5" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="957.684" y="-470.354">&lt;&lt;ModeSwitcher&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="957.684" y="-451.354">SmartModeSwitcher&lt;M&gt;</text>
+    <rect style="fill: #ffffff" x="839.934" y="-442.354" width="235.5" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="839.934" y="-442.354" width="235.5" height="8"/>
+    <rect style="fill: #ffffff" x="839.934" y="-434.354" width="235.5" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="839.934" y="-434.354" width="235.5" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="842.934" y="-420.354">+AddMode(mode:M): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="842.934" y="-404.354">+NextMode(): void</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="910.048,-277.721 910.048,-336.417 957.684,-336.417 957.684,-397.349 "/>
+    <polygon style="fill: #ffffff" points="902.048,-277.721 910.048,-261.721 918.048,-277.721 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="902.048,-277.721 910.048,-261.721 918.048,-277.721 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2271.25,212.998 2271.25,140.167 2270.79,140.167 2270.79,65.0995 "/>
+    <polygon style="fill: #ffffff" points="2263.25,212.998 2271.25,228.998 2279.25,212.998 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2263.25,212.998 2271.25,228.998 2279.25,212.998 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1639.5,205.5 1738.67,205.5 1738.67,306.242 2124.79,306.242 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2112.15,311.242 2128.15,306.242 2112.15,301.242 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="654.154,205.5 382.51,205.5 382.51,267.598 109.57,267.598 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="122.217,262.598 106.217,267.598 122.217,272.598 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1281.01,205.5 1251.82,205.5 1251.82,331.598 108.562,331.598 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="121.21,326.598 105.21,331.598 121.21,336.598 "/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="575.463" y1="683.832" x2="829.524" y2="539.292"/>
+</svg>

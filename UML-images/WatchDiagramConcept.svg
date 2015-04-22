@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="125cm" height="50cm" viewBox="175 -234 2495 984" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #ffff00" x="1620.62" y="-12.1173" width="786.303" height="420.021"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #1e90ff" x="997.76" y="107.343" width="192.94" height="109.642"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #0000ff" x="971.498" y="79.7656" width="616.233" height="413.698"/>
+  <g>
+    <rect style="fill: #ffffff" x="1345" y="527" width="53.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1345" y="527" width="53.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1371.8" y="546">Main</text>
+    <rect style="fill: #ffffff" x="1345" y="555" width="53.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1345" y="555" width="53.6" height="8"/>
+    <rect style="fill: #ffffff" x="1345" y="563" width="53.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1345" y="563" width="53.6" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="666.33" y="138" width="248.7" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="666.33" y="138" width="248.7" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="790.68" y="154">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="790.68" y="173">Display</text>
+    <rect style="fill: #ffffff" x="666.33" y="182" width="248.7" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="666.33" y="182" width="248.7" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="196">+OnModeButtonPress: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="212">+OnPrimaryButtonPress: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="228">+OnSecondaryButtonPress: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="244">+OnPrimaryLongButtonPress: even</text>
+    <rect style="fill: #ffffff" x="666.33" y="250" width="248.7" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="666.33" y="250" width="248.7" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="264">+Write()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="280">+Clear()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="296">+Show()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="669.33" y="312">+Hide()</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1036" y="297" width="164" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1036" y="297" width="164" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1118" y="313">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1118" y="332">Watch</text>
+    <rect style="fill: #ffffff" x="1036" y="341" width="164" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1036" y="341" width="164" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1039" y="355">+OnModeSwitch: event</text>
+    <rect style="fill: #ffffff" x="1036" y="361" width="164" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1036" y="361" width="164" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1039" y="375">+ShowWatch()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1039" y="391">+HideWatch()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1039" y="407">+SwitchMode()</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1641" y="224" width="202.5" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1641" y="224" width="202.5" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1742.25" y="240">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1742.25" y="259">WatchComponent</text>
+    <rect style="fill: #ffffff" x="1641" y="268" width="202.5" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1641" y="268" width="202.5" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1644" y="282">+Update: Event</text>
+    <rect style="fill: #ffffff" x="1641" y="288" width="202.5" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1641" y="288" width="202.5" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1644" y="302">+PrimaryButtonPress()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1644" y="318">+SecondaryButtonPress()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1644" y="334">+PrimaryButtonLongPress()</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1874" y="343" width="105.75" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1874" y="343" width="105.75" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1926.88" y="362">Stopwatch</text>
+    <rect style="fill: #ffffff" x="1874" y="371" width="105.75" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1874" y="371" width="105.75" height="8"/>
+    <rect style="fill: #ffffff" x="1874" y="379" width="105.75" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1874" y="379" width="105.75" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2017" y="343" width="61.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2017" y="343" width="61.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2047.9" y="362">Timer</text>
+    <rect style="fill: #ffffff" x="2017" y="371" width="61.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2017" y="371" width="61.8" height="8"/>
+    <rect style="fill: #ffffff" x="2017" y="379" width="61.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2017" y="379" width="61.8" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2143" y="344" width="63.25" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2143" y="344" width="63.25" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2174.62" y="363">Alarm</text>
+    <rect style="fill: #ffffff" x="2143" y="372" width="63.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2143" y="372" width="63.25" height="8"/>
+    <rect style="fill: #ffffff" x="2143" y="380" width="63.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2143" y="380" width="63.25" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="378.134" y="-93.2574" width="156.35" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="378.134" y="-93.2574" width="156.35" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="456.309" y="-74.2574">SegmentDisplay</text>
+    <rect style="fill: #ffffff" x="378.134" y="-65.2574" width="156.35" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="378.134" y="-65.2574" width="156.35" height="8"/>
+    <rect style="fill: #ffffff" x="378.134" y="-57.2574" width="156.35" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="378.134" y="-57.2574" width="156.35" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="586.134" y="-88.2574" width="111.25" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="586.134" y="-88.2574" width="111.25" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="641.759" y="-69.2574">LCDDisplay</text>
+    <rect style="fill: #ffffff" x="586.134" y="-60.2574" width="111.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="586.134" y="-60.2574" width="111.25" height="8"/>
+    <rect style="fill: #ffffff" x="586.134" y="-52.2574" width="111.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="586.134" y="-52.2574" width="111.25" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="733.72" y="-91.5" width="111.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="733.72" y="-91.5" width="111.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="789.27" y="-72.5">DailDisplay</text>
+    <rect style="fill: #ffffff" x="733.72" y="-63.5" width="111.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="733.72" y="-63.5" width="111.1" height="8"/>
+    <rect style="fill: #ffffff" x="733.72" y="-55.5" width="111.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="733.72" y="-55.5" width="111.1" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="790.68,119.764 790.68,57.1792 641.76,57.1792 641.76,-44.2574 "/>
+    <polygon style="fill: #ffffff" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="790.68,119.764 790.68,57.0002 456.31,57.0002 456.31,-49.2574 "/>
+    <polygon style="fill: #ffffff" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="790.68,119.764 790.68,58.0002 789.27,58.0002 789.27,-47.5 "/>
+    <polygon style="fill: #ffffff" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1037" y="139.5" width="113.95" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1037" y="139.5" width="113.95" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1093.98" y="158.5">BasicWatch</text>
+    <rect style="fill: #ffffff" x="1037" y="167.5" width="113.95" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1037" y="167.5" width="113.95" height="8"/>
+    <rect style="fill: #ffffff" x="1037" y="175.5" width="113.95" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1037" y="175.5" width="113.95" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1282" y="139.5" width="178.75" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282" y="139.5" width="178.75" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1371.38" y="158.5">BasicWatchBuilder</text>
+    <rect style="fill: #ffffff" x="1282" y="167.5" width="178.75" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282" y="167.5" width="178.75" height="8"/>
+    <rect style="fill: #ffffff" x="1282" y="175.5" width="178.75" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1282" y="175.5" width="178.75" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1306.59" y="299.5" width="248.7" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1306.59" y="299.5" width="248.7" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1430.94" y="315.5">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1430.94" y="334.5">WatchBuilder</text>
+    <rect style="fill: #ffffff" x="1306.59" y="343.5" width="248.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1306.59" y="343.5" width="248.7" height="8"/>
+    <rect style="fill: #ffffff" x="1306.59" y="351.5" width="248.7" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1306.59" y="351.5" width="248.7" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1309.59" y="365.5">+SetDisplay(displayType:string)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1309.59" y="381.5">+AddComponent(component:string)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1309.59" y="397.5">+CreateWatch(): Watch</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1118,278.764 1118,232.25 1093.98,232.25 1093.98,183.5 "/>
+    <polygon style="fill: #ffffff" points="1110,278.764 1118,294.764 1126,278.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1110,278.764 1118,294.764 1126,278.764 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1430.94,281.264 1430.94,233.5 1371.38,233.5 1371.38,183.5 "/>
+    <polygon style="fill: #ffffff" points="1422.94,281.264 1430.94,297.264 1438.94,281.264 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1422.94,281.264 1430.94,297.264 1438.94,281.264 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1282,153.5 1281,153.5 1159.95,153.5 1157.66,153.5 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1170.3,148.5 1154.3,153.5 1170.3,158.5 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1371.8,527 1371.8,469.25 1430.94,469.25 1430.94,410.205 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1435.94,422.853 1430.94,406.853 1425.94,422.853 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="915.03,160 971.511,160 971.511,161.5 1029.29,161.5 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1016.64,166.5 1032.64,161.5 1016.64,156.5 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1861.74,246 1926.88,246 1926.88,343 "/>
+    <polygon style="fill: #ffffff" points="1861.74,238 1845.74,246 1861.74,254 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1861.74,238 1845.74,246 1861.74,254 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1861.74,246 2047.9,246 2047.9,343 "/>
+    <polygon style="fill: #ffffff" points="1861.74,238 1845.74,246 1861.74,254 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1861.74,238 1845.74,246 1861.74,254 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1861.74,246 2174.62,246 2174.62,344 "/>
+    <polygon style="fill: #ffffff" points="1861.74,238 1845.74,246 1861.74,254 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1861.74,238 1845.74,246 1861.74,254 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="215.894" y="-89.7572" width="134.25" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="215.894" y="-89.7572" width="134.25" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="283.019" y="-70.7572">BinaryDisplay</text>
+    <rect style="fill: #ffffff" x="215.894" y="-61.7572" width="134.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="215.894" y="-61.7572" width="134.25" height="8"/>
+    <rect style="fill: #ffffff" x="215.894" y="-53.7572" width="134.25" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="215.894" y="-53.7572" width="134.25" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="790.68,119.764 790.68,57.0002 283.018,57.0002 283.018,-45.7572 "/>
+    <polygon style="fill: #ffffff" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="782.68,119.764 790.68,135.764 798.68,119.764 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1556.3,351.5 1594.65,351.5 1594.65,246 1634.29,246 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1621.65,251 1637.65,246 1621.65,241 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1093.97,138.497 1093.97,104.5 1742.25,104.5 1742.25,217.295 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1737.25,204.647 1742.25,220.647 1747.25,204.647 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1345,541 1118,541 1118,419.705 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1123,432.353 1118,416.353 1113,432.353 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1864.25" y="60.0002" width="53.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1864.25" y="60.0002" width="53.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1891.2" y="79.0002">Time</text>
+    <rect style="fill: #ffffff" x="1864.25" y="88.0002" width="53.9" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1864.25" y="88.0002" width="53.9" height="8"/>
+    <rect style="fill: #ffffff" x="1864.25" y="96.0002" width="53.9" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1864.25" y="96.0002" width="53.9" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1861.74,246 1891.2,246 1891.2,104 "/>
+    <polygon style="fill: #ffffff" points="1861.74,238 1845.74,246 1861.74,254 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1861.74,238 1845.74,246 1861.74,254 "/>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="1681.02,524.056 2395.42,524.056 2407.42,536.056 2407.42,590.056 1681.02,590.056 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1681.02,524.056 2395.42,524.056 2407.42,536.056 2407.42,590.056 1681.02,590.056 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="2395.42,524.056 2395.42,536.056 2407.42,536.056 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1688.02" y="548.956">
+      <tspan x="1688.02" y="548.956">Een WatchComponent voegt functionaliteit toe aan de watch.</tspan>
+      <tspan x="1688.02" y="564.956">Zo kan een watch een StopWatch en Timer bevaten. Niet alle display's</tspan>
+      <tspan x="1688.02" y="580.956">ondersteunen alle componenten. Zo ondersteunt een bijvoorbeeld WijzerDisplay geen Stopwatch.</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="2044.22" y1="524.056" x2="1731.56" y2="327"/>
+  <g>
+    <polygon style="fill: #ffffff" points="1294.56,715.294 1816.46,715.294 1828.46,727.294 1828.46,749.294 1294.56,749.294 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1294.56,715.294 1816.46,715.294 1828.46,727.294 1828.46,749.294 1294.56,749.294 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="1816.46,715.294 1816.46,727.294 1828.46,727.294 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1301.56" y="740.194">
+      <tspan x="1301.56" y="740.194">De WatchBuilder is verantwoordelijk voor het crëeren van een Watch </tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="1555.34" y1="714.293" x2="1449.12" y2="404.503"/>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2336.6" y="108">
+    <tspan x="2336.6" y="108"></tspan>
+  </text>
+  <g>
+    <polygon style="fill: #ffffff" points="230.528,333 737.028,333 749.028,345 749.028,399 230.528,399 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="230.528,333 737.028,333 749.028,345 749.028,399 230.528,399 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="737.028,333 737.028,345 749.028,345 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="237.528" y="357.9">
+      <tspan x="237.528" y="357.9">De Display zorgt in de applicatie voor twee dingen:</tspan>
+      <tspan x="237.528" y="373.9">- Het tonen van de inhoud die naar de Write functie geschreven is</tspan>
+      <tspan x="237.528" y="389.9">- Het doorgeven van GUI events naar de Watch classe</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="563.92" y1="331.997" x2="665.335" y2="285.486"/>
+  <g>
+    <polygon style="fill: #ffffff" points="356.854,529.27 1055.85,529.27 1067.85,541.27 1067.85,611.27 356.854,611.27 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="356.854,529.27 1055.85,529.27 1067.85,541.27 1067.85,611.27 356.854,611.27 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="1055.85,529.27 1055.85,541.27 1067.85,541.27 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="363.854" y="554.17">
+      <tspan x="363.854" y="554.17">De watch classe is de basis klasse van het watch programma.</tspan>
+      <tspan x="363.854" y="570.17">De watch is de "brug" tussen het Display en de WatchComponenten.</tspan>
+      <tspan x="363.854" y="586.17">Wanneer een actief WatchComponent een update heeft, moet de watch classe</tspan>
+      <tspan x="363.854" y="602.17">hier op reageren door bijvoorbeerd de Compontent informatie naar het scherm te schrijven. </tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="2191.7" y="60.5" width="133" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2191.7" y="60.5" width="133" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2258.2" y="79.5">TimeManager</text>
+    <rect style="fill: #ffffff" x="2191.7" y="88.5" width="133" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2191.7" y="88.5" width="133" height="8"/>
+    <rect style="fill: #ffffff" x="2191.7" y="96.5" width="133" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2191.7" y="96.5" width="133" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="2206.25,358 2258.2,358 2258.2,111.205 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2263.2,123.853 2258.2,107.853 2253.2,123.853 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1918.15,74.0002 2050.93,74.0002 2050.93,74.5 2184.99,74.5 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2172.35,79.5 2188.35,74.5 2172.35,69.5 "/>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="2117.02,-91.6126 2546.52,-91.6126 2558.52,-79.6126 2558.52,-57.6126 2117.02,-57.6126 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2117.02,-91.6126 2546.52,-91.6126 2558.52,-79.6126 2558.52,-57.6126 2117.02,-57.6126 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="2546.52,-91.6126 2546.52,-79.6126 2558.52,-79.6126 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2124.02" y="-66.7126">
+      <tspan x="2124.02" y="-66.7126">De TimeManager is een singletron welke de tijd verzorgt</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="2337.76" y1="-57.6126" x2="2258.2" y2="60.5"/>
+  <g>
+    <polygon style="fill: #ffffff" points="1653.5,-139.399 2213.9,-139.399 2225.9,-127.399 2225.9,-105.399 1653.5,-105.399 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1653.5,-139.399 2213.9,-139.399 2225.9,-127.399 2225.9,-105.399 1653.5,-105.399 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="2213.9,-139.399 2213.9,-127.399 2225.9,-127.399 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1660.5" y="-114.499">
+      <tspan x="1660.5" y="-114.499">Het Time component zorgt voor het schrijven van de tijd naar het display</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="1922.7" y1="-91.5" x2="1891.2" y2="60.0002"/>
+  <g>
+    <polygon style="fill: #ffffff" points="2057.7,431.5 2656.6,431.5 2668.6,443.5 2668.6,481.5 2057.7,481.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2057.7,431.5 2656.6,431.5 2668.6,443.5 2668.6,481.5 2057.7,481.5 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="2656.6,431.5 2656.6,443.5 2668.6,443.5 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2064.7" y="456.4">
+      <tspan x="2064.7" y="456.4">Het Alarm component zorgt er voor dat er een alarm afgaat op de bepaalde tijd</tspan>
+      <tspan x="2064.7" y="472.4">Het Alarm maakt gebruik van de TimeManager voor het verkrijgen van de tijd</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="2363.16" y1="431.5" x2="2206.24" y2="388"/>
+  <g>
+    <polygon style="fill: #ffffff" points="720.352,-156.946 826.452,-156.946 838.452,-144.946 838.452,-122.946 720.352,-122.946 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="720.352,-156.946 826.452,-156.946 838.452,-144.946 838.452,-122.946 720.352,-122.946 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="826.452,-156.946 826.452,-144.946 838.452,-144.946 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="727.352" y="-132.046">
+      <tspan x="727.352" y="-132.046">WijzerDisplay</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="783.066" y1="-121.956" x2="789.27" y2="-91.5"/>
+  <g>
+    <rect style="fill: #ffffff" x="1001.98" y="-101.5" width="181" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1001.98" y="-101.5" width="181" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1092.48" y="-82.5">ModeSwitcher&lt;M&gt;</text>
+    <rect style="fill: #ffffff" x="1001.98" y="-73.5" width="181" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1001.98" y="-73.5" width="181" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1004.98" y="-59.5">-modeList: List&lt;M&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1004.98" y="-43.5">+CurrentMode: M</text>
+    <rect style="fill: #ffffff" x="1001.98" y="-37.5" width="181" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1001.98" y="-37.5" width="181" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1004.98" y="-23.5">+AddMode(mode:M)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1004.98" y="-7.5">+NextMode()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1004.98" y="8.5">+PreviousMode()</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="1093.98,138.494 1093.98,81.0008 1092.48,81.0008 1092.48,22.2124 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1097.48,34.8598 1092.48,18.8598 1087.48,34.8598 "/>
+  </g>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #ff0000" x="2137.86" y="13.3385" width="248.902" height="134.35"/>
+  <text font-size="31.2025" style="fill: #ff0000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1975.23" y="47.2796">
+    <tspan x="1975.23" y="47.2796">Singleton</tspan>
+  </text>
+  <text font-size="31.2025" style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1618.14" y="466.412">
+    <tspan x="1618.14" y="466.412">Builder</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #ffff00" x="979.012" y="-116.769" width="231.123" height="151.321"/>
+  <g>
+    <rect style="fill: #ffff00" x="1233.47" y="-63.9276" width="82.6" height="36.4"/>
+    <text font-size="31.2025" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1233.47" y="-34.9276">
+      <tspan x="1233.47" y="-34.9276">State</tspan>
+    </text>
+  </g>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 20; stroke-dasharray: 4; stroke: #00ff00" x="185.195" y="-175.5" width="755.887" height="604.617"/>
+  <g>
+    <rect style="fill: #ffff00" x="1707.6" y="-65.3418" width="82.6" height="36.4"/>
+    <text font-size="31.2025" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1707.6" y="-36.3418">
+      <tspan x="1707.6" y="-36.3418">State</tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="603.802" y="-221.42">
+    <tspan x="603.802" y="-221.42"></tspan>
+  </text>
+  <text font-size="31.2025" style="fill: #00ff00;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="571.628" y="-204.634">
+    <tspan x="571.628" y="-204.634">Bridge</tspan>
+  </text>
+  <text font-size="31.2025" style="fill: #1e90ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1214.04" y="226.702">
+    <tspan x="1214.04" y="226.702">Facade</tspan>
+  </text>
+</svg>
