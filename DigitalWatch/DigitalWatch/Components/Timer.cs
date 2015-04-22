@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Timers;
 using System.Media;
+using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
@@ -21,7 +22,7 @@ namespace DigitalWatch.Components
         /// <summary>
         /// The time of this timer.
         /// </summary>
-        private readonly Timemanagement.Time time;
+        private readonly Time time;
         /// <summary>
         /// The timer used for this timer instance.
         /// </summary>

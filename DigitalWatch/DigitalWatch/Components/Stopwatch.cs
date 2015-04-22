@@ -1,4 +1,5 @@
 ﻿using System.Timers;
+using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
@@ -19,7 +20,7 @@ namespace DigitalWatch.Components
         /// <summary>
         /// The time of this stopwatch.
         /// </summary>
-        private readonly Timemanagement.Time stopwatchTime;
+        private readonly Time stopwatchTime;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitalWatch.Components.Stopwatch"/> class.
