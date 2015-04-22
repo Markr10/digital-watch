@@ -23,6 +23,10 @@ namespace DigitalWatch.Mode
             base.AddMode(mode);
         }
 
+        /// <summary>
+        /// Adds multiple modes to the list.
+        /// </summary>
+        /// <param name="modes">Modes.</param>
         public override void AddModes(Mode[] modes)
         {
             if (innerList.Count == 0 && modes[0] is PauzableWatchComponent)
