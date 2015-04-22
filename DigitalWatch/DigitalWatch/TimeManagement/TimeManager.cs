@@ -292,10 +292,10 @@ namespace DigitalWatch.Timemanagement
         }
 
         /// <summary>
-        /// Pauzes an interval.
+        /// Pauses an interval.
         /// </summary>
         /// <param name="token">The intervalToken obtained from AddInterval.</param>
-        public void PauzeInterval(object token)
+        public void PauseInterval(object token)
         {
             EnableInterval(token, false);
         }

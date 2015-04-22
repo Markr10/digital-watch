@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Timers;
 using System.Media;
+using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
@@ -9,6 +10,9 @@ namespace DigitalWatch.Components
     /// </summary>
     public class Timer : WatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>
@@ -18,7 +22,7 @@ namespace DigitalWatch.Components
         /// <summary>
         /// The time of this timer.
         /// </summary>
-        private readonly Timemanagement.Time time;
+        private readonly Time time;
         /// <summary>
         /// The timer used for this timer instance.
         /// </summary>

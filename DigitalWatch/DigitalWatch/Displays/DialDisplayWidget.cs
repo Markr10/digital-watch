@@ -12,9 +12,21 @@ namespace DigitalWatch.Displays
     {
         #region Display implementation variables
 
+        /// <summary>
+        /// Occurs on a mode button press.
+        /// </summary>
         public event OnButtonPress OnModeButtonPress;
+        /// <summary>
+        /// Occurs on a primary button press.
+        /// </summary>
         public event OnButtonPress OnPrimaryButtonPress;
+        /// <summary>
+        /// Occurs on a secondary button press.
+        /// </summary>
         public event OnButtonPress OnSecondaryButtonPress;
+        /// <summary>
+        /// Occurs on a primary long button press.
+        /// </summary>
         public event OnButtonPress OnPrimaryLongButtonPress;
 
         #endregion
@@ -129,11 +141,11 @@ namespace DigitalWatch.Displays
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="args">Expose event arguments.</param>
-        protected void OnExpose(object sender, Gtk.ExposeEventArgs args)
+        protected void OnExpose(object sender, ExposeEventArgs args)
         {
             // Get de drawing context
             DrawingArea area = (DrawingArea)sender;
-            Cairo.Context cr = Gdk.CairoHelper.Create(area.GdkWindow);
+            Context cr = Gdk.CairoHelper.Create(area.GdkWindow);
 
             // Set the size of the context
             int width = area.Allocation.Width;

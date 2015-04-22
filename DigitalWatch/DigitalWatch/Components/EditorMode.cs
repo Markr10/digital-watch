@@ -9,7 +9,7 @@ namespace DigitalWatch.Components
         None,
         Seconds,
         Minutes,
-        Hours,
+        Hours
     }
 }
 

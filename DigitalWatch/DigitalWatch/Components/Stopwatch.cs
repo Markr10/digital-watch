@@ -1,4 +1,5 @@
 ﻿using System.Timers;
+using DigitalWatch.Timemanagement;
 
 namespace DigitalWatch.Components
 {
@@ -7,10 +8,19 @@ namespace DigitalWatch.Components
     /// </summary>
     public class Stopwatch : WatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         public event UpdateScreen OnScreenUpdate;
 
+        /// <summary>
+        /// The timer used for this timer instance.
+        /// </summary>
         private System.Timers.Timer timer;
-        private readonly Timemanagement.Time stopwatchTime;
+        /// <summary>
+        /// The time of this stopwatch.
+        /// </summary>
+        private readonly Time stopwatchTime;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitalWatch.Components.Stopwatch"/> class.

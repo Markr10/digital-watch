@@ -13,6 +13,9 @@ namespace DigitalWatch.Components
     /// </summary>
     public interface WatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         event UpdateScreen OnScreenUpdate;
 
         /// <summary>
@@ -37,19 +40,19 @@ namespace DigitalWatch.Components
     }
 
     /// <summary>
-    /// The pauzeableWatchCompont is an upgraded version of the normal
-    /// WatchComponent. The SmartModeSwitcher will call the Pauze function when
+    /// The pauseableWatchComponent is an upgraded version of the normal
+    /// WatchComponent. The SmartModeSwitcher will call the Pause function when
     /// the component moves to the background and will call the Start function when 
     /// the components moves to the foreground. 
     /// 
-    /// <para>PauzableWatchCOmponents can be used to make the program less resourse intensive.</para>
+    /// <para>PausableWatchCOmponents can be used to make the program less resourse intensive.</para>
     /// </summary>
-    public interface PauzableWatchComponent: WatchComponent
+    public interface PausableWatchComponent: WatchComponent
     {
         /// <summary>
-        /// Pauze this instance.
+        /// Pause this instance.
         /// </summary>
-        void Pauze();
+        void Pause();
 
         /// <summary>
         /// Start/resume this instance.

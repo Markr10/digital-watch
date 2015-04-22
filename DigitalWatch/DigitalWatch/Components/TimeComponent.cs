@@ -6,26 +6,39 @@ namespace DigitalWatch.Components
     /// <summary>
     /// TimeCompontent witch displays the time (not to confuse with the Time class in the TimeManagement namespace).
     /// </summary>
-    public class TimeComponent : PauzableWatchComponent
+    public class TimeComponent : PausableWatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>
         /// The time token used to get and change the time.
         /// </summary>
         private object timeToken;
+        /// <summary>
+        /// The time manager.
+        /// </summary>
         private TimeManager timeManager;
         /// <summary>
         /// Indicates if the Time componend is in editorMode or not.
         /// </summary>
         private bool inEditorMode;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Components.TimeComponent"/> class.
+        /// </summary>
         public TimeComponent()
         {
             timeManager = TimeManager.GetInstance();
             inEditorMode = false;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Components.TimeComponent"/> class.
+        /// </summary>
+        /// <param name="timeToken">Time token.</param>
         public TimeComponent(object timeToken)
         {
             timeManager = TimeManager.GetInstance();
@@ -55,13 +68,13 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Pauze this instance.
+        /// Pause this instance.
         /// </summary>
-        public void Pauze()
+        public void Pause()
         {
             if (timeToken != null)
             {
-                timeManager.PauzeInterval(timeToken);
+                timeManager.PauseInterval(timeToken);
             }
         }
 
@@ -77,7 +90,7 @@ namespace DigitalWatch.Components
         /// Raises the time update event.
         /// </summary>
         /// <param name="currentTime">Current time.</param>
-        private void OnTimeUpdate(Timemanagement.Time currentTime)
+        private void OnTimeUpdate(Time currentTime)
         {
             if (OnScreenUpdate != null)
             {
@@ -96,7 +109,7 @@ namespace DigitalWatch.Components
         /// Gets the current time.
         /// </summary>
         /// <returns>The current time.</returns>
-        private Timemanagement.Time GetCurrentTime()
+        private Time GetCurrentTime()
         {
             if (timeToken != null)
             {
@@ -115,7 +128,7 @@ namespace DigitalWatch.Components
         {
             if (inEditorMode)
             {
-                Timemanagement.Time currentTime = GetCurrentTime();
+                Time currentTime = GetCurrentTime();
                 currentTime.IncreaseMinutes();
                 timeManager.ChangeTime(timeToken, currentTime);
                 ForceScreenUpdate();
@@ -129,7 +142,7 @@ namespace DigitalWatch.Components
         {
             if (inEditorMode)
             {
-                Timemanagement.Time currentTime = GetCurrentTime();
+                Time currentTime = GetCurrentTime();
                 currentTime.DecreaseMinutes();
                 timeManager.ChangeTime(timeToken, currentTime);
                 ForceScreenUpdate();

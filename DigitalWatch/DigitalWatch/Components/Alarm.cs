@@ -9,6 +9,9 @@ namespace DigitalWatch.Components
     /// </summary>
     public class Alarm : WatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>
@@ -22,7 +25,7 @@ namespace DigitalWatch.Components
         /// <summary>
         /// Time object witch stores the alarm time.
         /// </summary>
-        private Timemanagement.Time currentTime;
+        private Time currentTime;
         /// <summary>
         /// The time token used for scheduling alarms.
         /// </summary>
@@ -66,7 +69,7 @@ namespace DigitalWatch.Components
                 {
                     DisableAlarm();
                 }
-                else if (HasValitAlarmTime())
+                else if (HasValidAlarmTime())
                 {
                     SetAlarm();
                 }
@@ -78,7 +81,7 @@ namespace DigitalWatch.Components
         /// Determines whether this instance has valit alarm time.
         /// </summary>
         /// <returns><c>true</c> if this instance has valit alarm time; otherwise, <c>false</c>.</returns>
-        private bool HasValitAlarmTime()
+        private bool HasValidAlarmTime()
         {
             return currentTime.Minutes > 0 || currentTime.Hours > 0;
         }
@@ -163,7 +166,7 @@ namespace DigitalWatch.Components
         /// Sound the alarm
         /// </summary>
         /// <param name="currentTime">Current time.</param>
-        public void OnTimeManagerNotify(Timemanagement.Time currentTime)
+        public void OnTimeManagerNotify(Time currentTime)
         {
             SystemSounds.Beep.Play();
         }
