@@ -6,7 +6,7 @@ namespace DigitalWatch.Components
     /// <summary>
     /// TimeCompontent witch displays the time (not to confuse with the Time class in the TimeManagement namespace).
     /// </summary>
-    public class TimeComponent : PauzableWatchComponent
+    public class TimeComponent : PausableWatchComponent
     {
         /// <summary>
         /// Occurs when the screen should update.
@@ -68,13 +68,13 @@ namespace DigitalWatch.Components
         }
 
         /// <summary>
-        /// Pauze this instance.
+        /// Pause this instance.
         /// </summary>
-        public void Pauze()
+        public void Pause()
         {
             if (timeToken != null)
             {
-                timeManager.PauzeInterval(timeToken);
+                timeManager.PauseInterval(timeToken);
             }
         }
 
