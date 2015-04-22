@@ -29,6 +29,11 @@ namespace DigitalWatch.Displays
         /// <summary>
         /// Font of the segment display. Change this if you want to change the font and size
         /// of the display.
+        /// 
+        /// The selected font has to be installed. The DisplayLabel will falback to the default font if the specified 
+        /// font was not found on de machine.
+        /// 
+        /// The DS-Digital font can be obtained from: http://www.dafont.com/ds-digital.font
         /// </summary>
         private const string FONT_DESCRIPTION = "DS-Digital Bold 50";
         /// <summary>
