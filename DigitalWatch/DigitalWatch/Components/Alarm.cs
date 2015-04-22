@@ -9,6 +9,9 @@ namespace DigitalWatch.Components
     /// </summary>
     public class Alarm : WatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>

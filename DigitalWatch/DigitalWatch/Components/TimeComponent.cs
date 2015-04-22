@@ -8,24 +8,37 @@ namespace DigitalWatch.Components
     /// </summary>
     public class TimeComponent : PauzableWatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         public event UpdateScreen OnScreenUpdate;
 
         /// <summary>
         /// The time token used to get and change the time.
         /// </summary>
         private object timeToken;
+        /// <summary>
+        /// The time manager.
+        /// </summary>
         private TimeManager timeManager;
         /// <summary>
         /// Indicates if the Time componend is in editorMode or not.
         /// </summary>
         private bool inEditorMode;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Components.TimeComponent"/> class.
+        /// </summary>
         public TimeComponent()
         {
             timeManager = TimeManager.GetInstance();
             inEditorMode = false;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DigitalWatch.Components.TimeComponent"/> class.
+        /// </summary>
+        /// <param name="timeToken">Time token.</param>
         public TimeComponent(object timeToken)
         {
             timeManager = TimeManager.GetInstance();

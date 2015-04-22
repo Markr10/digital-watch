@@ -14,9 +14,21 @@ namespace DigitalWatch.Displays
     {
         #region Display implementation variables
 
+        /// <summary>
+        /// Occurs on a mode button press.
+        /// </summary>
         public event OnButtonPress OnModeButtonPress;
+        /// <summary>
+        /// Occurs on a primary button press.
+        /// </summary>
         public event OnButtonPress OnPrimaryButtonPress;
+        /// <summary>
+        /// Occurs on a secondary button press.
+        /// </summary>
         public event OnButtonPress OnSecondaryButtonPress;
+        /// <summary>
+        /// Occurs on a primary long button press.
+        /// </summary>
         public event OnButtonPress OnPrimaryLongButtonPress;
 
         #endregion

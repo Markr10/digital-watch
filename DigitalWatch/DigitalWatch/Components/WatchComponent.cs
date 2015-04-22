@@ -13,6 +13,9 @@ namespace DigitalWatch.Components
     /// </summary>
     public interface WatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         event UpdateScreen OnScreenUpdate;
 
         /// <summary>

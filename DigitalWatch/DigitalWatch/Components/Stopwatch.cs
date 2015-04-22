@@ -7,9 +7,18 @@ namespace DigitalWatch.Components
     /// </summary>
     public class Stopwatch : WatchComponent
     {
+        /// <summary>
+        /// Occurs when the screen should update.
+        /// </summary>
         public event UpdateScreen OnScreenUpdate;
 
+        /// <summary>
+        /// The timer used for this timer instance.
+        /// </summary>
         private System.Timers.Timer timer;
+        /// <summary>
+        /// The time of this stopwatch.
+        /// </summary>
         private readonly Timemanagement.Time stopwatchTime;
 
         /// <summary>
